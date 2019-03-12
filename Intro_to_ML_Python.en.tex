@@ -1,0 +1,379 @@
+
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+%******************************************************************************%
+%                                                                              %
+%                   Parseltongue_02.tex                                        %
+%                   Made by: 42 staff                                          %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+
+\begin{document}
+
+\title{Intro to Machine Learning - Python}
+\subtitle{Numpy; Pandas; Matplotlib}
+
+\member {Jeson}{jesonleejunzhen.com}
+
+\summary
+{
+Learn about the essentails machine learning libraries
+}
+
+\maketitle
+
+\tableofcontents
+
+%Initialisation des headers d'exercices
+
+\newpage
+
+\bigskip
+
+% \centerline{\includegraphics[width=150mm]{images/dont_panic.jpeg}}
+
+\centerline{\texttt{Eat, Sleep, Code, Repeat.}}
+
+%******************************************************************************%
+%                                                                              %
+%                                 Python Exercises                             %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Python Exercieses!}
+
+% {images/.jpeg}}
+
+Before we dive into learning about ‘machine learning’, let’s take a look at some of the essential programming skills needed to build a machine learning project using Python. 
+
+Some of the most commonly used python libraries are Numpy, Pandas, and Matplotlib. 
+
+These powerful libraries can be used to pre-process, analyze, and visualize data before we even begin building a machine learning model. 
+
+So let’s not waste time and dive straight into it!
+
+Let’s start off with downloading the libraries by doing this:
+
+
+\begin{42console}
+Pip3 install numpy
+Pip3 install pandas
+Pip3 install matplotlib
+
+You may need to add the ‘--user’ flag in order to add the libraries to your home directory, which won’t require any special privileges. 
+
+\end{42console}
+
+
+\startexercices
+
+%******************************************************************************%
+%                                                                              %
+%                                 Numpy                                        %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Python Exercieses!}
+
+% {images/.jpeg}}
+
+Numpy is a math library for python. It enables us to do computation efficiently and effectively. Numpy has many amazing capabilities such as the ability to manipulate large arrays and matrices of numeric data.
+
+To use the NumPy module, we need to import it using:
+
+\begin{42console}
+import numpy as np
+
+\end{42console}
+
+Take a look at this Numpy cheat sheet by DataCamp to get an overall understanding:
+https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Cheat_Sheet.pdf 
+
+%******************************************************************************%
+%                                                                              %
+%                                 Brainstorm                                   %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 0: Creating a numpy array using arrange}
+\extopics{Arrange}
+\exfiles{ex00.py}
+\exnotes{\href{http://effbot.org/zone/python-list.htm}{Lists}, \href{https://www.youtube.com/watch?v=H3s4129glHw}{Append List Method}}
+\makeheaderfiles
+
+Create a program called \texttt{00\_brainstorm.py} which imitates a version of the game Scattegories. Here are some goals for it:
+
+\begin{itemize}
+	\item Your game should have a built in list or tuple which contains a selection of categories. When the game begins, choose one of the categories from the list randomly. (Research: How to choose a random number between 0 and n?)
+	\item Once the random category is chosen, the program displays it and loops 10 times to collect input from the user.
+	\item Every answer the user gives is added to another list, the answers lists.
+	\item After 10 entries, display each answer that was given.
+	\item The answers should be displayed neatly. Print them in a column that is centered in the middle of the terminal, with a blank line between each answer.
+	\item Bonus: Time how long it takes the user to enter 10 items for that category, and display the elapsed time at the end.
+	\item Bonus: Draw a nice box around the answer table output.
+\end{itemize}
+
+\nextexercice
+\newpage
+
+%******************************************************************************%
+%                                                                              %
+%                                 ARR, Matey                                   %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 1: ARR Matey}
+\extopics{ARGV}
+\exfiles{01\_arrmatey.rb or 01\_arrmatey.py}
+\extitle{ARR, Matey}
+\exnotes{\href{https://www.youtube.com/watch?v=FjxmUkNns-8}{Increment and Decrement}, \href{http://thomas-cokelaer.info/tutorials/python/data_structures.html}{Data Structures}}
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{01\_arrmatey.py} which takes a sentence worth of command-line arguments, splits them into an array, and then prints them each out on a different line along with the corresponding index of the array.
+\item Next, sort the array by word length and reverse it, printing just the words in descending order of length.
+
+\begin{42console}
+	?> python 01_arrmatey.py docs.python.org/3/ has official info regarding every module :\)
+	Argv of 0 is 01_arrmatey.py
+	Argv of 1 is docs.python.org/3/
+	Argv of 2 is has
+	Argv of 3 is official
+	Argv of 4 is info
+	Argv of 5 is regarding
+	Argv of 6 is every
+	Argv of 7 is module
+	Argv of 8 is :)
+	docs.python.org/3/
+	01_arrmatey.py
+	regarding
+	official
+	module
+	every
+	info
+	has
+	:)
+	?>
+\end{42console}
+
+\end{itemize}
+
+\nextexercice
+\newpage
+
+%******************************************************************************%
+%                                                                              %
+%                                 Numeric Types                                %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 2: Numeric Types}
+\extopics{Variable types, floats}
+\exfiles{02\_numtypes.rb or 02\_numtypes.py}
+\exnotes{\href{https://docs.python.org/2/library/stdtypes.html}{Numeric Types} \href{https://www.tutorialspoint.com/python3/python_command_line_arguments.htm
+}{Command Line Arguments}, \href{https://docs.python.org/3/library/functions.html}{Built-in Functions}}
+\makeheaderfiles
+
+Write a program that takes two numbers as command line arguments.\\
+
+They will come into your program as Strings. Find a way to turn them into numbers with which you can perform math.\\
+
+Divide the first number by the second one and print out both the integer quotient and the remainder.\\
+
+Then, your program should declare and initialize four variables of different numeric types.
+Print them out and use the built-in functions type() or .class to print the variable type of each.
+
+\begin{42console}
+	?> python 02\_numtypes.py 142 6
+	142 divided by 6 equals 23 remainder 4
+	Variable a contains : 10  which is of type: Integer
+	Variable b contains: 56.99  which is of type: Float
+	Variable c contains: 2+3i  which is of type: Complex
+	...
+\end{42console}
+
+
+\nextexercice
+\newpage
+
+
+% %******************************************************************************%
+% %                                                                              %
+% %                                   Prime Suspects                             %
+% %                                                                              %
+% %******************************************************************************%
+
+% \chapter{Exercise 3: Prime Suspects}
+
+% \extitle{Prime Suspects}
+% \exfiles{01\_primes.rb or 01\_primes.py}
+
+% \makeheaderfiles
+
+% \begin{itemize}
+
+% \item Create a script \texttt{01\_primes.py} that prints the prime factors, in increasing order, of the number given as an argument.
+% \item If the input given is not a number or is less than one, print only a newline.
+
+% \begin{42console}
+% 	?> python 01_primes.py 29
+% 	29
+% 	?>
+% \end{42console}
+
+% \begin{42console}
+% 	?> python 01_primes.py 242
+% 	2,11,11
+% 	?>
+% \end{42console}
+
+% \begin{42console}
+% 	?> python 01_primes.py 60
+% 	2,2,3,5
+% 	?>
+% \end{42console}
+
+% \begin{42console}
+% 	?> python 01_primes.py nineteen ninety six
+% 	?>
+% \end{42console}
+
+% \begin{42console}
+% 	?> python 01_primes.py
+% 	?>
+% \end{42console}
+
+% \end{itemize}
+
+
+% %******************************************************************************%
+% %                                                                              %
+% %                              Project Euler                                   %
+% %                                                                              %
+% %******************************************************************************%
+
+% \chapter{Exercise 2: Project Euler}
+
+% \extitle{Project Euler}
+% \exfiles{02\_euler.rb or 02\_euler.py}
+
+% \makeheaderfiles
+
+% \begin{itemize}
+
+% \item From Project Euler, a great resource for programming practice:\\
+% https://projecteuler.net/problem=1
+% \item If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+% \item Create a script \texttt{02\_euler.py} which finds the sum of all the multiples of 3 or 5 below the number given as a command line argument.
+% \item For this version, if given a negative number you must also find the sum of all multiples of 3 and 5 between that number and zero.
+
+% \begin{42console}
+% 	?> python 02_euler.py 42
+% 	408
+% 	?>
+% \end{42console}
+
+% \begin{42console}
+% 	?> python 02_euler.py 420
+% 	40950
+% 	?>
+% \end{42console}
+
+% \begin{42console}
+% 	?> python 02_euler.py 4242
+% 	4198308
+% 	?>
+% \end{42console}
+
+% \begin{42console}
+% 	?> python 02_euler.py -10
+% 	-23
+% 	?>
+% \end{42console}
+
+% \begin{42console}
+% 	?> python 02_euler.py 0
+% 	0
+% 	?>
+% \end{42console}
+
+% \end{itemize}
+
+%******************************************************************************%
+%                                                                              %
+%                                   101010                                     %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 3: 101010}
+\extopics{Base systems (Binary, Hexadecimal, Octal)}
+\extitle{101010}
+\exfiles{03\_binary.rb or 03\_binary.py}
+\exnotes{\href{https://www.youtube.com/watch?v=ZL-LhaaMTTE}{Binary and Hexidecimal} \href{https://www.youtube.com/watch?v=aW3qCcH6Dao}{Conversions}}
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{03\_binary.py} which takes in a number in base 10 and prints out its equivalent in base 2 (binary), in base 8 (octal), and in base 16 (hexadecimal).
+
+\begin{42console}
+	?> python 03_binary.py 94555
+	10111000101011011
+	270533
+	1715B
+	?>
+\end{42console}
+
+\hint {There are two types of people in the world: those who understand binary, and those who \texttt donut.}
+\hint {Real hint: there is a built in function for this... search around!}
+\end{itemize}
+
+%******************************************************************************%
+%                                                                              %
+%                                      Bool                                    %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 4: George Bool}
+\extopics{Booleans, iPython}
+\extitle{George Bool}
+\exfiles{04\_bool.rb or 04\_bool.py}
+\exnotes{\href{https://docs.python.org/2/library/constants.html}{Constants}, \href{https://docs.python.org/2/library/stdtypes.html}{Types}, \href{https://www.youtube.com/watch?v=9OK32jb_TdI}{Booleans}, \href{https://docs.python.org/3/tutorial/interpreter.html}{Python Interpreter}}
+\makeheaderfiles
+
+Using the three provided arrays:\\
+
+Ruby\\
+\noindent [false,true,true,nil,true,nil,nil,false,false,nil,true,false]\\
+\noindent ["or","or","or","==","!=","==","and","==","!=","and","!=","and"]\\
+\noindent [false,false,nil,nil,true,true,false,true,nil,false,true,nil]\\
+
+Python\\
+\noindent [False,True,True,None,True,None,None,False,False,None,True,False]\\
+\noindent ["or","or","or","==","!=","==","and","==","!=","and","!=","and"]\\
+\noindent [False,False,None,None,True,True,False,True,None,False,True,None]\\
+
+Write a program which tests boolean logic by combining one element from each array into an equation and printing the full equation with its result. You can either use the arrays as given or have your program randomize them.
+
+\begin{42console}
+	?> ruby 04_bool.rb
+	false or false => false
+	true or false => true
+	true or false => true
+	nil == nil => true
+	true != true => false
+	...
+\end{42console}
+
+\hint{There are several ways to do this. Sophisticated ways include .send or getattr(). Simpler ways involve using a series of if statements to perform the operation requested. Practicing these equations in the terminal by typing "irb" or "python" would be a helpful way to start.}
+
+
+\end{document}
