@@ -1,0 +1,433 @@
+%******************************************************************************%
+%                                                                              %
+%                  oop_02.tex for LaTeX                                        %
+%                  Created on : Tue Mar 10 13:27:28 2015                       %
+%                  Made by : David "Thor" GIRON <thor@42.fr>                   %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+
+%******************************************************************************%
+%                                                                              %
+%                                    Header                                    %
+%                                                                              %
+%******************************************************************************%
+\begin{document}
+
+
+
+       \title{Object Oriented Programming, Part 2 - Linked Lists}
+      \subtitle{The Archnemesis of Arrays}
+   \member{tingo -}{tingo@student.42.us.org}
+   \member{jchung -}{jchung@student.42.us.org}
+
+\summary {
+  This is an introduction to \texttt{Linked Lists}.
+}
+
+\maketitle
+
+\tableofcontents
+
+
+%******************************************************************************%
+%                                                                              %
+%                                  Foreword                                    %
+%                                                                              %
+%******************************************************************************%
+\chapter{Foreword}
+\begin{center}
+	\textbf{Rick Astley - Never Gonna Give You Up}
+\end{center}
+We're no strangers to love\\
+    You know the rules and so do I\\
+    A full commitment's what I'm thinking of\\
+    You wouldn't get this from any other guy\\
+    I just wanna tell you how I'm feeling\\
+    Gotta make you understand\\
+    \\
+    Never gonna give you up\\
+    Never gonna let you down\\
+    Never gonna run around and desert you\\
+    Never gonna make you cry\\
+    Never gonna say goodbye\\
+    Never gonna tell a lie and hurt you\\
+    \\
+    We've known each other for so long\\
+    Your heart's been aching but you're too shy to say it\\
+    Inside we both know what's been going on\\
+    We know the game and we're gonna play it\\
+    And if you ask me how I'm feeling\\
+    Don't tell me you're too blind to see\\
+    \\
+    Never gonna give you up\\
+    Never gonna let you down\\
+    Never gonna run around and desert you\\
+    Never gonna make you cry\\
+    Never gonna say goodbye\\
+    Never gonna tell a lie and hurt you\\
+    Never gonna give you up\\
+    Never gonna let you down\\
+    Never gonna run around and desert you\\
+    Never gonna make you cry\\
+    Never gonna say goodbye\\
+    Never gonna tell a lie and hurt you\\
+    Never gonna give, never gonna give\\
+    \\
+    (Give you up)\\
+    (Ooh) Never gonna give, never gonna give\\
+    (Give you up)\\
+    \\
+    We've known each other for so long\\
+    Your heart's been aching but you're too shy to say it\\
+    Inside we both know what's been going on\\
+    We know the game and we're gonna play it\\
+    I just wanna tell you how I'm feeling\\
+    Gotta make you understand\\
+    \\
+    Never gonna give you up\\
+    Never gonna let you down\\
+    Never gonna run around and desert you\\
+    Never gonna make you cry\\
+    Never gonna say goodbye\\
+    Never gonna tell a lie and hurt you\\
+    Never gonna give you up\\
+    Never gonna let you down\\
+    Never gonna run around and desert you\\
+    Never gonna make you cry\\
+    Never gonna say goodbye\\
+    Never gonna tell a lie and hurt you\\
+    Never gonna give you up\\
+    Never gonna let you down\\
+    Never gonna run around and desert you\\
+    Never gonna make you cry
+
+%******************************************************************************%
+%                                                                              %
+%                                 Introduction                                 %
+%                                                                              %
+%******************************************************************************%
+\chapter{Introduction}
+    Linked lists are the foundation for
+    more advanced data structures and are commonly used in place of arrays
+    for data storage due to their ability to store information in
+    non-contiguous blocks of memory. This makes linked lists a very powerful
+    tool for parallel computation.\\
+    \\
+    There are many uses for the different variations of linked lists.
+    For example, many games will store cycling character animations in a circular linked
+    list or a circular array. Many operating systems line up processes and 
+    jobs in a queue. A simulation of genetic mutations like removing and swapping base pairs in DNA strands can best
+    be organized by a doubly linked list.\\
+    \\
+    Within the 42 curriculum, the projects in graphics branch frequently utilize
+    linked lists to store coordinates of points for an object in a map or
+    rendering. In many Unix projects, making a process and job queue for
+    operating systems is essential to keep the computer running without a crash.
+
+
+
+%******************************************************************************%
+%                                                                              %
+%                                  Goals                                       %
+%                                                                              %
+%******************************************************************************%
+\chapter{Goals}
+    This project lays groundwork for all of the data structures you will learn
+    in the following days. Today, you will learn how to implement your very own
+    data structure. You will be responsible for creating the basic functions
+    that allow a data structure to access values, add values, remove values, and
+    modify itself in fun and interesting ways.\\
+    \\
+    This project is a simple gateway into the larger world of Data Structures.
+
+%******************************************************************************%
+%                                                                              %
+%                             General instructions                             %
+%                                                                              %
+%******************************************************************************%
+\chapter{General instructions}
+    The following exercises are designed such that written functions are
+    to be turned in as standalone functions; they will not be included
+    in the class for LinkedLists but will still perform standardized
+    operations. All exercises should be written in Python and no external
+    function calls should be made except for the first question; only the
+    functions supplied in the classes provided to you should be needed.\\
+    \\
+    Both a \texttt{Node} and \texttt{SinglyList} class have been given to
+    you for use. The \texttt{SinglyList} class has an in-class iterator defined to
+    traverse a list, but you are free to iterate through the list yourself :)\\
+    \\
+    If a function requires the use of the Node or SinglyList class, do not 
+    include that code in your file submission. If you use a previous solution
+    please make sure to include that function in the file submission.
+
+\newpage
+    \section{Node Class}
+
+        \begin{42pycode}
+class Node(object):
+    def __init__(self, content):
+        if content is None:
+            raise ValueError('Node must have content')
+        self.c = content
+        self.n = None
+    
+    @property
+    def content(self):
+        return self.c
+
+    @content.setter
+    def content(self, val):
+        self.c = val
+    
+    @property
+    def next(self):
+        return self.n
+    
+    @next.setter
+    def next(self, val):
+        self.n = val
+\end{42pycode}
+
+    \section{SinglyList Class}
+
+        \begin{42pycode}
+class SinglyList(object):
+    def __init__(self):
+        self.h = None
+
+    def __iter__(self):
+        current = self.head
+        while current:
+            yield current
+            current = current.next
+
+    @property
+    def head(self):
+        return self.h
+
+    @head.setter
+    def head(self, val):
+        self.h = val
+
+    def isEmpty(self):
+        return self.head == None
+
+    def add_head(self, node):
+        if self.isEmpty():
+            self.head = node
+        else:
+            node.next = self.head
+            self.head = node
+    \end{42pycode}
+
+\startexercices
+
+\chapter{Exercise\exercicenumber: Print All Nodes in a List}
+
+\extitle{Print All Nodes in a List}
+\exnumber{\exercicenumber}
+\exfiles{print\_list.py}
+\exforbidden{Everything except print() :D}
+\exnotes{n/a}
+
+\makeheaderfiles
+    Understanding how to traverse a linked list is important to mastering
+    its concept. Given the head node of a singly linked list, print out all
+    the items in the list.\\
+    \\
+    Your function will be defined as such:\\
+    \texttt{print\_list(list\_head)}\\
+    \\
+    \textbf{Input Format}
+
+    Your function will take the head node of a list.\\
+    \\
+    \textbf{Output Format}
+
+    Nothing special. Just print the items of the list in the order they appear.
+
+\nextexercice
+
+\chapter{Exercise\exercicenumber: Add an Item to the End of a List}
+
+\extitle{Add an Item to the End of a List}
+\exnumber{\exercicenumber}
+\exfiles{add\_tail.py}
+\exforbidden{Everything :D}
+\exnotes{There is a similar function in the SinglyList class to reference :)}
+
+\makeheaderfiles
+    You're given the pointer to the head node of a singly linked list and
+    the value of a node to add to the list. Create a new node with the given
+    value. Insert this node at the tail of the linked list and return the head
+    node after the insertion.\\
+    \\
+    Your function will be defined as such:\\
+    \texttt{add\_tail(list\_head, val)}\\
+    \\
+    \textbf{Input Format}
+
+    Your function will take the head node of a list and a value.\\
+    \\
+    \textbf{Output Format}
+
+    There will be no return, but the list must now cotain a new node with the specified value at the end of it.
+
+\nextexercice
+
+\chapter{Exercise\exercicenumber: Remove an Item From a List}
+
+\extitle{Remove an Item From a List}
+\exnumber{\exercicenumber}
+\exfiles{remove.py}
+\exforbidden{Everything :D}
+\exnotes{If the list is empty, head will be null. The list will not contain duplicates.}
+
+\makeheaderfiles
+    You're given the pointer to the head node of a singly linked list and
+    the value of a node to delete from the list. Delete the node with the given
+    value if it exists.\\
+    \\
+    Your function will be defined as such:\\
+    \texttt{remove(list\_head, val)}\\
+    \\
+    \textbf{Input Format}
+
+    Your function will take the head node of a list and a value.\\
+    \\
+    \textbf{Output Format}
+
+    There will be no return, but the list must no longer contain the node with that value.
+
+\nextexercice
+
+\chapter{Exercise\exercicenumber: Cycle Detection}
+
+\extitle{Cycle Detection}
+\exnumber{\exercicenumber}
+\exfiles{has\_cycle.py}
+\exforbidden{Everything :D}
+\exnotes{If the list is empty, head will be null.}
+
+\makeheaderfiles
+    In a turn-based multiplayer game, a linked list can be used to cyclically
+    repeat player order by having the last player's \texttt{next} reference the
+    first player. Check that a given linked list cycles or not.\\
+    \\
+    Your function will be defined as such:\\
+    \texttt{has\_cycle(list\_head)}\\
+    \\
+    \textbf{Input Format}
+
+    Your function will take the head node of a list.\\
+    \\
+    \textbf{Output Format}
+
+    It will return True of there is a cycle and False if there is no cycle.
+
+\nextexercice
+
+\chapter{Exercise\exercicenumber: Merge Two Lists}
+
+\extitle{Merge Two Lists}
+\exnumber{\exercicenumber}
+\exfiles{merge.py}
+\exforbidden{Everything :D}
+\exnotes{All trains have at least one car, and no two cars have the same weight.}
+
+\makeheaderfiles
+    Two cargo trains arrive in the trainyard and their cargo needs to be
+    consolidated into a single train set before it can depart. Both trains
+    were organized with the heaviest car in the front of the train
+    descending to the lightest car in the back.\\
+    \\
+    Your function will be defined as such:\\
+    \texttt{merge(train1, train2)}\\
+    \\
+    \textbf{Input Format}
+
+    Your function will take two list heads, \textit{train1 and train2}.\\
+    \\
+    \textbf{Output Format}
+
+    Return the head of the new merged train.
+
+\nextexercice
+
+\chapter{Exercise\exercicenumber: Sort a Linked List}
+
+\extitle{Sort a Linked List}
+\exnumber{\exercicenumber}
+\exfiles{sort\_asc.py}
+\exforbidden{Everything :D}
+\exnotes{There is no limitation on which sort to implement for this exercise. You will find some sorts are easier to work into a linked list than others...}
+
+\makeheaderfiles
+    Understanding how to organize information in a list is important. Implement
+    a sorting algorithm that organizes a linked list with numbers in
+    \textbf{ascending} order.\\
+    \\
+    Your function will be defined as such:\\
+    \texttt{sort\_asc(unsorted\_list)}\\
+    \\
+    \textbf{Input Format}
+
+    Your function will take the head node of an unsorted list.\\
+    \\
+    \textbf{Output Format}
+
+    Sort the list in function, but return nothing.
+
+\chapter{Bonus part}
+    Now that you've had a chance to get your feet wet with the linked list, let's
+    revisit a previous problem. The traiyard has run into some more trouble.
+    See if you can help them.
+
+\warn{This will only count if and only if you have completed the previous excercises correctly. Go back now to make sure.}
+
+\nextexercice
+
+\chapter{Exercise\exercicenumber: Trainyard Revisited}
+
+\extitle{Trainyard Revisited}
+\exnumber{\exercicenumber}
+\exfiles{trainyard.py}
+\exforbidden{Everything :D}
+\exnotes{All trains have at least one cart, and two carts \textbf{may} have the same weight.}
+
+\makeheaderfiles
+    Two more cargo trains arrive in the trainyard and need to be merged before
+    departure. These two trains are no longer organized by weight from heaviest
+    to lightest prior to the merge. The two lightest cars must also stay behind
+    at the trainyard for inspection and leave with the next incoming train.
+    Take into account cars with equal weights.\\
+    \\
+    Your function will be defined as in excercise 04.\\
+    \\
+    \textbf{Input Format}
+
+    \textit{Same as 04}\\
+    \\
+    \textbf{Output Format}
+
+    \textit{Same as 04}, but missing the lightest 2 and sorted.
+
+%******************************************************************************%
+%                                                                              %
+%                           Turn-in and peer-evaluation                        %
+%                                                                              %
+%******************************************************************************%
+\chapter{Turn-in and peer-evaluation}
+
+    This project will be evaluated by your peers and the moulinette. Submit to
+    the \texttt{GIT} repository as usual. Only work in your repository will be
+    graded. Make sure you have the \textit{exact} function names as shown in
+    this document. Only the specified functions will be looked at and graded.
+    Remember, the bonus will only be evaluated if \textit{all} the previous
+    excercises are correct.
+
+\end{document}

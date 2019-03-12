@@ -1,0 +1,146 @@
+---
+name: Ask your peers 2
+lg: en
+comment: ''
+introduction_md: ''
+disclaimer_md: ''
+guidelines_md: Be courteous and firm with your classmates. Allow them to defend the
+  reasoning for their code, and focus on giving useful feedback or teaching things
+  they don't understand.
+is_primary: true
+correction_number: 2
+duration: 1
+sections:
+- name: Ask your peers 2
+  description: ''
+  position: 1
+  questions:
+  - name: First question
+    guidelines: 
+
+      How accurate was the answer provided by the student? 
+
+      Fact check what the student explained and grade the students based on the accuracy of the answer. 
+
+    rating: multi
+    kind: standard
+    position: 1
+    questions_skills:
+    - percentage: 12
+      name: Imperative programming
+    - percentage: 12
+      name: Organization
+  - name: Second Question
+    guidelines: 
+
+      How accurate was the answer provided by the student? 
+
+      This is an answer that the student might provide
+      -label values rather than numeric values
+
+    rating: multi
+    kind: standard
+    position: 2
+    questions_skills:
+    - percentage: 12
+      name: Imperative programming
+    - percentage: 12
+      name: Organization
+  - name: Third Question
+    guidelines: 
+
+      How accurate was the answer provided by the student? 
+
+      Example 
+      Label encoding, Frequency encoding, hashing encoding etc 
+
+    rating: multi
+    kind: standard
+    position: 3
+    questions_skills:
+    - percentage: 12
+      name: Imperative programming
+    - percentage: 12
+      name: Organization
+  - name: Fourth Question
+    guidelines: 
+
+      How accurate was the answer provided by the student? 
+      
+      Answer - When the model has memorized the training data and produced 100% accuracy with 0 error
+
+    rating: multi
+    kind: standard
+    position: 4
+    questions_skills:
+    - percentage: 12
+      name: Imperative programming
+    - percentage: 12
+      name: Organization
+
+  - name: Fifth Question
+    guidelines: 
+
+     How accurate was the answer provided by the student? 
+
+     Answer - The ability of the learned model to fit an unseen instance
+
+
+    rating: multi
+    kind: standard
+    position: 5
+    questions_skills:
+    - percentage: 12
+      name: Imperative programming
+    - percentage: 12
+      name: Organization
+
+
+  - name: Sixth Question
+    guidelines: 
+
+      How accurate was the answer provided by the student? 
+      
+      Answer - The ability of the learned model to fit an unseen instance
+
+    rating: multi
+    kind: standard
+    position: 6
+    questions_skills:
+    - percentage: 12
+      name: Imperative programming
+    - percentage: 12
+      name: Organization
+
+
+  - name: Seventh Question
+    guidelines: 
+
+      How accurate was the answer provided by the student? 
+
+      Answer - Feature scaling is a method used to standardize the range of independent variables or features of data. 
+               Because datasets contain features highly varying in magnitudes, units, and range.
+
+    rating: multi
+    kind: standard
+    position: 7
+    questions_skills:
+    - percentage: 14
+      name: Imperative programming
+    - percentage: 14
+      name: Organization
+
+
+  - name: Eighth Question
+    guidelines: 
+
+      How accurate was the answer provided by the student? Fact check before giving the grade
+
+    rating: multi
+    kind: standard
+    position: 8
+    questions_skills:
+    - percentage: 14
+      name: Imperative programming
+    - percentage: 14
+      name: Organization

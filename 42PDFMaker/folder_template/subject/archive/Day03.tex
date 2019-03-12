@@ -1,0 +1,446 @@
+
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+%******************************************************************************%
+%                                                                              %
+%                   Day02.tex                                                    %
+%                   Made by: 42 staff                                          %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+
+\begin{document}
+
+\title{Introduction to Programming - 42}
+\subtitle{Day 03}
+
+\member {Kai}{kai@42.us.org}
+\member {Gaetan}{gaetan@42.us.org}
+
+\summary
+{
+This document is the subject of the day 03 of the introduction to programming piscine.
+}
+
+\maketitle
+
+\tableofcontents
+
+%Initialisation des headers d'exercices
+\daypiscine{03}
+
+%******************************************************************************%
+%                                                                              %
+%                                Guidelines                                    %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Guidelines}
+
+\begin{itemize}
+
+  \item Corrections will take place in the last hour of the day. Each person will correct another person accoring to the peer-corrections model.
+ 
+  \item Questions? Ask the neighbor on your right. Next, ask the neighbor on your left.
+  
+  \item Read the examples carefully. The exercises might require things that are not specified in the subject...
+
+  \item Your reference manual is called Google / "Read the Manual!" / the Internet / ...
+
+\end{itemize}
+
+\newpage
+
+
+%******************************************************************************%
+%                                                                              %
+%                                Preamble                                      %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Preamble}
+
+This is a real, functional program in the language "lolcode":
+
+\begin{42console}
+HAI 1.3
+
+O HAI IM guess
+	I HAS A animal
+
+	HOW IZ I new YR animal
+		I HAS A new ITZ LIEK guess
+		new'Z animal R animal
+		FOUND YR new
+	IF U SAY SO
+
+	HOW IZ I guessin
+		VISIBLE "Is it a " MAH animal "? " !
+		I HAS A answer, GIMMEH answer
+		BOTH SAEM answer AN NOOB, O RLY?
+		YA RLY
+			DO NOT WANT finished
+		MEBBE NOT answer
+			ME IZ guessin, BTW again
+		MEBBE BOTH SAEM answer AN "yes"
+			VISIBLE "I win!"
+			FOUND ME
+		NO WAI
+			ME IZ learnin, FOUND IT
+		OIC
+	IF U SAY SO
+
+	HOW IZ I learnin
+		VISIBLE ":)I give up. What is it? " !
+		I HAS A answer, GIMMEH answer
+		I HAS A new ITZ guess IZ new YR answer MKAY
+		
+		VISIBLE "Enter a question where the answer is YES for a " answer...
+			" and NO for a " MAH animal ": " !
+		I HAS A sentence, GIMMEH sentence
+		VISIBLE "Thanks!"
+
+		question IZ new sentence AN new AN ME
+	IF U SAY SO
+KTHX
+
+O HAI IM question
+	I HAS A question
+	I HAS A yes
+	I HAS A no
+
+	HOW IZ I new YR ask AN YR yes AN YR no
+		I HAS A new ITZ LIEK question
+		new'Z question R ask
+		new'Z yes R yes
+		new'Z no R no
+		FOUND YR new
+	IF U SAY SO
+
+	HOW IZ I guessin
+		VISIBLE MAH question " " !
+		I HAS A answer, GIMMEH answer
+		BOTH SAEM answer AN NOOB, O RLY?
+		YA RLY
+			DO NOT WANT finished
+		MEBBE NOT answer
+			ME IZ guessin, BTW again
+		MEBBE BOTH SAEM answer AN "yes"
+			MAH yes IZ guessin, MAH yes R IT
+		NO WAI
+			MAH no IZ guessin, MAH no R IT
+		OIC
+		FOUND ME
+	IF U SAY SO
+KTHX
+
+HOW IZ I playing YR animals
+	VISIBLE "Think of an animal!"
+	animals IZ guessin
+IF U SAY SO
+
+question IZ new "Does it have wings?"...
+	AN guess IZ new "parrot" MKAY...
+	AN guess IZ new "rabbit" MKAY
+I HAS A animals ITZ IT
+
+BTW baby exception
+ME HAS A finished ITZ LIEK BUKKIT
+
+ME IZ frist, O RLY?
+YA RLY
+	PLZ
+		IM IN YR animals, BTW forever
+			I IZ playing YR animals
+			VISIBLE ""
+		KTHX
+	O NOES ITZ A finished
+		VISIBLE ":):)Thanks for playing!"
+	KTHX
+OIC
+
+KTHXBAI
+\end{42console}
+
+\hint{You can run it yourself with the help of this gem! (https://github.com/belkadan/lolcode-rb)}
+
+\startexercices
+
+
+%******************************************************************************%
+%                                                                              %
+%                                My First Method                               %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: My First Method}
+
+\extitle{Let\'s traverse the array}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{my\_first\_method.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{my\_first\_method.rb} which includes a method. The method takes a string as an argument. The method must return an uppercase version of the string, if and only if the character string is longer than 10 characters. If the string is 10 characters or less, the method returns nil.
+\item Your program will call this method and display the return value on the command line. If there are no parameters, display \texttt{none} followed by a newline.
+
+\begin{42console}
+	?> ./my_first_method.rb | cat -e
+	none$
+	?> ./my_first_method.rb "alo" | cat -e
+	nil$
+	?> ./my_first_method.rb "hello world" | cat -e
+	nil$
+	?> ./my_first_method.rb "i'M happY to be hERE" | cat -e
+	I'M HAPPY TO BE HERE$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Google ruby methods.}
+
+
+%******************************************************************************%
+%                                                                              %
+%                              Greetings for All!                              %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Greetings for All}
+
+\extitle{Say hello to the lady}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{greetings\_for\_all.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{greetings\_for\_all.rb} that contains a greetings method. The method takes a parameter name and displays a welcome message with that name. If the method is called without arguments, its default setting will be \"noble stranger\". If the method is called with an arguent that is not a string, an error message should be displayed instead of the welcome message.
+
+\item So the following script:
+\begin{42console}
+	?> cat greetings_for_all.rb
+	# your method definition here
+
+	greetings "lucie"
+	greetings
+	greetings 22
+	?>
+\end{42console}
+
+will have the result:
+\begin{42console}
+	?> ./greetings_for_all.rb | cat -e
+	Hello, lucie.$
+	Hello, noble stranger.$
+	Error! That doesn't sound like a name.$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Google is\_a.}
+
+%******************************************************************************%
+%                                                                              %
+%                              Help your Professor                             %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Help your Professor}
+
+\extitle{A little boost to the prof}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{help\_your\_professor.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{help\_your\_professor.rb} which contains a method average\_mark. The method will use a hash, associating the first name of the students with their grade, to calculate the average score of the class on that test.
+
+\item So the following script:
+\begin{42console}
+	?> cat help_your_professor.rb
+	# your method definition here$
+
+	class_csci101 = {
+		"margot" => 17,
+		"june" => 8,
+		"colin" => 14,
+		"lewis" => 9
+	}
+	class_csci102 = {
+		"quentin" => 16,
+		"julie" => 15,
+		"mark" => 8,
+		"stephanie" => 13
+	}
+	puts "Average mark for the CSCI 101 class: #{average_mark class_csci101}."
+	puts "Average mark for the CSCI 102 class: #{average_mark class_csci102}."
+	?>
+\end{42console}
+
+has the result:
+\begin{42console}
+	?> /.help_your_professor.rb | cat -e
+	Average mark for the CSCI 101 class: 12.$
+	Average mark for the CSCI 102 class: 13.$
+\end{42console}
+\end{itemize}
+
+\hint{Google ruby hashes}
+
+%******************************************************************************%
+%                                                                              %
+%                                Family Affairs                                %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Family Affairs}
+
+\extitle{Family Stories}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{family\_affairs.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{family\_affairs.rb}. It will contain a find\_the\_gingers method which takes in as a parameter a hash containing the first names of family members as key and their hair colors as attribute. This method will use the select metho to collect the first names of the redheads in a new array, which it will return. 
+
+\item So a script like this:
+\begin{42console}
+	?> ./family_affairs.rb | cat -e
+	# your method definition here
+
+	Dupont_family = {
+		"matthew" => :red,
+		"mary" => :blonde,
+		"virginia" => :brown,
+		"gaetan" => :red,
+		"fred" => :red
+	}
+
+	p find_the_gingers Dupont_family
+	?>
+\end{42console}
+
+would have this result:
+\begin{42console}
+	?> ./family_affairs.rb | cat -e
+	["matthew", "gaetan", "fred"]$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Google ruby hashes, select, to\_s}
+
+
+%******************************************************************************%
+%                                                                              %
+%                               Persons of Interest                            %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Persons of Interest}
+
+\extitle{People worth knowing.}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{persons\_of\_interest.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{persons\_of\_interest.rb}. It will contain a method \texttt{great\_births} that takes a hash representing people from history, each entry itself being a hash with keys "name" and "year\_of\_birth". Display them in order sorted by birth dates.
+
+\item A script like this:
+\begin{42console}
+	?> cat persons_of_interest.rb
+	# your method definition here
+
+	women_in_science = {
+		:ada => { :name => "Ada Lovelace", :year_of_birth => "1815" },
+		:cecilia => { :name => "Cecila Payne", :year_of_birth => "1900" },
+		:lise => { :name => "Lise Meitner", :year_of_birth => "1878" },
+		:grace => { :name => "Grace Hopper", :year_of_birth => "1906" }
+	}
+
+	great_births women_in_science
+\end{42console}
+
+has output like this:
+\begin{42console}
+	?> ./persons_of_interest.rb | cat -e
+	Ada Lovelace is a great person born in 1815.$
+	Lise Meitner is a great person born in 1878.$
+	Cecila Payne is a great person born in 1900.$
+	Grace Hopper is a great person born in 1906.$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Hashes and sort\_by are "valu"able.}
+
+%******************************************************************************%
+%                                                                              %
+%                                    bonus                                  %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Bonus: Posse}
+
+\extitle{People worth knowing.}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{family\_list.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+Create a script which loops infinitely, taking input from the user. On each iteration, ask the user the name of someone in their family, and how they are related. Build a hash containing this information and print it when the user types DONE.
+
+\begin{42console}
+	?> ./persons_of_interest.rb
+	Hello, what is someone's name?: Luna
+	And who is that person to you?: cousin
+	Hello, what is someone's name?: Marley
+	And who is that person to you?: dog
+	Hello, what is someone's name?: Anna
+	And who is that person to you?: sister
+	Hello, what is someone's name?: DONE
+	Cool, here is your family!
+	{"Luna"=>:cousin, "Marley"=>:dog, "Anna"=>:sister}
+\end{42console}
+
+
+%******************************************************************************%
+%                                                                              %
+%                               End of document                                %
+%                                                                              %
+%******************************************************************************%
+
+\end{document}

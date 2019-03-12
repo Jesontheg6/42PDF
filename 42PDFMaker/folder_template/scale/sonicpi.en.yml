@@ -1,0 +1,208 @@
+# **************************************************************************** #
+#                                                                              #
+#               sonicpi.en.yml for SonicPi H2S                                 #
+#               Created on : Thurs Jan 18 18:10:13 2018                        #
+#               Made by : Elliot Tregoning <etregoni@student.42.us.org>        #
+#                                                                              #
+# **************************************************************************** #
+---
+name: Sonic Pi
+lg: en
+is_primary: true
+comment: ''
+introduction_md: |
+
+  To ensure this evaluation goes smoothly, please respect the following set
+  of rules :
+
+  - Please remain courteous, polite, respectful and constructive at all
+    times during this exchange. The trust bond between the school's
+    communauty and yourself depends on it.
+
+  - Should you notice any malfunctions within the submitted project,
+    make sure you take the time to discuss those with the student (or
+    group of students) being graded.
+
+  - Keep in mind that some subjects can be interpreted differently.
+    If you come accross a situation where the student you're grading
+    has interpreted the subject differently than you, try and judge
+    fairly whether their interpretation is acceptable or not, and grade
+    them accordingly. Our peer-evaluation system can only work if you
+    both take it seriously.
+
+disclaimer_md: ''
+
+guidelines_md: |
+
+  - You may only evaluate whatever is in the GiT submission directory of
+    the student you are grading.
+
+  - Make sure to check wether the GiT submission directory
+    belongs to the student (or group) you're grading, and that
+    it's the right project.
+
+  - Make sure no mischievous aliases have been used to trick you
+    into correcting something that is not actually in the official
+    submitted directory.
+
+  - If the student who is grading this project hasn't done the
+    project him/herself yet, he/she must read the whole topic
+    before starting the evaluation session.
+
+correction_number: 2
+duration: 2
+sections:
+- name: Sonic Pi
+  position: 1
+  description: 'If you are unsure about a correction question, please see Hints & Examples section of pdf.'
+  questions:
+
+  - name: Git Repository
+    position: 1
+    guidelines: |
+      Clone their repository. If their work is not in their git repo, the correction is over and they get a zero.
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 25
+      name: Organization
+
+- name: Song Requirements
+  position: 2
+  description: ''
+  questions:
+
+  - name: Song Length
+    position: 1
+    guidelines: |
+      Load all of the buffers and play the song. Is the song at least 1 minute long with at least 3 instruments/effects?
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 50
+      name: Adaptation & creativity
+    - percentage: 20
+      name: Imperative programming
+
+  - name: Creativity
+    position: 2
+    guidelines: |
+      Does their song have different parts to it?
+
+      If the song just loops over the same few notes for the entire song, do not give credit for this question.
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 50
+      name: Adaptation & creativity
+    - percentage: 20
+      name: Imperative programming
+
+- name: Code Requirements
+  position: 3
+  description: ''
+  questions:
+
+  - name: Code Organization
+    position: 1
+    guidelines: |
+      Is all of their code inside functions, with the exception of function calls?
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 25
+      name: Organization
+    - percentage: 20
+      name: Imperative programming
+
+  - name: Use of loops
+    position: 2
+    guidelines: |
+      Did they make use of loops in their song?
+
+      This does not count for loops from samples. They must make their own loops.
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 20
+      name: Imperative programming
+
+  - name: End Condition
+    position: 3
+    guidelines: |
+      Does their song have and end condition? The song must end on it's own. If you have to press any buttons to end the song,
+      do not give credit for this question.
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 20
+      name: Imperative programming
+    - percentage: 25
+      name: Organization
+
+  - name: Comments
+    position: 4
+    guidelines: |
+      Did they include comments at the top of their files, indicating the name and purpose of each file?
+    rating: bool
+    kind: standard
+    questions_skills:
+      - percentage: 25
+        name: Organization
+
+- name: Bonus
+  position: 4
+  description: 'For each of these bonus questions, you must ask them why they think they deserve the bonus points, and it is their job to convince you.'
+  questions:
+
+  - name: Code Readability part 1
+    position: 1
+    guidelines: |
+      Was their repository structured as requested in the pdf? When you first entered the directory of their repository, was all of their work contained in a directory named SonicPi, or something similar? Was the entry point of their song named main.rb? If you answered yes to both of these, mark yes for this question.
+    rating: bool
+    kind: bonus
+    questions_skills:
+      - percentage: 15
+        name: Organization
+
+  - name: Code Readability part 2
+    position: 2
+    guidelines: |
+      Did they organize their code into multiple buffers? Is the code cleanly written and easy to read?
+    rating: bool
+    kind: bonus
+    questions_skills:
+      - percentage: 10
+        name: Organization
+
+  - name: Ruby Code
+    position: 3
+    guidelines: |
+      Did they use any Ruby code that isn't exclusive to Sonic Pi? This includes classes, zips, for loops, each/do loops, and other such things.
+    rating: bool
+    kind: bonus
+    questions_skills:
+    - percentage: 10
+      name: Imperative programming
+
+  - name: Creativity
+    position: 4
+    guidelines: |
+      Did they fully make use of Sonic Pi's features? Did they use fx? Did they tweak the effects with such things as amx, mix, cutoff, room, attack, release, etc? Give 1 point on the slider for any extra tweaks done to the sounds.
+    rating: multi
+    kind: bonus
+    questions_skills:
+      - percentage: 15
+        name: Adaptation & creativity
+
+  - name: Extra Effort
+    position: 5
+    guidelines: |
+      Did they go above and beyond the scope of the project? Ask them why they think they deserve bonus points, and give them a score with the slider.
+    rating: multi
+    kind: bonus
+    questions_skills:
+    - percentage: 10
+      name: Adaptation & creativity
+    - percentage: 15
+      name: Imperative programming

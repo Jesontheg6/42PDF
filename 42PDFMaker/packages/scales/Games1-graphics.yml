@@ -1,0 +1,132 @@
+---
+name: Graphics_2018-06-17
+comment: ''
+introduction_md: ''
+disclaimer_md: ''
+guidelines_md: Play the game, check the requirements, and talk to them about how they
+  wrote this program - see what's going on in their code.
+evaluation_id: 1320
+is_primary: true
+correction_number: 1
+duration: 2
+lg: en
+manual_subscription: false
+is_external: false
+free: false
+sections:
+- id: 3589
+  scalable_id: 1050
+  name: Games
+  description: ''
+  position: 1
+  questions:
+  - id: 11308
+    name: Keeping score
+    guidelines: 'Does the program keep score in some way and display it? '
+    rating: bool
+    kind: standard
+    position: 7
+    questions_skills:
+    - id: 29535
+      percentage: 10
+      name: Adaptation & creativity
+  - id: 11302
+    name: Welcome
+    guidelines: The game should welcome you and give you instructions on how to play.
+    rating: bool
+    kind: standard
+    position: 1
+    questions_skills:
+    - id: 29529
+      percentage: 10
+      name: Adaptation & creativity
+  - id: 11303
+    name: Board
+    guidelines: Does this program show a visual representation of the game, and update it every time there is a move?
+    rating: bool
+    kind: standard
+    position: 2
+    questions_skills:
+    - id: 29530
+      percentage: 10
+      name: Adaptation & creativity
+  - id: 11304
+    name: Infinite Loop
+    guidelines: Does the program loop to take input over and over until the game is
+      won or lost?
+    rating: bool
+    kind: standard
+    position: 3
+    questions_skills:
+    - id: 29531
+      percentage: 10
+      name: Adaptation & creativity
+  - id: 11305
+    name: Win condition
+    guidelines: Is it possible both to win or to lose, and the program announces when
+      both of these things happen? If relevant, does it also handle a "tie" correctly?
+    rating: bool
+    kind: standard
+    position: 4
+    questions_skills:
+    - id: 29532
+      percentage: 10
+      name: Adaptation & creativity
+  - id: 11306
+    name: Rematch
+    guidelines: After a win, lose, or tie, the program should ask you if you want
+      to play again. It should play again accurately if you say yes, and exit cleanly
+      if you say no.
+    rating: bool
+    kind: standard
+    position: 5
+    questions_skills:
+    - id: 29533
+      percentage: 10
+      name: Adaptation & creativity
+  - id: 11307
+    name: Bogus input
+    guidelines: Does the program handle bad input (like a move that has already been taken, or a move that is off the board) gracefully?
+      Give a 'no' here if you can break the program with bad input.
+    rating: bool
+    kind: standard
+    position: 6
+    questions_skills:
+    - id: 29534
+      percentage: 20
+      name: Adaptation & creativity
+  - id: 11309
+    name: Lessons learned
+    guidelines: Ask the programmer to talk about the part of the program that was
+      hardest for them to build. They should be able to tell you something interesting
+      about it.
+    rating: bool
+    kind: standard
+    position: 8
+    questions_skills:
+    - id: 29536
+      percentage: 10
+      name: Adaptation & creativity
+  - id: 11310
+    name: Teamwork
+    guidelines: Ask the team how they divided up the work, and ask each team member
+      to describe how the code works on one part of the program that they contributed
+      to. Give 5 points if it's clear that everyone helped, 1 if one person wrote
+      it all, or somewhere in between.
+    rating: multi
+    kind: standard
+    position: 9
+    questions_skills:
+    - id: 29537
+      percentage: 10
+      name: Adaptation & creativity
+  - id: 11311
+    name: Lookin' Good
+    guidelines: Give bonus points for how nice looking the graphics are!
+    rating: multi
+    kind: bonus
+    position: 10
+    questions_skills:
+    - id: 29538
+      percentage: 25
+      name: Adaptation & creativity

@@ -1,0 +1,162 @@
+
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+%******************************************************************************%
+%                                                                              %
+%                   TicTacToe.tex                                              %
+%                   Made by: 42 staff                                          %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+
+\begin{document}
+
+\title{Connect Four}
+\subtitle{Command line games}
+
+\member {Kai}{kai@42.us.org}
+
+\summary
+{
+In Connect Four, it's a game you play at the command line. If you want to get fancy you can try to code an AI. 
+}
+
+\maketitle
+
+\tableofcontents
+
+%Initialisation des headers d'exercices
+
+\startexercices
+
+
+%******************************************************************************%
+%                                                                              %
+%                                    Goals                                     %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Goals}
+
+Games are one of the oldest motivations for computer science and still drive the industries of processors and microchips today. What is the goal of learning Ruby other than to make the world your own arcade game? \\
+
+Connect 4 is one of the many simple grid-based games which we can easily play at the terminal window. You could do the same thing with Tetris, or Sudoku, or word searches, or Checkers - it's a template for how to build a certain type of game. \\
+
+How would you coach a computer to have strategy on this one?
+
+
+%******************************************************************************%
+%                                                                              %
+%                            General Instructions                              %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{General Instructions}
+
+Create a program \texttt{connect4.rb} which allows two users to play Connect 4 on the command line. \\
+
+After a welcome screen and instructions, your output should look something like this:
+
+\begin{42console}
+=== *Connect4* ===
+| . . . . . . . |
+| . . . . . . . |
+| . . . . . . . |
+| . . . . . . . |
+| . . . . . . . |
+| . . . . . . . |
+Player 1, go!
+
+Player 1 drops a piece on column 1.
+| . . . . . . . |
+| . . . . . . . |
+| . . . . . . . |
+| . . . . . . . |
+| . . . . . . . |
+| . o . . . . . |
+Player 2, go!
+
+Player 2 drops a piece on column 7.
+| . . . . . . . |
+| . . . . . . . |
+| . . . . . . . |
+| . . . . . . . |
+| . . . . . . . |
+| . o . . . . x |
+Player 1, go!
+
+Player 1 drops a piece on column 1.
+| . . . . . . . |
+| . . . . . . . |
+| . . . . . . . |
+| . . . . . . . |
+| . o . . . . . |
+| . o . . . . x |
+Player 2, go!
+
+Player 2 drops a piece on column 1.
+| . . . . . . . |
+| . . . . . . . |
+| . . . . . . . |
+| . x . . . . . |
+| . o . . . . . |
+| . o . . . . x |
+\end{42console}
+
+... and so on.
+
+%******************************************************************************%
+%                                                                              %
+%                                Mandatory Part                                %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Mandatory Part}
+
+\begin{itemize}
+
+\item The default board has 6 rows and 7 columns.
+\item The board should display in its updated state after every play.
+\item Allow two human players to alternate giving commands.
+\item The first player to connect four pieces in a diagonal, horizontal, or vertical line, wins.
+\item Print a message when one of the players wins or when there is a tie.
+\item The program should not throw any unhandled exceptions, have strange behavior or crash!
+\item Gravity works!
+
+\end{itemize}
+
+%******************************************************************************%
+%                                                                              %
+%                                  Bonus Part                                  %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Bonus Part}
+
+In no particular order, choose any/none/all:
+
+\begin{itemize}
+
+\item Allow resizing of the board and the streak goal so that we can play Connect 11 on a 42 x 42 board, or Connect 3 on a 4 x 5.
+\item Code a computer player which contains similar functions as your human players, but makes its own decisions of how to play.
+\item Coordinate with a friend so that your computer players can each interact with the same board and try to beat each other.
+\item Can you make the board change dynamically in place in the terminal, instead of each new version printing below the last?
+\hint {Google ANSI escape codes.}
+\item Can you even animate the dropping of the pieces using that technique?!?
+\item Code another game - try Tic Tac Toe, or Checkers.
+
+\end{itemize}
+
+%******************************************************************************%
+%                                                                              %
+%                               End of document                                %
+%                                                                              %
+%******************************************************************************%
+
+\end{document}

@@ -1,0 +1,77 @@
+---
+name: Simple Logistic Regression
+lg: en
+comment: ''
+introduction_md: ''
+disclaimer_md: ''
+guidelines_md: Be courteous and firm with your classmates. Allow them to defend the
+  reasoning for their code, and focus on giving useful feedback or teaching things
+  they don't understand.
+is_primary: true
+correction_number: 2
+duration: 1
+sections:
+- name: Logistic Regression
+  description: ''
+  position: 1
+  questions:
+  - name: First Criteria
+    guidelines: Are the age, estimated salary and the purchased column being assigned to their respective variable using iloc or loc?
+    rating: bool
+    kind: standard
+    position: 1
+    questions_skills:
+    - percentage: 16
+      name: Imperative programming
+    - percentage: 16
+      name: Organization
+  - name: Second Criteria
+    guidelines: Is the dataset being split to training and testing set?
+    rating: bool
+    kind: standard
+    position: 2
+    questions_skills:
+    - percentage: 16
+      name: Imperative programming
+    - percentage: 16
+      name: Organization
+  - name: Third Criteria
+    guidelines: Are the range of age and estimated salary being standardize using feature scaling method?
+    rating: bool
+    kind: standard
+    position: 3
+    questions_skills:
+    - percentage: 16
+      name: Imperative programming
+    - percentage: 16
+      name: Organization
+  - name: Fourth Criteria
+    guidelines: Is the training set being trained with logistic regression model?
+    rating: bool
+    kind: standard
+    position: 4
+    questions_skills:
+    - percentage: 16
+      name: Imperative programming
+    - percentage: 16
+      name: Organization
+  - name: Fitfh Criteria
+    guidelines: Is the test set being predicted using the predict() function?
+    rating: bool
+    kind: standard
+    position: 5
+    questions_skills:
+    - percentage: 16
+      name: Imperative programming
+    - percentage: 16
+      name: Organization
+  - name: Sixth Criteria
+    guidelines: Is the output similar to the one shown in the pdf?
+    rating: bool
+    kind: standard
+    position: 6
+    questions_skills:
+    - percentage: 20
+      name: Imperative programming
+    - percentage: 20
+      name: Organization

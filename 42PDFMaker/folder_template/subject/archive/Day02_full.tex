@@ -1,0 +1,398 @@
+
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+%******************************************************************************%
+%                                                                              %
+%                   Day02.tex                                                  %
+%                   Made by: 42 staff                                          %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+
+\begin{document}
+
+\title{Introduction to Programming \- 42}
+\subtitle{Day 02}
+
+\member {Kai}{kai@42.us.org}
+\member {Gaetan}{gaetan@42.us.org}
+
+\summary
+{
+This document is the subject of the day 02 of the introduction to programming
+piscine.
+}
+
+\maketitle
+
+\tableofcontents
+
+%Initialisation of exercise headers
+\daypiscine{02}
+
+%******************************************************************************%
+%                                                                              %
+%                                Guidelines                                    %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Guidelines}
+
+\begin{itemize}
+
+  \item Corrections will take place in the last hour of the day. Each person will
+  correct another person according to the peer-corrections model.
+ 
+  \item Questions? Ask the neighbor on your right. Next, ask the neighbor on your
+  left.
+  
+  \item Read the examples carefully. The exercises might require things that are
+  not specified in the subject...
+
+  \item Your reference manual is called Google / "Read the Manual!" / the Internet
+  / ...
+
+\end{itemize}
+
+\newpage
+
+
+%******************************************************************************%
+%                                                                              %
+%                                Preamble                                      %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Preamble}
+
+\begin{verbatim}
+Intro text will go here.
+\end{verbatim}
+% TODO: Cute intro!
+
+\startexercices
+
+%******************************************************************************%
+%                                                                              %
+%                                Puts Each                                     %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: puts each}
+
+\extitle{Lets traverse the array}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{puts_each.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{puts_each.rb} which declares a number array [1, 2,
+3, 4, 5, 6, 7, 8, 9, 10] and uses each method to iterate over the array and
+display each value.
+
+\begin{42console}
+	?> ./puts_each.rb | cat -e
+	1$
+	2$
+	3$
+	4$
+	5$
+	6$
+	7$
+	8$
+	9$
+	10$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Google array, each}
+
+%******************************************************************************%
+%                                                                              %
+%                              Reverse Parameters                              %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: display rev params}
+
+\extitle{Display a table in reverse}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{display_rev_params.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+s
+\item Create a script \texttt{display_rev_params.rb} 
+
+\begin{42console}
+	?> ./display_rev_params.rb | cat -e
+	none$
+	?> ./display_rev_params.rb "yolo" | cat -e
+	none$
+	?> ./display_rev_params.rb "Garkbit" "God" "Genghis Khan"
+	Genghis Khan$
+	God$
+	Garkbit$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Google ARGV, array, reverse}
+
+%******************************************************************************%
+%                                                                              %
+%                                 I Got That                                   %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Did you get that}
+
+\extitle{description}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{i_got_that.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{i_got_that.rb}. This script must contain a while loop that accepts a user input, write a return phrase, and stops only when the user has entered "STOP!". Each round of loops must accept input from the user.
+
+\begin{42console}
+	?> ./i_got_that.rb | cat -e
+	What you gotta say?: Hello$
+	I got that! Anything else?: I like ponies$
+	I got that! Anything else?: stop...$
+	I got that! Anything else?: STOP!
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Google while, break}
+
+%******************************************************************************%
+%                                                                              %
+%                                 Arrr, Stings                                 %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Strings are Arrays}
+
+\extitle{Getting to know strings}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{strings_arr.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{strings_arr.rb} that takes a character string as a parameter. When executed, the script displays "z" for each character "z" in the string passed as a parameter, followed by a newline.
+If the number of parameters is different that 1, or there is no "z" character in the string, display "none" followed by a newline.
+
+\begin{42console}
+	?> ./strings_arr.rb "The target character is not in this string" | cat -e
+	none$
+	?> ./strings_arr.rb "z" | cat -e
+	z$
+	?> ./strings_arr.rb "Zealously zany zapping zebras zigzag zested Zoology zone" | cat -e
+	zzzzzz$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Strings are also composed of boxes. You can do it!}
+
+%******************************************************************************%
+%                                                                              %
+%                               Play with Arrays                               %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Array Play}
+
+\extitle{Manipulating arrays}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{play_with_arrays.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{file.rb} which takes an array of numbers (that you define) and builds a new array that is the result of adding the value 2 to each value of the original array. You must have two arrays at the end of the program, the original one and the new one you created. Display the two arrays on the screen using the p method rather than puts. 
+For example, if your original array is [2, 8, 9, 48, 8, 22, -12, 2] you will get the following output:
+
+\begin{42console}
+	?> ./play_with_arrays.rb | cat -e
+	[2, 8, 9, 48, 8, 22, -12, 2]$
+	[4, 10, 11, 50, 10, 24, -10, 4]$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Google p method in ruby, array each}
+
+%******************************************************************************%
+%                                                                              %
+%                             play with arrays II                              %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Array\+\+}
+
+\extitle{Manipulating arrays, encore}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{play_with_arrays.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{play_with_arrays.rb} 
+
+\begin{42console}
+	?> ./play_with_arrays.rb | cat -e
+	[2, 8, 9, 48, 8, 22, -12, 2]$
+	[10, 11, 50, 10, 24]$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Google p method in ruby, array each}
+
+%******************************************************************************%
+%                                                                              %
+%                            play with arrays III                              %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Array\+\=2}
+
+\extitle{Manipulating arrays, forever!}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{play_with_arrays.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{play_with_arrays.rb} 
+
+\begin{42console}
+	?> ./play_with_arrays.rb | cat -e
+	[2, 8, 9, 48, 8, 22, -12, 2]$
+	[10, 11, 50, 24]$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Google array, uniq}
+
+%******************************************************************************%
+%                                                                              %
+%                                  Count It                                    %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Count It}
+
+\extitle{Counting and measuring parameters}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{count_it.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{count_it.rb}, which, when executed, has "parameters:" and then the number of parameters, followed by a newline, then each parameter and its size followed by a newline. If there is no parameter, output \texttt{none} followed by a newline. 
+
+\begin{42console}
+	?> ./count_it.rb "Life" "Universe" "Everything" | cat -e
+	parameters: 3$
+	Life: 4$
+	Universe: 8$
+	Everything: 10$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Google size}
+
+\warn{Strictly respect the format indicated in the example.}
+
+%******************************************************************************%
+%                                                                              %
+%                               igpay atinlay                                  %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Pig Latin}
+
+\extitle{Modifying strings}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{atinlay.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{atinlay.rb} that translates its arguments into pig latin.
+\item If the word starts with one or more consonents, remove the group of consonants and add them to the end of the string with a hypen. Then, add the letters "ay". 
+\item If the first letter is a vowel, just add a "way" t the end. 
+\item If there is no parameter, display \texttt{none} followed by a newline.
+\item You should probably downcase them, too
+\item \texttt{oink, oink}
+
+\begin{42console}
+	?> ./append_it.rb "paranoid" "android" "Marvin" "so" "stoic" | cat -e
+	aranoidpay$
+	androidway$
+	arvinmay$
+	osay$
+	oicstay$
+	?>
+\end{42console}
+
+\end{itemize}
+
+%******************************************************************************%
+%                                                                              %
+%                               End of document                                %
+%                                                                              %
+%******************************************************************************%
+
+\end{document}

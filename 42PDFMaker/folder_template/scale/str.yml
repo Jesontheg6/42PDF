@@ -1,0 +1,289 @@
+# **************************************************************************** #
+#                                                                              #
+#               str.en.yml for h2s-intro-sequence-write                        #
+#               Created on : Nov 17 2017                                       #
+#               Made by : Kai Drumm [kai@42.us.org]                            #
+#                                                                              #
+# **************************************************************************** #
+
+# **************************************************************************** #
+#                                                                              #
+#    A scale is made of a bloc header followed by one or more section-blocs.   #
+#  Each section-bloc is made of one or more question-blocs. This bloc system   #
+#  allows you to gather related questions into the same section.               #
+#                                                                              #
+#  - Adaptation & creativity                                                   #
+#  - Algorithms & AI                                                           #
+#  - DB & Data                                                                 #
+#  - Graphics                                                                  #
+#  - Group & interpersonal                                                     #
+#  - Imperative programming                                                    #
+#  - Object-oriented programming                                               #
+#  - Organization                                                              #
+#  - Python                                                                    #
+#  - Rigor                                                                     #
+#  - Ruby                                                                      #
+#  - Security                                                                  #
+#  - Technology integration                                                    #
+#  - Web                                                                       #
+#                                                                              #
+# **************************************************************************** #
+---
+# **************************************************************************** #
+#                                                                              #
+#                                  Header                                      #
+#                                                                              #
+# **************************************************************************** #
+
+name: Strings
+lg: en
+is_primary: true
+comment: ''
+
+# Etiquette!
+introduction_md: |
+
+  Please respect the following rules :
+
+  - Always remain courteous, polite, respectful and constructive during a peer
+    corrections exchange. The quality of trust among our school's communuty
+    and your reputation depends on it.
+
+  - Should you notice any errors within the submitted project, 
+    make sure you take the time to discuss those with the student (or 
+    group of students) being graded!
+
+  - Keep in mind that some subjects can be interpreted differently.
+    If you come accross a situation where the student you're grading 
+    has interpreted the subject differently than you, try and judge
+    fairly whether their interpretation is acceptable or not, and grade
+    them accordingly. Our peer-evaluation system can only work if you
+    both take it seriously.
+
+# Disclaimer for corporate partnerships with NDAs
+disclaimer_md: ''
+
+# Technical guidelines
+guidelines_md: |
+
+  - You may only evaluate whatever is in the GiT submission directory of 
+    the student you are grading.
+
+  - Make sure to check wether the GiT submission directory
+    belongs to the student (or group) you're grading, and that
+    it's the right project.
+
+  - If you haven't done the project yourself yet, read the whole topic 
+    before starting the evaluation session.
+
+# - Use the flags available to you on this scale in order to report
+#   a submission directory that is empty, non-functional, or a case of cheating,
+#   etc... In this case, the evaluation session ends and the final grade is 0
+#   (or -42, in case of cheating). However, unless the student has
+#   cheated, we advise you to go through the project together in order 
+#   for the two (or more) of you to identify the problems that may have 
+#   led for this project to fail, and avoid repeating those mistakes for
+#   future projects.
+
+# **************************************************************************** #
+#                               Project Details:                               #
+# **************************************************************************** #
+# Imperative programming
+# Organization
+# Group & Integpersonal
+
+# Two corrections required
+correction_number: 2
+
+# 15 minute duration
+duration: 1
+
+# **************************************************************************** #
+#                                                                              #
+#                                   Sections                                   #
+#                                                                              #
+# **************************************************************************** #
+sections:
+
+- name: Overall structure
+  position: 1
+  description: 'Function structure'
+  questions:
+
+  - name: Folders
+    position: 1
+    guidelines: |
+      Did the student format their program and functions according to the
+      instructions in the PDF?
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 100
+      name: Organization
+
+
+# **************************************************************************** #
+#                 Section 0: Strings                                           #
+# **************************************************************************** #
+
+- name: Strings
+  position: 2
+  description: 'Miscellaneous strings'
+
+  questions:
+
+  - name: Alt Caps
+    position: 1
+    guidelines: |
+
+      Does the program perform the function:
+      (1) It capitalized every other letter of the input (regardless of whether punctuation and whitespace are skipped or not)
+      
+      Try this with both the PDF examples and also your own made-up examples.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 10
+      name: Imperative programming
+    - percentage: 10
+      name: Group & interpersonal
+
+  - name: Substitution
+    position: 2
+    guidelines: |
+
+      Does the program perform the function:
+      (2) It then replaced uppercase vowels with asterisks.
+
+      Try this with both the PDF examples and also your own made-up examples.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 10
+      name: Imperative programming
+    - percentage: 10
+      name: Group & interpersonal
+
+  - name: Parens
+    position: 3
+    guidelines: |
+
+      Does the program perform the function:
+      (3) It correctly indicates if the parentheses are balanced or not.
+
+      Try this with both the PDF examples and also your own made-up examples.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 10
+      name: Imperative programming
+    - percentage: 10
+      name: Group & interpersonal
+
+  - name: Comprehension
+    position: 4
+    guidelines: |
+
+      Can the student who you are correcting understand how each of the three
+      operations works? Can they explain it to you?
+
+    rating: multi
+    kind: standard
+    questions_skills:
+    - percentage: 20
+      name: Imperative programming
+    - percentage: 20
+      name: Group & interpersonal
+
+  - name: Strings are made of Characters
+    position: 5
+    guidelines: |
+
+      Did the student find a method for iterating through each character in a
+      string? Can they explain how to select one letter from a word?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 20
+      name: Imperative programming
+    - percentage: 20
+      name: Group & interpersonal
+
+  - name: Complexity
+    position: 6
+    guidelines: |
+
+      Does the program match the examples exactly by skipping over whitespace
+      and punctuation when it decides which letters to capitalize?
+
+    rating: bool
+    kind: bonus
+    questions_skills:
+    - percentage: 10
+      name: Imperative programming
+    - percentage: 10
+      name: Group & interpersonal
+
+
+# **************************************************************************** #
+#                 Section 1: 1010101                                           #
+# **************************************************************************** #
+
+- name: \1010101
+  position: 3
+  description: 'Do you even 101010?'
+
+  questions:
+
+  - name: Conversion
+    position: 1
+    guidelines: |
+
+      Check some decimal to binary conversions in this program against some online
+      base calculators. Is it accurate?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 10
+      name: Imperative programming
+    - percentage: 10
+      name: Group & interpersonal
+
+
+  - name: String methods
+    position: 2
+    guidelines: |
+
+      Look at the person's code. Did they figure out how to do this using string
+      related library functions, like "to_s(2)" and "print(bin(24))"?
+      
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 20
+      name: Imperative programming
+    - percentage: 20
+      name: Group & interpersonal
+
+  - name: Overachievers
+    position: 3
+    guidelines: |
+
+      Now, these built in functions are actually quite interesting and fun algorithms;
+      converting between bases cna be a fun math problem and an excellent coding exercise.
+      If your correctee submitted a function that does the base conversion instead of
+      using built-in methods, ask them to walk you through it step by step. Give bonus
+      credit if they can explain it all. :)
+      
+    rating: multi
+    kind: bonus
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Group & interpersonal

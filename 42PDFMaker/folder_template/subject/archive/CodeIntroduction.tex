@@ -1,0 +1,443 @@
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+%******************************************************************************%
+%                                                                              %
+%                   HackerBaby.tex                                             %
+%                   Made by: 42 staff                                          %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+
+\begin{document}
+
+\title{Hacker, Baby}
+\subtitle{Show us your skillz}
+
+\member {Kai}{kai@42.us.org}
+
+\summary
+{
+This project is the doorway into the full pathway of HackHighSchool programming challenges. We are checking to see if you know a few things - how to repeat, how to make decisions, how to encapsulate code. Can you take data into your program; check the docs for options; discover built in data structures; and use logic to structure a program?
+}
+
+\maketitle
+
+\tableofcontents
+
+% %Initialisation des headers d'exercices
+% \daypiscine{02}
+
+
+
+%******************************************************************************%
+%                                                                              %
+%                                Preamble                                      %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Preamble}
+
+Welcome to HackHighSchool!
+
+Take a deep breath, look around. This is your oasis for expressing creativity through code. Here is a place for hanging out with 
+friends who have the skills to make things happen. Take a moment to caress the edges of your lovely iMac - aren't they wonderful? Take care of the shared lab space so that we can share it with many people to come;
+that includes especially, most importantly, no drinks on the table. Keep only water in the lab and keep it on the
+floor. Capiche.\\
+
+The first checkpoint of HackHighSchool is to learn the basic controls of how to use a programming language. It's
+like learning how to drive a bicycle or a car: there's a few features shared between all vehicles. Turn right,
+turn left, move forward, slow down, stop.\\
+
+We'd love for you to be bilingual or even multilingual programmers. Many of the projects we are going to offer are
+open-language: you can turn in a solution in any programming language you like, so long as it outputs the right
+program behavior. But our first stop is Ruby. We'll give everyone a shared experience by learning some Ruby syntax
+to start it all off.\\
+
+Here's how to start:
+\begin{enumerate}
+
+	\item Open a terminal window. Use "cd <name>" to move between folders. Choose a folder for your 42 work.
+	\item From your project page on intra, copy the Git Repository link. Now, in the terminal type "git clone " and paste the link.
+	\item cd into the new folder and from now on, save your work there. Use the command "mkdir <name>" to create new folders. Put your work from the
+	open source lessons in a folder called "homework" and put each puzzle from this project in a folder on the top level titled "ex00", "ex01" and so forth. 
+	\item Each day, turn in your work so far by typing three commands in order: 
+	\begin{itemize}
+		\item git add *
+		\item git commit -m "Today I worked on ..<your comments here>.."
+		\item git push
+	\end{itemize}
+	\item If you have an error during the git push, you may need to refresh your authentication ticket. Do this by typing "kinit <username>" and then typing your intra password.
+
+\end{enumerate}
+
+\begin{42console}
+	?>pwd
+	~/kai/hackhighschool
+	?>ls
+	hacker_baby
+	first_day
+	knowledge_libre
+	?>cd hacker_baby & ls
+	ex00
+	ex01
+	ex02
+	ex03
+	ex04
+	ex05
+	?>cd ex00 & ls
+	ex00.rb
+\end{42console}
+
+If you already know Ruby, go ahead and solve the problems below to prove that to us. What do you want to do next? Pick a project from
+the next level available. Or - if you like - find a friend, choose another language to learn together, and complete this intro in that language as well. 
+
+
+%******************************************************************************%
+%                                                                              %
+%                                Guidelines                                    %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Guidelines}
+
+\begin{itemize}
+
+  \item This project is corrected by Moulinette, our computer grader.
+ 
+  \item Questions? Ask the neighbor on your right. Next, ask the neighbor on your left. Consult the lessons in your intro to coding curriculum of choice.
+  
+  \item Read the examples carefully. The exercises might require things that are not specified in the subject...
+
+  \item Your reference manual is called Google / "Read the Manual!" / the Internet / ...
+
+  \warn{
+  	No non-standard imports or gems allowed !
+  }
+
+\end{itemize}
+
+\newpage
+
+
+\startexercices
+
+
+%******************************************************************************%
+%                                                                              %
+%                              What is your name?                              %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: What is your name}
+
+\extitle{description}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{ex00.rb}
+\exauthorize{All}
+\begin{tabular}{|r|l|}
+  \hline
+  7C0 & hexadecimal \\
+  3700 & octal \\ \cline{2-2}
+  11111000000 & binary \\
+  \hline \hline
+  1984 & decimal \\
+  \hline
+\end{tabular}
+
+% \makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{ex00.rb} which asks your name and greets you with it.
+
+\begin{42console}
+	?> ruby ex00.rb
+	Hello hacker, what is your name?
+	?> O'Brian
+	Welcome, O'Brian.
+\end{42console}
+
+\end{itemize}
+
+
+%******************************************************************************%
+%                                                                              %
+%                                Who Goes There                                %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Who Goes There}
+
+\extitle{description}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{ex01.rb}
+\exauthorize{All}
+
+% \makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{ex01.rb} which asks your name and only greets you if your name is “Daenerys of the House Targaryen, the First of Her Name, The Unburnt, Queen of the Andals, the Rhoynar and the First Men, Queen of Meereen, Khaleesi of the Great Grass Sea, Protector of the Realm, Lady Regnant of the Seven Kingdoms, Breaker of Chains and Mother of Dragons” or "DHTFHNUQARFMQMKGSPRLRSKBCMD" for short. 
+\item Otherwise, if your name is "Dany", the program replies "Dany who?". 
+\item For any other name, the program replies "Move along, now."
+
+\begin{42console}
+	?> ruby ex01.rb
+	Who goes there?
+	?> DHTFHNUQARFMQMKGSPRLRSKBCMD
+	Welcome, Daenerys.
+\end{42console}
+
+\begin{42console}
+	?> ruby ex01.rb
+	Who goes there?
+	?> Dany
+	Dany who?
+\end{42console}
+
+\begin{42console}
+	?> ruby ex01.rb
+	Who goes there?
+	?> Jaqen H'gar
+	Move along, now.
+\end{42console}
+
+\end{itemize}
+
+%******************************************************************************%
+%                                                                              %
+%                                 ARR, Matey                                   %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: ARR Matey}
+
+\extitle{description}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{ex02.rb}
+\exauthorize{All}
+
+% \makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{ex02.rb} which takes a sentence worth of command-line arguments, splits them into an array, and then prints them each out on a different line along with the corresponding index of the array.
+\item Next, sort the array by word length and reverse it, printing just the words in descending order of length.
+
+\begin{42console}
+	?> ruby ex02.rb ruby-doc.org shows comprehensive functions with arrays and strings :\)
+	Argv of 0 is ruby-doc.org
+	Argv of 1 is shows
+	Argv of 2 is comprehensive
+	Argv of 3 is functions
+	Argv of 4 is with
+	Argv of 5 is arrays
+	Argv of 6 is and
+	Argv of 7 is strings
+	Argv of 8 is :)
+	comprehensive
+	ruby-doc.org
+	functions
+	strings
+	arrays
+	shows
+	with
+	and
+	:)
+	?>
+\end{42console}
+
+\end{itemize}
+
+%******************************************************************************%
+%                                                                              %
+%                                Conditional Sum                               %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Conditional Sum}
+
+\extitle{description}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{ex03.rb}
+\exauthorize{All}
+
+% \makeheaderfiles
+
+\begin{itemize}
+
+\item From Project Euler, a great resource for programming practice:\\
+https://projecteuler.net/problem=1
+\item If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+\item Create a script \texttt{ex03.rb} which finds the sum of all the multiples of 3 or 5 below the number given as a command line argument.
+\item For this version, if given a negative number you must also find the sum of all multiples of 3 and 5 between that number and zero.
+
+\begin{42console}
+	?> ruby ex03.rb 42
+	408
+	?>
+\end{42console}
+
+\begin{42console}
+	?> ruby ex03.rb 420
+	40950
+	?>
+\end{42console}
+
+\begin{42console}
+	?> ruby ex03.rb 4242
+	4198308
+	?>
+\end{42console}
+
+\begin{42console}
+	?> ruby ex03.rb -10
+	-23
+	?>
+\end{42console}
+
+\begin{42console}
+	?> ruby ex03.rb 0
+	0
+	?>
+\end{42console}
+
+\end{itemize}
+
+
+%******************************************************************************%
+%                                                                              %
+%                                Prime Suspects                                %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Prime Suspects}
+
+\extitle{description}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{ex04.rb}
+\exauthorize{All}
+
+% \makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{ex04.rb} that prints the prime factors, in increasing order, of the number given as an argument.
+\item If the input given is not a number or is less than one, print only a newline.
+
+\begin{42console}
+	?> ruby ex04.rb 29
+	29
+	?>
+\end{42console}
+
+\begin{42console}
+	?> ruby ex04.rb 242
+	2,11,11
+	?>
+\end{42console}
+
+\begin{42console}
+	?> ruby ex04.rb 60
+	2,2,3,5
+	?>
+\end{42console}
+
+\begin{42console}
+	?> ruby ex04.rb nineteen ninety six
+	?>
+\end{42console}
+
+\begin{42console}
+	?> ruby ex04.rb 1
+	1
+	?>
+\end{42console}
+
+\end{itemize}
+
+%******************************************************************************%
+%                                                                              %
+%                                    Memorize                                  %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Memorize}
+
+\extitle{description}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{ex05.rb}
+\exauthorize{All}
+
+% \makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{ex05.rb} which reads in the provided comma-delimited file of US States and capitals and stores this information in a hashtable.
+\item Next, on an infinite loop, print "Ready: " and wait for the user to enter the name of a state or capital. For each query print out the associated capital or state and go back to Ready state.
+\item The program exits when the user types "Done". If the input is invalid, answer "nil".
+
+\begin{42console}
+	?> ruby ex05.rb capitals.txt
+	Ready: Arizona
+	Phoenix
+	Ready: Montana
+	Helena
+	Ready: MacaroniAndCheese
+	nil
+	Ready: Pierre
+	South Dakota
+	Ready: Done
+	?>
+\end{42console}
+
+\end{itemize}
+
+%******************************************************************************%
+%                                                                              %
+%                             Do you even... 101010                            %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Do You Even 101010}
+
+\extitle{description}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{ex06.rb}
+\exauthorize{All}
+
+% \makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{ex06.rb} which takes in a number in base 10 and prints out its equivalent in base 2 (binary).
+
+\begin{42console}
+	?> ruby ex06.rb 94555
+	10111000101011011
+	?>
+\end{42console}
+
+\hint {There are two types of people in the world: those who understand binary, and those who \texttt donut.}
+\end{itemize}
+
+%******************************************************************************%
+%                                                                              %
+%                               End of document                                %
+%                                                                              %
+%******************************************************************************%
+
+\end{document}

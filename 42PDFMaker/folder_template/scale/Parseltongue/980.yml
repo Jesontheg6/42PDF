@@ -1,0 +1,146 @@
+---
+name: Parseltongue Week - Day3_2018-04-06
+comment: ''
+introduction_md: "\r\nPlease respect the following rules :\r\n\r\n- Always remain
+  courteous, polite, respectful and constructive during a peer\r\n  corrections exchange.
+  The quality of trust among our school's communuty\r\n  and your reputation depends
+  on it.\r\n\r\n- Should you notice any errors within the submitted project,\r\n  make
+  sure you take the time to discuss those with the student (or\r\n  group of students)
+  being graded!\r\n\r\n- Keep in mind that some subjects can be interpreted differently.\r\n
+  \ If you come accross a situation where the student you're grading\r\n  has interpreted
+  the subject differently than you, try and judge\r\n  fairly whether their interpretation
+  is acceptable or not, and grade\r\n  them accordingly. Our peer-evaluation system
+  can only work if you\r\n  both take it seriously."
+disclaimer_md: ''
+guidelines_md: "\r\nCorrections are all about looking at the code together and discussing
+  which,\r\nsolution works best. So, you should\r\n\r\n- Run the program and see if
+  it works. Does it hit all the right benchmarks?\r\n\r\n- Look at the code together
+  and talk about how it works. Do they understand\r\n  the code they wrote and can
+  teach it to you?\r\n\r\n- Say hi to the other group and be friendly. Mark yes/no
+  honestly to the\r\n  questions below."
+evaluation_id: 1275
+is_primary: true
+correction_number: 1
+duration: 1
+manual_subscription: false
+is_external: false
+free: false
+sections:
+- id: 3323
+  scalable_id: 980
+  name: Overall structure
+  description: ''
+  position: 1
+  questions:
+  - id: 10477
+    name: Folders
+    guidelines: "Did the student format their program and functions according to the\r\ninstructions
+      in the PDF?"
+    rating: bool
+    kind: standard
+    position: 1
+    questions_skills: []
+- id: 3324
+  scalable_id: 980
+  name: 'Ex00 : George Bool'
+  description: ''
+  position: 2
+  questions:
+  - id: 10478
+    name: Functionality
+    guidelines: Does their program work as described?
+    rating: bool
+    kind: standard
+    position: 1
+    questions_skills:
+    - id: 27263
+      percentage: 50
+      name: Python
+  - id: 10479
+    name: Explanation
+    guidelines: Can the correctee walk you through the code and explain how it works?
+    rating: multi
+    kind: standard
+    position: 2
+    questions_skills:
+    - id: 27264
+      percentage: 50
+      name: Python
+- id: 3325
+  scalable_id: 980
+  name: 'Ex01 : Math Class'
+  description: Check their work against an online min, max, median, mode, range calculator
+    such as http://www.calculator.net/mean-median-mode-range-calculator.html.
+  position: 3
+  questions:
+  - id: 10480
+    name: First test
+    guidelines: Check their program with a sampling of 10 numbers that you pick. Does
+      it work?
+    rating: bool
+    kind: standard
+    position: 1
+    questions_skills: []
+  - id: 10481
+    name: Outliers
+    guidelines: Check their program again, this time including negative numbers, at
+      least one large number of 10 digits or more, and a few numbers that repeat a
+      few times. Does it still work?
+    rating: bool
+    kind: standard
+    position: 2
+    questions_skills: []
+  - id: 10482
+    name: Explanation
+    guidelines: Ask them to explain their code. Can they walk you through how it works?
+    rating: bool
+    kind: standard
+    position: 3
+    questions_skills: []
+  - id: 10483
+    name: Blank input
+    guidelines: " If you run the program with no command-line arguments, does it tell
+      you what's wrong or at least exit silently? If you see messy error codes, do
+      not give credit for this question. "
+    rating: bool
+    kind: standard
+    position: 4
+    questions_skills: []
+- id: 3326
+  scalable_id: 980
+  name: 'Ex02: Guessing Game'
+  description: ''
+  position: 4
+  questions:
+  - id: 10484
+    name: Loop
+    guidelines: "\r\nDoes the program accept input exactly 10 times and then exit?"
+    rating: bool
+    kind: standard
+    position: 1
+    questions_skills: []
+  - id: 10485
+    name: Hint
+    guidelines: "\r\nDoes the program tell the user what letter the word begins with?"
+    rating: bool
+    kind: standard
+    position: 2
+    questions_skills: []
+  - id: 10486
+    name: Response
+    guidelines: "\r\nTest the following inputs:\r\n- something longer than 5 letters\r\n-
+      something shorter than 5 letters\r\n- 5 letters starting with the right letter\r\n-
+      5 letters starting with the wrong letter\r\n- empty input\r\n\r\nDoes the program
+      respond according to the instructions in each case?"
+    rating: multi
+    kind: standard
+    position: 3
+    questions_skills: []
+  - id: 10487
+    name: Secret
+    guidelines: "\r\nWhen you guess the secret word correctly, does the program tell
+      you that you're right?"
+    rating: bool
+    kind: standard
+    position: 4
+    questions_skills: []

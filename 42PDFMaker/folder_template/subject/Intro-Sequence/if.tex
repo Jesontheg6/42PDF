@@ -1,0 +1,197 @@
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+%******************************************************************************%
+%                                                                              %
+%                   if.tex                                                     %
+%                   Made by: 42 staff                                          %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+
+\begin{document}
+
+\title{If, Else}
+\subtitle{Learn to Walk}
+
+\member {Kai}{kai@42.us.org}
+
+\summary
+{
+	Keep a friend at your side, and study in the path of inspired ones who have given their knowledge out for free. 
+}
+
+\maketitle
+
+\tableofcontents
+
+%******************************************************************************%
+%                                                                              %
+%                               Before you Start                               %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Before you Start!}
+
+Create your project folder:
+	\begin{enumerate}
+		\item From your project page on intra, copy the git repository link. Now, in the terminal type "git clone " and paste the link. After the link and before pressing enter, write a name for the new folder. Cloning your git repository always creates a new folder.
+		\item cd into the folder you just created and from now on, save your work there. Use the command "mkdir <name>" to create new folders. Put each puzzle from this project in a folder with the same name.
+	\end{enumerate}
+
+
+%******************************************************************************%
+%                                                                              %
+%                              Coding Guidelines                               %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Format your Code}
+
+Each 42 challenge you turn in must adhere to the following format:
+
+\begin{42rbcode}
+#!/usr/bin/env ruby
+
+# This is what my program does
+# By <userid>
+
+def function_a
+ #code
+end
+
+def function_b
+ #code
+end
+
+def main(ARGV)
+ #main method
+ function_a
+ function_b
+end
+
+main(ARGV)
+\end{42rbcode}
+
+\begin{itemize}
+	\item Always begin with the "\#!/usr/bin/env ruby" statement. This tells your terminal to run the program using Ruby. In python, the first line is "\#!/usr/bin/env python".
+	\item Always add a comment stating what this program is for, some hints to help others use or understand it, and your name or intra ID.
+	\item Do not write any code outside of functions except for one line, at the end of your program, which calls the main() function.
+	\item The (ARGV) parameter is not always needed. In Python it is sys.argv.
+\end{itemize}
+
+\hint{Reference your chosen intro to coding class to learn about functions/methods (The keyword "def" means "define function...").}
+
+\startexercices
+
+
+%******************************************************************************%
+%                                                                              %
+%                                Who Goes There                                %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 0: Who Goes There}
+\turnindir{ex00}
+\exfiles{ex00.rb or ex00.py}
+\exnotes{Ruby \href{https://ruby-doc.org/core-2.4.2/doc/syntax/control_expressions_rdoc.html}{Control Expressions} Python \href{https://docs.python.org/2/tutorial/controlflow.html}{Control Flow}}
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{ex01.rb} which asks your name and only greets you if your name is “Daenerys of the House Targaryen, the First of Her Name, The Unburnt, Queen of the Andals, the Rhoynar and the First Men, Queen of Meereen, Khaleesi of the Great Grass Sea, Protector of the Realm, Lady Regnant of the Seven Kingdoms, Breaker of Chains and Mother of Dragons” or "DHTFHNUQARFMQMKGSPRLRSKBCMD" for short. 
+\item Otherwise, if your name is "Dany", the program replies "Dany who?". 
+\item For any other name, the program replies "Move along, now."
+
+\begin{42console}
+	?> ruby ex00.rb
+	Who goes there?
+	?> DHTFHNUQARFMQMKGSPRLRSKBCMD
+	Welcome, Daenerys.
+\end{42console}
+
+\begin{42console}
+	?> ruby ex00.rb
+	Who goes there?
+	?> Dany
+	Dany who?
+\end{42console}
+
+\begin{42console}
+	?> ruby ex00.rb
+	Who goes there?
+	?> Jaqen H'gar
+	Move along, now.
+\end{42console}
+
+\end{itemize}
+
+
+%******************************************************************************%
+%                                                                              %
+%                                   Part II                                    %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 1: Decision Making}
+
+\turnindir{ex01}
+\exfiles{ex01.rb or ex01.py}
+\exnotes{Ruby \href{https://ruby-doc.org/core-2.4.2/doc/syntax/control_expressions_rdoc.html}{Control Expressions} Python \href{https://docs.python.org/2/tutorial/controlflow.html}{Control Flow}}
+\makeheaderfiles
+
+Create a program which contains a secret five-letter word.
+When the program runs, it tells the user what letter the word starts with and invites the user to guess.\\
+
+Use a loop to receive guesses from the user 10 times.\\
+
+The program says different things depending on the input:
+\begin{itemize}
+\item If the user does not type a word but presses Enter, the program informs them, "You wasted a guess =P"
+\item If the user types a word that is longer or shorter than five letters long, the program helpfully prints out "0, 1, 2, 3, 4 that's how we count to five!". 
+\item If the user types a word that is five letters long but does not start with the correct letter, the program helpfully prints out the full alphabet.
+\item If the user types a word that is five letters long and starts with the correct letter but is not the secret word, the program informs them how many guesses they have left.
+\item If the user guesses the word correctly, the program prints out, "Good Job! You are one with the Source."
+\item If the user spends all 10 guesses and does not get the question right, exit the program.
+\end{itemize}
+\begin{42console}
+	?> ruby ex01.rb
+	The secret word begins with a D.
+	GUESS: delighted
+	0, 1, 2, 3, 4 that's how we count to five!
+	GUESS: rigor
+	ABCDEFGHIJKLMNOPQRSTUVWXYZ
+	GUESS:
+	You wasted a guess!
+	GUESS: dolma
+	You have 6 guesses left!
+	GUESS: dough
+	Good Job! You are one with the Source.
+\end{42console}
+
+%******************************************************************************%
+%                                                                              %
+%                               Grade your work                                %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Grade your work!}
+
+Turn in your work by typing three commands in order: 
+\begin{itemize}
+	\item git add *
+	\item git commit -m "<your comments here>"
+	\item git push
+	\item If you have an error during the git push, you may need to refresh your authentication ticket. Do this by typing "kinit <username>" and then typing your intra password.
+\end{itemize}
+
+Then, go to your project page and click "Set the project as finished".
+Next click "Subscribe to defense" and schedule two peer corrections.
+If you run out of correction points (check your number on your profile page!), it means you need to open correction slots and correct other people in return. :)
+
+\end{document}

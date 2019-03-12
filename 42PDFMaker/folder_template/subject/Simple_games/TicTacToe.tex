@@ -1,0 +1,216 @@
+
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+%******************************************************************************%
+%                                                                              %
+%                   TicTacToe.tex                                              %
+%                   Made by: 42 staff                                          %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+
+\begin{document}
+
+\title{Tic Tac Toe}
+\subtitle{Command line games}
+
+\member {Kai}{kai@42.us.org}
+
+\summary
+{
+The art of building a program.
+}
+
+\maketitle
+
+\tableofcontents
+
+%Initialisation des headers d'exercices
+
+\startexercices
+
+
+%******************************************************************************%
+%                                                                              %
+%                            General Instructions                              %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Gameboard}
+
+\begin{itemize}
+
+	\item How do we play tic tact toe? It starts with drawing a \# ... two sets of perpendicular lines. A grid.
+
+	\item Decide for yourself how to design a game board. It could look something like this:
+	\begin{42console}
+	 x | o |
+	-----------
+	   | o | o
+	-----------
+	   |   | x 
+	\end{42console}
+
+	\item Be careful and plan ahead! As the game progresses, we want to be able to store and display values of o, x, or nil in each square.
+
+	\item How will you save the data? It could work multiple ways. For example, you could use nine different variables...
+	\begin{42ccode}
+	square_0 = nil;
+	square_1 = nil;
+	square_2 = 'x';
+	square_3 = nil;
+	...
+	\end{42ccode}
+
+	\item Or an array...
+	\begin{42ccode}
+	board = Array.new
+	board[2] = 'x'
+	\end{42ccode}
+
+	\item Or an array of arrays if you really want.
+	\begin{42ccode}
+	board = Array.new
+	top_row = Array.new
+	board[0] = top_row
+	...
+	\end{42ccode}
+
+	\item Choose the data structure that will hold your game board, and add it to your program. Let the whole board start "empty" with no x's or o's. 
+
+\end{itemize}
+
+\chapter{Printing}
+
+\begin{itemize}
+
+	\item When you first start the tictac.rb, it should print a welcome message to the terminal, and the empty game board.
+
+	\begin{42console}
+	?> tictac.rb
+	Welcome to Intergalactic Tic Tac Toe!
+	   |   |   
+	-----------
+	   |   |   
+	-----------
+	   |   |   
+	\end{42console}
+
+	\item Later, you will want to print the same game board with something else in the squares besides empty spaces.
+
+	\item Create a \texttt{method} in your program which takes the state of the board as parameter(s) and prints it out.
+
+	\item Test it by changing the board state a few times within your program, and printing out each version.
+
+	\begin{42ccode}
+	def print_board_parameters(board)
+		#your method definition here
+	end
+
+	# blank board
+	print_board(board)
+
+	board[2] = 'x'
+
+	# after one move
+	print_board(board)
+	\end{42ccode}
+
+\end{itemize}
+
+\chapter{Making the First Move}
+
+\begin{itemize}
+
+	\item OK, that's cool. You can print out different versions of the board if you set them yourself from inside the code.
+
+	\item Now, have your program change the board based on input from the command line.
+
+	\item Start with Player 1. Ask them for a move, and read what choice they make. Then update that part of the board to hold an 'x'. 
+
+	\item Print the board before and after.
+	
+	\begin{42console}
+	?> tictac.rb
+	Welcome to Intergalactic Tic Tac Toe!
+	   |   |   
+	-----------
+	   |   |   
+	-----------
+	   |   |   
+
+	Player 1, it's your turn. Which square?
+	 0 | 1 | 2 
+	-----------
+	 3 | 4 | 5 
+	-----------
+	 6 | 7 | 8 
+
+	 2
+	 Interesting choice, Player 1. 
+	   |   | x 
+	-----------
+	   |   |   
+	-----------
+	   |   |   
+	\end{42console}
+
+\end{itemize}
+
+\chapter{Looping}
+
+Awesome! You know how to print the gameboard and store whether there is an x or an o in each square. You also have been able to receive a move from a player and make it real.
+
+\begin{itemize}
+
+	\item In the main body of your program, add a loop which repeatedly asks Player 1 and Player 2 for their moves.
+
+	\item It should alternate between the two players and print the board after each move.
+
+	\item For now, the loop can be infinite.
+
+\end{itemize}
+
+\chapter{Validity}
+
+Validity checking - one of the most important things you will ever need to remember as a programmer.
+
+\begin{itemize}
+
+	\item To prevent cheating, insert a check to make sure that a players' move is valid.
+
+	\item A move is not valid if it is outside the game board.
+
+	\item A move is not valid if someone's x or o is already played there.
+
+\end{itemize}
+
+\chapter{Did I Win?}
+
+Looking good! Kudos that you have made it this far. 
+
+\begin{itemize}
+
+	\item Create a method in your program which determines if anyone has won yet.
+
+	\item This may be the most complex part of the program so far! Remember to check for horizontal, vertical, and diagonal lines.
+
+	\item Add this check to your loop so that we look for a win after every move.
+
+	\item Print a congratulatory message when you do find a win!
+
+\end{itemize}
+
+%******************************************************************************%
+%                                                                              %
+%                               End of document                                %
+%                                                                              %
+%******************************************************************************%
+
+\end{document}

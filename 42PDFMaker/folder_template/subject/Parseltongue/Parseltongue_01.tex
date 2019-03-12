@@ -1,0 +1,249 @@
+
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+%******************************************************************************%
+%                                                                              %
+%                   Parseltongue_00.tex                                        %
+%                   Made by: 42 staff                                          %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+
+\begin{document}
+
+\title{Parseltongue Piscine - Day01}
+\subtitle{Strings, Input-Output, Equality, Integers, If/Else}
+
+\member {Kai}{kai@42.us.org}
+
+\summary{Learn about the following: Strings, Printing, Variable Assignment, Format strings aka String Interpolation, Input, String methods, If-Else, Index of a string, testing equality with ==, and Integers.}
+
+\maketitle
+
+\tableofcontents
+
+%Initialisation des headers d'exercices
+
+\newpage
+
+\bigskip
+
+\centerline{\includegraphics[width=150mm]{images/dont_panic.jpeg}}
+
+\centerline{\texttt{Eat, Sleep, Code, Repeat.}}
+
+%******************************************************************************%
+%                                                                              %
+%                                 Don't Panic                                  %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Don't Panic!}
+
+Confused about how to begin? Not sure what the PDF means?\\
+
+Don't worry, we are not perfect :)\\
+
+And the PDFs are challenges - not walkthroughs. Team up with your group, your partner,
+your mentor and your other peers to decipher what to do.\\
+
+You are the master of your own destiny! Go forward and code the world ! 
+
+
+\startexercices
+
+%******************************************************************************%
+%                                                                              %
+%                            Thanks for All the Fish                           %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 0: So Long and Thanks for All the Fish}
+\extopics{Variables, Printing, String Manipulation}
+\extitle{So Long and Thanks for All the Fish}
+\exfiles{00\_so\_long.py}
+\exnotes{\href{https://learnpythonthehardway.org/book/ex5.html}{Variables},\href{https://tinyurl.com/yajs9otg}{Printing},\href{http://www.pythonforbeginners.com/basics/string-manipulation-in-python}{String Manipulation}}
+\makeheaderfiles
+
+You're going to write a Python program. That means you write Python code in a text editor, and save it as a file called 00\_so\_long.py. Whenever you want to see what your code does, run it by typing "python 00\_so\_long.py" in Terminal after navigating to the folder which contains that file.\\
+
+The idea of this project is to write an ad-lib. The first thing your program should do is define six different variables and fill each variable with a string of your choice that matches the description.
+
+\begin{42pycode}
+animal_plural = "monkeys"
+emotion = "perturbed"
+character_trait = "wholesomeness"
+adjective = "vivacious"
+
+print("So long and thanks for all the {}".format(animal_plural))
+# Continue writing your own code here :)
+\end{42pycode}
+
+Next, your program should print the first half of the "So Long And Thanks for All The Fish" song with your ad-lib words filled in. Use the syntax in the example above for filling in variables to the lines you print out.\\
+
+Here's a template for how to fill in the lyrics:
+
+\begin{verbatim}
+So long and thanks for all the {animal_plural}
+So {emotion} that it should come to this
+We tried to warn you all but oh dear?
+
+You may not share our {character_trait}
+Which might explain your disrespect
+For all the {adjective} wonders that
+grow around you
+
+So long, so long and thanks
+for all the {animal_plural}
+\end{verbatim}
+
+
+And here's an example of the output:
+
+\begin{42console}
+So long and thanks for all the monkeys
+So perturbed that it should come to this
+We tried to warn you all but oh dear?
+
+You may not share our wholesomeness
+Which might explain your disrespect
+For all the vivacious wonders that
+grow around you
+
+So long, so long and thanks
+for all the monkeys
+\end{42console}
+
+
+After this first half has been printed, create one new \texttt{variable} and re-use the other variables from above. Assign a new value to each of the reused variables...\\
+\begin{42pycode}
+animal_2 = # fill in your own values!
+emotion = 
+character_trait = 
+adjective = 
+\end{42pycode}
+
+And then, print the second half, with your variables in the spots like this:\\
+\begin{verbatim}
+The world's about to be destroyed
+There's no point getting all {emotion}
+Lie back and let the planet dissolve
+
+Despite those nets of {animal_2} fleets
+We thought that most of you were {emotion}
+Especially {adjective} tots and your
+pregnant women
+
+So long, so long, so long, so long, so long
+So long, so long, so long, so long, so long
+
+So long, so long and thanks
+for all the {animal_plural}
+\end{verbatim}
+
+\nextexercice
+\newpage
+
+%******************************************************************************%
+%                                                                              %
+%                              What is your name?                              %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 1: Ready Player One}
+\extopics{Input, format strings}
+\extitle{Ready Player One}
+\exfiles{01\_player.rb or 01\_player.py}
+\exnotes{\href{https://docs.python.org/2/library/functions.html}{Built-in Functions},\href{https://docs.python.org/2/library/sys.html}{System},\href{https://tinyurl.com/lgg2xm5}{input}}
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{01\_player.py} which asks your name and waits for you to type something in. After you type an input, then it assigns that input to a variable, and prints out another message to greet you by your name.\\
+
+Here is an example of the program running:
+\begin{42console}
+	?> python 01_player.py
+	Hello hacker, what is your name?
+	?> Parzival
+	Welcome, Parzival!
+\end{42console}
+
+\end{itemize}
+
+\nextexercice
+\newpage
+%******************************************************************************%
+%                                                                              %
+%                                   Daenerys                                   %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 2: Daenerys}
+\extopics{If/Else, Equality Testing}
+\extitle{Daenerys}
+\exfiles{02\_daenerys.rb or 02\_daenerys.py}
+\exnotes{\href{https://docs.python.org/2/tutorial/controlflow.html}{Control Flow}, \href{https://www.youtube.com/watch?v=DZwmZ8Usvnk}{Conditionals, Booleans}, \href{http://interactivepython.org/courselib/static/thinkcspy/Strings/StringComparison.html}{Testing Equality}}
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a program called \texttt{02\_daenerys.py} which asks your name and only greets you if your name is “Daenerys of the House Targaryen, the First of Her Name, The Unburnt, Queen of the Andals, the Rhoynar and the First Men, Queen of Meereen, Khaleesi of the Great Grass Sea, Protector of the Realm, Lady Regnant of the Seven Kingdoms, Breaker of Chains and Mother of Dragons” or "DHTFHNUQARFMQMKGSPRLRSKBCMD" for short. 
+\item Otherwise, if your name is "Dany", the program replies "Dany who?". 
+\item For any other name, the program replies "Move along, now."
+
+\begin{42console}
+	?> python 02_daenerys.py
+	Who goes there?
+	?> DHTFHNUQARFMQMKGSPRLRSKBCMD
+	Welcome, Daenerys.
+\end{42console}
+
+\begin{42console}
+	?> python 02_daenerys.py
+	Who goes there?
+	?> Dany
+	Dany who?
+\end{42console}
+
+\begin{42console}
+	?> python 02_daenerys.py
+	Who goes there?
+	?> Jaqen H'gar
+	Move along, now.
+\end{42console}
+
+\end{itemize}
+
+\nextexercice
+\newpage
+
+%******************************************************************************%
+%                                                                              %
+%                                 Palindrome                                   %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 3: Palindrome}
+\extopics{Index, incrementing, for loops, string manipulation}
+\extitle{Palindrome}
+\exfiles{02\_palindrome.rb or 02\_palindrome.py}
+\exnotes{The goal of this project is to learn to work through strings by accessing individual letters through their \href{https://www.digitalocean.com/community/tutorials/how-to-index-and-slice-strings-in-python-3}{index.} You will also need to research substring substitutions. \href{https://www.programiz.com/python-programming/array}{Arrays}, \href{https://www.youtube.com/watch?v=xtXexPSfcZg}{For Loops}}
+\makeheaderfiles
+
+Create a program called \texttt{03\_palindrome.py} which takes in a sentance, word, or number and tells you if it is a palindrome or not.
+\\
+Here's a few things to think about:
+\begin{itemize}
+	\item The phrase "A man, a plan, a canal: Panama." is a valid palindrome. You don't want your program to ignore because of the spaces and punctuation marks, do you? You will have to find a way to handle spaces, capitalization, and punctuation.
+	\item How can you run tests of equality on specific letters in a string?
+	\item Your program will be nicer quality if it prints out a prompt, like "Enter the text which may be a palindrome:", and then a readable answer, like "So cool! This text IS a palindrome." At the bare minimum, it must print out 'true' or 'false'.
+\end{itemize}
+
+\end{document}

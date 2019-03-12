@@ -1,0 +1,190 @@
+# **************************************************************************** #
+#                                                                              #
+#               ft_arena.en.yml for FT_ARENA                                   #
+#               Made by : Michael Lu <mlu@student.42.fr>                       #
+#                                                                              #
+# **************************************************************************** #
+
+---
+
+name: ft_arena
+lg: en
+is_primary: true
+comment: ''
+
+introduction_md: |
+
+  To ensure this evaluation goes smoothly, please respect the following set
+  of rules :
+
+  - Please remain courteous, polite, respectful and constructive at all 
+    times during this exchange. The trust bond between the school's 
+    communauty and yourself depends on it.
+
+  - Should you notice any malfunctions within the submitted project, 
+    make sure you take the time to discuss those with the student (or 
+    group of students) being graded.
+
+  - Keep in mind that some subjects can be interpreted differently.
+    If you come accross a situation where the student you're grading 
+    has interpreted the subject differently than you, try and judge
+    fairly whether their interpretation is acceptable or not, and grade
+    them accordingly. Our peer-evaluation system can only work if you
+    both take it seriously.
+
+disclaimer_md: ''
+
+guidelines_md: |
+
+  - You may only evaluate whatever is in the GiT submission directory of 
+    the student you are grading.
+
+  - Make sure to check wether the GiT submission directory
+    belongs to the student (or group) you're grading, and that
+    it's the right project.
+
+  - Make sure no mischievous aliases have been used to trick you 
+    into correcting something that is not actually in the official
+    submitted directory.
+
+  - Any script created to make this evaluation session easier - whether
+    it was produced by you or the student being graded - must be  
+    checked rigorously in order to avoid bad surprises.
+
+  - If the student who is grading this project hasn't done the
+    project him/herself yet, he/she must read the whole topic 
+    before starting the evaluation session.
+
+  - Use the flags available to you on this scale in order to report
+    a submission directory that is empty, non-functional, that contains
+    a norm errors or a case of cheating, etc...
+    In this case, the evaluation session ends and the final grade is 0
+    (or -42, in case of cheating). However, unless the student has
+    cheated, we advise you to go through the project together in order 
+    for the two (or more) of you to identify the problems that may have 
+    led for this project to fail, and avoid repeating those mistakes for
+    future projects.
+
+correction_number: 5
+duration: 2
+
+sections:
+
+- name: Basic Object Oriented Class
+  position: 1
+  description: 'Implementing parent and children class'
+
+  questions:
+  - name: Proper inheritance with classes
+    position: 1
+    guidelines: |
+      Did the user utilize a parent class and the children class? Make sure that ALL the children class inherits from the same parent class. Failure to do so means they do not get any points for this project and you should mark everything as fail.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 60
+      name: Object-oriented programming
+    - percentage: 30
+      name: Adaptation & creativity 
+
+  - name: Children Classes
+    position: 2
+    guidelines: |
+      Is there at least three unique children classes? They must be different either because of the type of fighter they are, if they have additional skills or whatnot.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 20
+      name: Object-oriented programming
+    - percentage: 10
+      name: Adaptation & creativity 
+
+
+- name: Running & Playing ft_arena
+  position: 2
+  description: Make sure to rigorously test and check their ft_arena, it should be exciting to make characters and exciting to watch the fight happen.
+
+  questions:
+
+  - name: Arena Text Output
+    position: 1
+    guidelines: |
+
+      Is the entire fight outputted properly to the terminal? It should not have the entire fight immediately show up in the terminal. Any use of time or sleep is required here to give pace to the output.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 20
+      name: Adaptation & creativity 
+    - percentage: 5
+      name: Object-oriented programming
+
+  - name: Creativity & Design
+    position: 2
+    guidelines: | 
+
+      Are the text to the terminal describing the fight easy to understand? Does it clearly show who the winner is? It should be easy to read, follow along and show the winner. If you can't read it clearly this is considered a failure. (So moving too fast is bad too)
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 10
+      name: Adaptation & creativity 
+    - percentage: 5
+      name: Object-oriented programming
+
+  - name: Interface & Menu
+    position: 3
+    guidelines: | 
+
+      Is there a menu present? There must be a menu in some sort of loop (+1), when fight ends it should redirect you to the menu (+1), you should be able to create a fighter (+1), should be able to enter the arena (+1) and be able to see your fighters (+1)
+
+    rating: multi
+    kind: standard
+    questions_skills:
+    - percentage: 20
+      name: Adaptation & creativity 
+    - percentage: 5
+      name: Object-oriented programming
+
+
+  - name: Error Handling
+    position: 4
+    guidelines: |
+
+     Try to make sure they handle two important errors. The arena fighting should only work if there are two fighters available, and there should be no errors during character creation.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 10
+      name: Adaptation & creativity 
+    - percentage: 5
+      name: Object-oriented programming
+
+
+- name: Bonus
+  position: 3
+  description: 'Any additional bonus that enhances the project'
+
+
+  questions:
+
+
+  - name: Cool Bonuses
+    position: 1
+    guidelines: |
+
+      Did they implement any cool bonuses? Some include but is not limited to sound effect, additional characters, cool or fancy terminal output, visualizer, etc.
+
+    rating: multi
+    kind: bonus
+    questions_skills:
+    - percentage: 25
+      name: Adaptation & creativity
+    - percentage: 25
+      name: Object-oriented programming
+

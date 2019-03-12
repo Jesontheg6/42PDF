@@ -1,0 +1,215 @@
+
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+%******************************************************************************%
+%                                                                              %
+%                   Parseltongue_04.tex                                        %
+%                   Made by: 42 staff                                          %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+
+\begin{document}
+
+\title{Parseltongue Piscine - Day04}
+\subtitle{Dictionaries, reading files, reusable functions}
+
+\member {Kai}{kai@42.us.org}
+
+\maketitle
+
+\tableofcontents
+
+%Initialisation des headers d'exercices
+
+\newpage
+
+\bigskip
+
+\centerline{\includegraphics[width=150mm]{images/dont_panic.jpeg}}
+
+\centerline{\texttt{Eat, Sleep, Code, Repeat.}}
+
+%******************************************************************************%
+%                                                                              %
+%                                 Don't Panic                                  %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Don't Panic!}
+
+Confused about how to begin? Not sure what the PDF means?\\
+
+Don't worry, we are not perfect :)\\
+
+And the PDFs are challenges - not walkthroughs. Team up with your group, your partner,
+your mentor and your other peers to decipher what to do.\\
+
+You are the master of your own destiny! Go forward and code the world ! 
+
+%******************************************************************************%
+%                                                                              %
+%                              Coding Guidelines                               %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Format your Code}
+
+Each 42 challenge you turn in must adhere to the following format:
+
+\begin{42pycode}
+#!/usr/bin/env python3
+
+# Write your name at the top, and any helpful comments you have for people
+# running your program.
+# By <userid>
+
+import sys
+
+def function_a:
+    # code
+
+def function_b:
+    # code
+
+def main(argv):
+    # main method
+    function_a
+    function_b
+
+main(sys.argv)
+\end{42pycode}
+
+or:\\
+
+\begin{42rbcode}
+#!/usr/bin/env ruby
+
+# Write your name at the top, and any helpful comments you have for people
+# running your program.
+# By <userid>
+
+def function_a
+ # code
+end
+
+def function_b
+ # code
+end
+
+def main(ARGV)
+ # main method
+ function_a
+ function_b
+end
+
+main(ARGV)
+\end{42rbcode}
+
+\begin{itemize}
+	\item Always begin with the "\#!/usr/bin/env ruby" statement. This tells your terminal to run the program using Ruby. In python, the first line is "\#!/usr/bin/env python3".
+	\item Always add a comment stating what this program is for, some hints to help others use or understand it, and your name or intra ID.
+	\item Do not write any code outside of functions except for one line, at the end of your program, which calls the main() function.
+\end{itemize}
+
+\startexercices
+
+%******************************************************************************%
+%                                                                              %
+%                              Student Directory                               %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 0: Student Directory}
+\extopics{File input, dictionary}
+\extitle{Student Directory}
+\exfiles{00\_phonebook.rb or 00\_phonebook.py}
+\exnotes{Use the names.txt file provided on the project page. \href{https://docs.python.org/2/tutorial/datastructures.html\#dictionaries}{Dictionaries}, \href{http://www.pythonforbeginners.com/dictionary/how-to-use-dictionaries-in-python}{More Dictionaries}, \href{https://www.youtube.com/watch?v=daefaLgNkw0}{Key Value Pairs}}
+\makeheaderfiles
+
+Using the attached file names.txt, store the information in a hash or dictionary where first names are associated with last names.\\
+
+Use your hashtable to identify which first names are shared by more than one student, mentor or admin in h2s. Print out each first name that repeats in the set followed by an array of the last names associated with that first name. Then do the same thing with last names.
+
+\begin{42console}
+	?> python 00_phonebook.py
+	** Shared First Names! **
+	Elliot (2): [Tregoning, VanHeuman]
+
+	** Shared Last Names **
+	Kardashian (4): [Khloe, Kim, Kourtney, Rob]
+\end{42console}
+
+\nextexercice
+\newpage
+
+%******************************************************************************%
+%                                                                              %
+%                                   State Capitols                             %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 1: State Capitols}
+\extopics{Infinite while loop, Exit}
+\extitle{State Capitols}
+\exfiles{01\_capitols.rb or 01\_capitols.py}
+\exnotes{Use the capitols.txt file provided on the project page. You do not need to turn that file in, but you can include it in your repository. \href{https://docs.python.org/3/tutorial/inputoutput.html}{Input/Output}, \href{https://www.youtube.com/watch?v=-Lu8VgYSkNQ}{Text Files in Python}, Python \href{https://www.python-course.eu/python3_dictionaries.php}{dictionaries}}
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{01\_capitols.py} which reads in the provided comma-delimited file of US States and capitals and stores this information in a hashtable.
+\item Next, on an infinite loop, print "Ready: " and wait for the user to enter the name of a state or capital. For each query print out the associated capital or state and go back to Ready state.
+\item The program exits when the user types "Done". If the input is invalid, answer "nil".
+
+\begin{42console}
+	?> python 01_capitols.py capitals.txt
+	Ready: Arizona
+	Phoenix
+	Ready: Montana
+	Helena
+	Ready: MacaroniAndCheese
+	nil
+	Ready: Pierre
+	South Dakota
+	Ready: Done
+	?>
+\end{42console}
+
+\end{itemize}
+
+\nextexercice
+\newpage
+
+%******************************************************************************%
+%                                                                              %
+%                                   101010                                     %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 2: DIY 101010}
+\extopics{Reusable functions}
+\exfiles{02\_allyourbase.rb or 02\_allyourbase.py}
+\makeheaderfiles
+
+Write a decimal to binary converter of your very own.\\
+
+No need to cover hexadecimal, octal and binary all at once. You will get credit if you write a program to convert from one specific type to another.\\
+
+Do not use built in string formatting functions; you must write the mathematical logic for converting between bases, and print out the result.\\
+
+\begin{42console}
+	?> python 02_allyourbase.py 94555
+	10111000101011011
+	270533
+	1715B
+	?>
+\end{42console}
+
+\end{document}

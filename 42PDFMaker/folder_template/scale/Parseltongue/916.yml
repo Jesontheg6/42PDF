@@ -1,0 +1,152 @@
+---
+name: Sort
+comment: ''
+introduction_md: ''
+disclaimer_md: ''
+guidelines_md: Give constructive feedback on the student's logic and their code!
+evaluation_id: 1227
+is_primary: true
+correction_number: 1
+duration: 1
+manual_subscription: false
+is_external: false
+free: false
+sections:
+- id: 3131
+  scalable_id: 916
+  name: Exercise 0
+  description: Check their work against an online min, max, median, mode, range calculator
+    such as http://www.calculator.net/mean-median-mode-range-calculator.html.
+  position: 1
+  questions:
+  - id: 9765
+    name: First test
+    guidelines: Check their program with a sampling of 10 numbers that you pick. Does
+      it work?
+    rating: bool
+    kind: standard
+    position: 1
+    questions_skills:
+    - id: 25493
+      percentage: 10
+      name: Basics
+    - id: 25494
+      percentage: 10
+      name: Ruby
+  - id: 9766
+    name: Outliers
+    guidelines: Check their program again, this time including negative numbers, at
+      least one large number of 10 digits or more, and a few numbers that repeat a
+      few times. Does it still work?
+    rating: bool
+    kind: standard
+    position: 2
+    questions_skills:
+    - id: 25495
+      percentage: 10
+      name: Basics
+    - id: 25496
+      percentage: 10
+      name: Ruby
+  - id: 9767
+    name: Explanation
+    guidelines: Ask them to explain their code. Can they walk you through how it works?
+    rating: bool
+    kind: standard
+    position: 3
+    questions_skills:
+    - id: 25497
+      percentage: 15
+      name: Basics
+    - id: 25498
+      percentage: 15
+      name: Ruby
+  - id: 9768
+    name: Formatting
+    guidelines: And is it formatted in functions as specified on the PDF?
+    rating: bool
+    kind: standard
+    position: 4
+    questions_skills:
+    - id: 25499
+      percentage: 10
+      name: Basics
+    - id: 25500
+      percentage: 10
+      name: Ruby
+  - id: 9769
+    name: Blank input
+    guidelines: " If you run the program with no command-line arguments, does it tell
+      you what's wrong or at least exit silently? If you see messy error codes, do
+      not give credit for this question. "
+    rating: bool
+    kind: standard
+    position: 5
+    questions_skills:
+    - id: 25501
+      percentage: 10
+      name: Basics
+    - id: 25502
+      percentage: 10
+      name: Ruby
+- id: 3132
+  scalable_id: 916
+  name: Exercise 1
+  description: ARR Matey
+  position: 2
+  questions:
+  - id: 9770
+    name: Does it work?
+    guidelines: Test it with a few sentences or song lyrics. Does it work as you expect
+      it to?
+    rating: bool
+    kind: standard
+    position: 1
+    questions_skills:
+    - id: 25503
+      percentage: 10
+      name: Basics
+    - id: 25504
+      percentage: 10
+      name: Ruby
+  - id: 9771
+    name: Explanation
+    guidelines: Can they walk you through how the code works?
+    rating: bool
+    kind: standard
+    position: 2
+    questions_skills:
+    - id: 25505
+      percentage: 15
+      name: Basics
+    - id: 25506
+      percentage: 15
+      name: Ruby
+  - id: 9772
+    name: Formatting
+    guidelines: And is it formatted in functions as specified on the PDF?
+    rating: bool
+    kind: standard
+    position: 3
+    questions_skills:
+    - id: 25507
+      percentage: 10
+      name: Basics
+    - id: 25508
+      percentage: 10
+      name: Ruby
+  - id: 9773
+    name: Blank input
+    guidelines: " If you run the program with no command-line arguments, does it tell
+      you what's wrong or at least exit silently? If you see messy error codes, do
+      not give credit for this question. "
+    rating: bool
+    kind: standard
+    position: 4
+    questions_skills:
+    - id: 25509
+      percentage: 10
+      name: Basics
+    - id: 25510
+      percentage: 10
+      name: Ruby

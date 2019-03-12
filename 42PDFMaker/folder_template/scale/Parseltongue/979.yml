@@ -1,0 +1,305 @@
+---
+name: Parseltongue Week - Day2
+comment: ''
+introduction_md: |2
+
+  Please respect the following rules :
+
+  - Always remain courteous, polite, respectful and constructive during a peer
+    corrections exchange. The quality of trust among our school's communuty
+    and your reputation depends on it.
+
+  - Should you notice any errors within the submitted project,
+    make sure you take the time to discuss those with the student (or
+    group of students) being graded!
+
+  - Keep in mind that some subjects can be interpreted differently.
+    If you come accross a situation where the student you're grading
+    has interpreted the subject differently than you, try and judge
+    fairly whether their interpretation is acceptable or not, and grade
+    them accordingly. Our peer-evaluation system can only work if you
+    both take it seriously.
+disclaimer_md: ''
+guidelines_md: |2
+
+  Corrections are all about looking at the code together and discussing which,
+  solution works best. So, you should
+
+  - Run the program and see if it works. Does it hit all the right benchmarks?
+
+  - Look at the code together and talk about how it works. Do they understand
+    the code they wrote and can teach it to you?
+
+  - Say hi to the other group and be friendly. Mark yes/no honestly to the
+    questions below.
+evaluation_id: 1276
+is_primary: true
+correction_number: 1
+duration: 1
+manual_subscription: false
+is_external: false
+free: 
+
+sections:
+- name: Exercise 00 Brainstorm
+  description: Exercise 00
+  position: 2
+  questions:
+  - name: Random
+    guidelines: |2
+      Look at the code. Do they have a good way of choosing a random category?
+      It's not going to be the same every time, is it?
+    rating: bool
+    kind: standard
+    position: 1
+    questions_skills:
+    - percentage: 10
+      name: Basics
+    - percentage: 10
+      name: Python
+  - name: Loop
+    guidelines: |2
+      Does the program loop 10 times asking for input? Ask the author to
+      explain how they make it loop like that.
+    rating: bool
+    kind: standard
+    position: 2
+    questions_skills:
+    - percentage: 10
+      name: Basics
+    - percentage: 10
+      name: Python
+  - name: Answer list
+    guidelines: |2
+      Ask the author to explain how they store the answers and display them at the end.
+      Does the program display all the inputs you gave?
+    rating: bool
+    kind: standard
+    position: 3
+    questions_skills:
+    - percentage: 10
+      name: Basics
+    - percentage: 10
+      name: Python
+  - name: Answer display
+    guidelines: |2
+      Are they displayed nicely, in a column centered on the terminal, with a blank line between each?
+    rating: bool
+    kind: standard
+    position: 3
+    questions_skills:
+    - percentage: 10
+      name: Basics
+    - percentage: 10
+      name: Python
+  - name: List or Tuple?
+    guidelines: |2
+      Can the coder explain the difference between a list and a tuple?
+    rating: bool
+    kind: standard
+    position: 3
+    questions_skills:
+    - percentage: 10
+      name: Basics
+    - percentage: 10
+      name: Python
+  - name: Bonus - display box?
+    guidelines: |2
+      is there a display box around the output?
+    rating: bool
+    kind: bonus
+    position: 3
+    questions_skills:
+    - percentage: 10
+      name: Basics
+    - percentage: 10
+      name: Python
+  - name: Bonus - timer
+    guidelines: |2
+      Do they display the elapsed time at the end? Ask them to explain how they did it.
+    rating: bool
+    kind: bonus
+    position: 3
+    questions_skills:
+    - percentage: 10
+      name: Basics
+    - percentage: 10
+      name: Python
+
+- name: Exercise 1 ARR Matey
+  description:
+  position: 3
+  questions:
+  - name: Does it work?
+    guidelines: |2
+      Test it with a few sentences or song lyrics. Does it work as you expect
+      it to?
+    rating: bool
+    kind: standard
+    position: 1
+    questions_skills:
+    - percentage: 10
+      name: Basics
+    - percentage: 10
+      name: Python
+  - name: Empty checking
+    guidelines: |2
+
+      Does empty input, or a string, print just a newline as the subject asks?
+    rating: bool
+    kind: standard
+    position: 2
+    questions_skills:
+    - id: 27247
+      percentage: 10
+      name: Basics
+    - id: 27248
+      percentage: 10
+      name: Python
+  - id: 10470
+    name: Code formatting & comprehension
+    guidelines: |2
+
+      Can the author explain their code clearly to you? And is it
+      nicely formatted in functions as specified on the PDF?
+    rating: bool
+    kind: standard
+    position: 3
+    questions_skills:
+    - id: 27249
+      percentage: 10
+      name: Basics
+    - id: 27250
+      percentage: 10
+      name: Python
+- id: 3321
+  scalable_id: 979
+  name: Exercise 2 Project Euler
+  description: Exercise 01
+  position: 4
+  questions:
+  - id: 10471
+    name: Is it correct?
+    guidelines: |2
+
+      Perform some examples manually and check the result that the script
+      give you. Does it seem accurate?
+    rating: bool
+    kind: standard
+    position: 1
+    questions_skills:
+    - id: 27251
+      percentage: 10
+      name: Basics
+    - id: 27252
+      percentage: 10
+      name: Python
+  - id: 10472
+    name: Negative range
+    guidelines: |2
+
+      Does the program also work accurately for numbers below zero, or if
+      given a zero?
+    rating: bool
+    kind: standard
+    position: 2
+    questions_skills:
+    - id: 27253
+      percentage: 10
+      name: Basics
+    - id: 27254
+      percentage: 10
+      name: Python
+  - id: 10473
+    name: Blank input checking
+    guidelines: |2
+
+      If you don't give this program any number, or give it text - does it spit
+      out messy error codes (fail) or does it gracefully exit or tell the user
+      what input it expects (pass)?
+    rating: bool
+    kind: standard
+    position: 3
+    questions_skills:
+    - id: 27255
+      percentage: 10
+      name: Basics
+    - id: 27256
+      percentage: 10
+      name: Python
+- id: 3322
+  scalable_id: 979
+  name: Exercise 3 101010
+  description: Exercise 03
+  position: 5
+  questions:
+  - id: 10474
+    name: Conversion
+    guidelines: |2
+
+      Check some decimal to binary conversions in this program against some online
+      base calculators. Is it accurate?
+    rating: bool
+    kind: standard
+    position: 1
+    questions_skills:
+    - id: 27258
+      percentage: 5
+      name: Basics
+    - id: 27257
+      percentage: 5
+      name: Python
+  - id: 10475
+    name: String methods
+    guidelines: |2
+
+      Look at the person's code. Did they figure out how to do this using string
+      related library functions, like "to_s(2)" and "print(bin(24))"?
+    rating: bool
+    kind: standard
+    position: 2
+    questions_skills:
+    - id: 27260
+      percentage: 5
+      name: Basics
+    - id: 27259
+      percentage: 5
+      name: Python
+  - id: 10476
+    name: Overachievers
+    guidelines: |2
+
+      Now, these built in functions are actually quite interesting and fun
+      algorithms; converting between bases can be a fun math problem and an
+      excellent coding exercise. If your correctee submitted a function that
+      does the base conversion instead of using built-in methods, ask them to
+      walk you through it step by step. Give bonus credit if they can explain
+      it all. :)
+    rating: bool
+    kind: bonus
+    position: 3
+    questions_skills:
+    - id: 27262
+      percentage: 10
+      name: Basics
+    - id: 27261
+      percentage: 10
+      name: Python
+- id: 3318
+  scalable_id: 979
+  name: Overall structure
+  description: Function structure
+  position: 1
+  questions:
+  - id: 10464
+    name: Folders
+    guidelines: |
+      Did the student format their program and functions according to the
+      instructions in the PDF?
+    rating: bool
+    kind: standard
+    position: 1
+    questions_skills:
+    - id: 27238
+      percentage: 100
+      name: Organization

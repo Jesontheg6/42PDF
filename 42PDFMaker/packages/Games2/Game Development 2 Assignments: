@@ -1,0 +1,22 @@
+Game Development 2 Assignments:
+
+1st week - 
+* Brainstorm 3 challenges where kids take examples from http://p5play.molleindustria.org/examples/index.html and add functionality to them. Complete three "tutorial expansions" with a couple of feature add-ons each.
+Example: 
+Breakout - 
+- add death condition if ball hits the bottom edge of screen
+- make different colored blocks that speed up or slow down the ball, or other effects
+- Add a new level after the first screen is cleared
+
+* Then, write an outline of the steps that you would recommend kids use to build their first game. Get them pointed in the right direction.
+
+* Finally, build your own game from scratch using the play p5 js framework. Something that is fun for a user to interact with. 
+Suggestions:
+- snake
+- spaceship shooter
+- agar.io
+- tetris
+- simon says (memory game)
+- bejeweled
+- mancala
+- typeracer

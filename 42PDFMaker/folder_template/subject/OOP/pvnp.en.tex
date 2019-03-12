@@ -1,0 +1,700 @@
+%******************************************************************************%
+%                                                                              %
+%                  sample.en.tex for LaTeX                                     %
+%                  Created on : Tue Mar 10 13:27:28 2015                       %
+%                  Made by : David "Thor" GIRON <thor@42.fr>                   %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+
+%******************************************************************************%
+%                                                                              %
+%                                    Header                                    %
+%                                                                              %
+%******************************************************************************%
+\begin{document}
+
+
+
+                           \title{Plants vs. Non-Plants}
+                          \subtitle{p vs. np - any math geeks here who catch the pun?}
+                       \member{Milan Ray}{raytmilan@gmail.com}
+                       \member{Tapabrata Dey}{tapabratadey02@gmail.com}
+                       \member{Wesley To}{wto@student.42.fr}
+
+\summary {
+	A guide to creating a command-line style \href{https://en.wikipedia.org/wiki/Plants_vs._Zombies}{Plants vs. Zombies} game in \texttt{Python}.
+}
+
+\maketitle
+
+\tableofcontents
+
+%******************************************************************************%
+%                                                                              %
+%                                 Introduction                                 %
+%                                                                              %
+%******************************************************************************%
+\chapter{Introduction}
+	
+This week you all learned how to use and apply the data structures of classes, queues, stacks, and linked lists. Today, your skills will be put to the tests in a one day final project that uses all the data structures you implemented over the week.\\
+
+This final project is a command-line based clone of the popular \href{https://en.wikipedia.org/wiki/Plants_vs._Zombies}{Plants vs. Zombies} game called, \texttt{Plants vs Non-Plants} (or \href{https://en.wikipedia.org/wiki/P_versus_NP_problem}{PvNP} for you math geeks out there).\\
+
+For those of you who don't play many games, plants vs zombies is a turn-based strategy game where you need to stop zombies from taking over your house. 
+PvNP is similar in the fact that you have Plants and Non-Plants (instead of zombies), and you must use the plants to protect your field from non-plants. 
+The basic aim of the game to prevent any non-plants from reaching the left edge of your screen. The way that the non-plants are stopped is by buying plants from a virtual shop (automatically bought upon use) and blocking the non-plants (temporarily). Another extra feature is the ability to draw power-up cards to temporarily increase the strength of the plants surrounding the non-plants.
+
+%******************************************************************************%
+%                                                                              %
+%                                  Project Outline                             %
+%                                                                              %
+%******************************************************************************%
+\chapter{Project Outline}
+
+	\subsection{Game Rules}
+
+            \begin{itemize}\itemsep1pt
+                \item Each turn, the player will be asked for keyboard input for actions of:
+                \begin{itemize}
+                    \item Placing a plant (at a \texttt{ROW} number and \texttt{COLUMN} number)
+                    \item Drawing a powerup card (\texttt{C}) which temporarily increases damage by a random amount for all existing plants
+                    \item Quitting the game (\texttt{Q})
+                    \item Doing Nothing (inputting nothing and pressing \texttt{ENTER})
+                \end{itemize}
+                \item Non-plants enter from the right and move forward one position each turn
+                \item Non-plants are shown with a number, indicating how many occupy that position, or a \# if more than 10 occupy that position
+                \item Plants can be placed in any empty position on the field (placing a plant results in a loss of in-game cash)
+                \item Plants are shown as \texttt{P} characters
+                \item Empty spaces are shown with . characters
+                \item Plants attack the first NonPlant anywhere in front of them (destroying a nonplant corresponds to a gain of in-game cash)
+                \item NonPlants only attack plants one position in front of them
+                \item If all waves are eradicated, the plants win
+                \item If a non-plant reaches the far left of the field, the non-plants win
+                \\
+            \end{itemize}
+        \newpage
+    \subsection {Game Input file}
+    When the PvNP.py file is run (the file with your main python function), it accepts an argument of an extra file that holds data of the games properties.
+    \\
+    Game files include:
+                \begin{itemize}
+                \item The amount of cash the player starts with
+                \item The height and width of the playing field
+                \item Any number of waves, each containing:
+                \begin{itemize}
+                    \item The turn number during which the wave of nonplants is released
+                    \item The row in which the nonplants are to be released
+                    \item The quantity of nonplants to be released
+                \end{itemize}
+                \item Game files conform to the following format:
+                \\
+                Cash Height Width\\
+                Turn Row Quantity\\
+                Turn Row Quantity\\
+                \dots
+                \end{itemize}
+    \hint{We have provided example files that you can use when testing and to get an idea of what the format of the file will be.}
+    \newpage
+    \subsection {Example game play}
+     Here is an example of how your game should look:
+     \begin{42console}
+$python3 PvNP.py ../examples/example_gamefile
+Cash: $120
+Waves: 3
+   0  1  2  3  4  5  6
+0  .  .  .  .  .  .  .  .
+
+1  .  .  .  .  .  .  .  .
+
+2  .  .  .  .  .  .  .  .
+
+3  .  .  .  .  .  .  .  .
+
+4  .  .  .  .  .  .  .  1
+
+
+Action?
+        [ROW COL] to place plant ($35)
+        [C] to draw a powerup card ($5)
+        [Q] to quit
+        [ENTER] to do nothing?\end{42console}
+There is a print-out of the field, how much cash the player has to buy plants from the virtual shop, 
+and which wave is currently on the field. On the field, the numbers are the quantity of non-plants that are on the field, 
+while the letter \texttt{P}s are the plants that the player has the abiliy to place on the field. 
+\\
+The player is also prompted after each turn to input the row and col he wishes to place the plant, whether the  player wants to draw a power-up card, quit the game or simply do nothing.
+\\
+            \hint {
+              We have also provided a binary file that you can test out to see what the finished product should look like...if it's not provided to you, you probably were supposed to give your mentor some chocolate.
+            }
+
+
+
+
+%******************************************************************************%
+%                                                                              %
+%                             General instructions                             %
+%                                                                              %
+%******************************************************************************%
+\chapter{General instructions}
+
+    Read and follow the exercises provided. Ask your mentor for help when needed. 
+    \\
+    \\ 
+    Good luck!
+
+
+% Don't forget this line for piscine days to initate the exercise counter at 0
+\startexercices
+
+%******************************************************************************%
+%                                                                              %
+%                             Day of the Piscine                               %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: Create the \texttt{Organism} Class}
+
+\extitle{Create the Organism Class}
+\exnumber{\exercicenumber}
+\exfiles{organism.py}
+\exforbidden{n/a}
+\exnotes{n/a}
+
+\makeheaderfiles
+
+   \begin{enumerate}\itemsep7pt
+    \item Create a class called \texttt{Organism} that has instance variables of \texttt{hp} (hit points) and \texttt{dmg} (damage).
+    When you set instance variables for a class, make sure to do something like this:
+           \begin{42pycode}
+def __init__(self):
+    self.hp = 35
+    self.dmg = 10
+\end{42pycode}
+        Here we're using the \texttt{self} attribute of the class to assign the instance variables. Make sure the \texttt{hp} is defined to start at 35 and the dmg to 10
+                \item Create a \texttt{take\_damage} method, prototyped as:
+           \begin{42pycode}
+def take_damage(self, damage)
+\end{42pycode}
+that takes away \texttt{damage} from the hp.
+\end{enumerate}
+% Don't forget this line in order to increment the exercise counter
+\nextexercice
+%Make the plant%
+%******************************************************************************%
+%                                                                              %
+%                             Plant                                            %
+%                                                                              %
+%******************************************************************************%
+\chapter{Exercise \exercicenumber: Create the \texttt{Plant} class}
+
+\extitle{Create the Plant Class}
+\exnumber{\exercicenumber}
+\exfiles{plant.py}
+\exforbidden{n/a}
+\exnotes{n/a}
+
+\makeheaderfiles
+
+   \begin{enumerate}\itemsep7pt
+    \item Create a class called \texttt{Plant} that inherites from the \texttt{Organism} class.
+       \hint {
+              If you don't remember from the first day, inheritance for a \texttt{Child} to its \texttt{Parent} class, requires a class prototype like:
+            }
+\begin{42pycode}
+class Child(Parent)
+\end{42pycode}
+    \item Make sure the \texttt{Plant} properly inherites all the attributes of the \texttt{Organism} by adding:
+\begin{42pycode}
+super().__init__()
+\end{42pycode}
+to the \texttt{\_\_init\_\_} method.
+\warn {
+              Also an important note. Python won't recongnize your Parent class unless you import it into the child's file. For example, if you have a class called Human and want to import it from homosapien.py
+              then your import statement should be:
+            }
+\begin{42pycode}
+from homosapien import Human
+\end{42pycode}
+                \item Create a Class variable \texttt{cost} and set it to 35, this is the amount of cash that you need to buy a plant.
+ \hint {
+                Just to remind you, here's an example of creating a Class variable (it's not the same as setting an instance of the class)
+                }
+\begin{42pycode}
+class ClassName(ParentsIfAny):
+    classVariable = someNumber
+    def other_methods:
+\end{42pycode}
+ \hint {
+                If you want to know the reason for using a Class variable over an instance variable, ask your mentor.
+                }
+                
+                \item Initialize the plant's \texttt{powerup} instance variable to 0.
+                \item Create a method called \texttt{attack}, prototyped as:
+                \begin{42pycode}
+def attack(self, nonplant)
+\end{42pycode}
+                that applies a damage amount of the plants \texttt{dmg + powerup} to the nonplant 
+               \\ 
+                (hint, use: \texttt{take\_damage}, the nonplant wil be a child of the \texttt{Organism} class (see next exercise)).
+                \item Create a method called \texttt{apply\_powerup}, prototyped as:
+                \begin{42pycode}
+def apply_powerup(self, card)
+\end{42pycode}
+                that adds the card's \texttt{power} instance variable (will be created in a later exercise) to the plant's \texttt{powerup} instance variable.
+                \item Create a method called \texttt{weaken\_powerup}, prototyped as:
+                \begin{42pycode}
+def weaken_powerup(self)
+\end{42pycode}
+                that sets the plant's \texttt{powerup} instance variable to half of what it was.
+            \end{enumerate}
+% Don't forget this line in order to increment the exercise counter
+\nextexercice
+%MAKE THE NON PLANT
+%******************************************************************************%
+%                                                                              %
+%                             Non-Plant                                        %
+%                                                                              %
+%******************************************************************************%
+\chapter{Exercise \exercicenumber: Create the \texttt{Non\_Plant} class}
+
+\extitle{Create the Non\_Plant Class}
+\exnumber{\exercicenumber}
+\exfiles{non\_plant.py}
+\exforbidden{n/a}
+\exnotes{n/a}
+
+\makeheaderfiles
+
+   \begin{enumerate}\itemsep7pt
+    \item Create a class called \texttt{Non\_Plant} that inherites from the \texttt{Organism} Class.
+    \item Create a class variable called \texttt{worth} and set it to 20.
+    \item Make sure the \texttt{Non\_Plant} properly inherites all the attributes of the \texttt{Organism}.
+    \item Initialize the non-plant's \texttt{hp} instance variable to 80.
+    \item Initialize the non-plant's \texttt{dmg} instance variable to 5.
+    \item Create an \texttt{attack} method, prototyped as:
+\begin{42pycode}
+def attack(self, plant)
+\end{42pycode}
+This method will apply the non-plant's \texttt {dmg} to the plant
+\end{enumerate}
+% Don't forget this line in order to increment the exercise counter
+\nextexercice
+%******************************************************************************%
+%                                                                              %
+%                             Card                                             %
+%                                                                              %
+%******************************************************************************%
+\chapter{Exercise \exercicenumber: Create the \texttt{Card} class}
+
+\extitle{Create the Card Class}
+\exnumber{\exercicenumber}
+\exfiles{card.py}
+\exforbidden{n/a}
+\exnotes{n/a}
+
+\makeheaderfiles
+
+   \begin{enumerate}\itemsep7pt
+    \item Create a class called \texttt{Card}.
+    \item Create a class variable called \texttt{cost} and set it to 5.
+    \item Add an instance variable of \texttt{power} and set it to the value that is passed into the \_\_init\_\_ function.
+   \hint{
+       This means your init function should be prototyped like so:
+   } 
+\begin{42pycode}
+def __init__(self, power)
+\end{42pycode}
+\end{enumerate}
+% Don't forget this line in order to increment the exercise counter
+\nextexercice
+%******************************************************************************%
+%                                                                              %
+%                             Wave                                             %
+%                                                                              %
+%******************************************************************************%
+\chapter{Exercise \exercicenumber: Create the \texttt{Wave} class}
+
+\extitle{Create the Wave Class}
+\exnumber{\exercicenumber}
+\exfiles{wave.py}
+\exforbidden{n/a}
+\exnotes{n/a}
+
+\makeheaderfiles
+
+   \begin{enumerate}\itemsep7pt
+    \item Create a class called \texttt{Wave}.
+    \item Set the instance variables of the \texttt {Wave} class to be \texttt{wave\_num}, \texttt{row}, and \texttt{num}, which should all be passed into the \_\_init\_\_ function of the class.
+   \hint{
+       This means your init function should be prototyped like so:
+   } 
+\begin{42pycode}
+def __init__(self, wave_num, row, num)
+\end{42pycode}
+\end{enumerate}
+% Don't forget this line in order to increment the exercise counter
+\nextexercice
+%******************************************************************************%
+%                                                                              %
+%                             Game.py                                          %
+%                                                                              %
+%******************************************************************************%
+\chapter{Exercise \exercicenumber: Create the \texttt{Game} class}
+
+\extitle{Create the Game Class}
+\exnumber{\exercicenumber}
+\exfiles{game.py}
+\exforbidden{n/a}
+\exnotes{n/a}
+
+\makeheaderfiles
+    This is the longest class we will make. It contains all the actual game logic, putting together all the classes and data structures learned this week.
+    \info{
+        Since we'll be using all the files you have made up till now, make sure you import all the required files and libraries that are needed to allow all the game logic to run easily.
+        For ease of use, we'll include all the necessary import statements here, so you can easily paste it into your game.py file. 
+    }
+\begin{42pycode}
+from linked_list import LinkedList
+from queue import Queue
+from stack import Stack
+from wave import Wave
+from non_plant import Non_Plant
+from plant import Plant
+from card import Card
+import random
+\end{42pycode}
+\warn{
+    Make sure you have a linked\_list.py, queue.py, and stack.py from earlier in the week!
+}
+   \begin{enumerate}\itemsep7pt
+    \item Create a class called \texttt{Game}.
+    \item The init function for the \texttt{Game} class will need to be able to read input from a initialization file. Thus, to make it smoother for your implementation of the Game logic, we have provided the
+    code that will read in input from a file (just copy and paste it into your \texttt{Game} class):
+\begin{42pycode}
+	def __init__(self, file):
+		with open(file, 'r') as f:
+			self.cash, self.height, self.width = [int(x) for x in f.readline().split(' ')]
+			self.waves = LinkedList()
+			self.waves_num = 0
+			for line in iter(f.readline, ''):
+				self.waves.add(Wave(*[int(x) for x in line.split(' ')]))
+				self.waves_num += 1
+		# WRITE YOUR ADDITIONAL INIT CODE HERE
+\end{42pycode}
+\warn{It's important to read over this function, and try to understand it. For example, the game's waves instance variable is initialized to a LinkedList.}
+\hint {
+If you need assistance understanding ask your mentor.
+}
+Where it says \texttt{\#WRITE YOUR ADDITIONAL INIT CODE HERE} make sure to add the following functions to your init function for the \texttt{Game} class:
+   \begin{enumerate}\itemsep7pt
+    \item Create an instance variable called \texttt{board} that will store and initialize an empty \texttt{Queue} of size of the \texttt{width} and \texttt{height} of the read-in file. These are stored in the respective instance variables of the \texttt{Game} class
+    automatically handled in the code above. 
+    
+    \item Create an instance variable to store:
+   \begin{enumerate}\itemsep7pt
+        \item Whether the game is over, and initialize it to \texttt{False}.
+        \item The turn number, and initialize it to 0.
+        \item The number of nonplants, and initialize it to 0.
+        \item A deck of powerup cards, and initalize it to a \texttt{Stack}.
+    \end{enumerate}
+        \item For the initialized stack of deck powerup cards, loop through a \texttt{range} of 100 and push \texttt{Card}s initialized to a random \texttt{int} including and between 0 and 5 into the \texttt{Stack}.
+    \end{enumerate}
+ \item Create a \texttt{draw} method in the \texttt{Game} class and copy, paste, and tweak the code to how you want your output to look. For now it will be better to simply copy and paste the code, and then later once everything is working, to actually tweak it. 
+\begin{42pycode}
+	def draw(self):
+		print("Cash: $", self.cash, "\nWaves: ", self.waves_num, sep = '')
+		s = '  '.join([str(i) for i in range(self.width - 1)])
+		print('  ', s)
+		for row in range(self.height):
+			s = []
+			for col in range(self.width):
+				if self.is_plant(row, col):
+					char = 'P'
+				elif self.is_nonplant(row, col):
+					size = self.board[row][col].size()
+					char = str(size) if size < 10 else "#"
+				else:
+					char = '.'
+				s.append(char)
+			print(row, '  ', '  '.join(s), '\n', sep='')
+		print()
+\end{42pycode}
+ \warn{Tweak at your own risk, this part will be graded by your peers.}
+    \end{enumerate}
+\nextexercice
+ 
+%******************************************************************************%
+%                                                                              %
+%                             Game2.py                                         %
+%                                                                              %
+%******************************************************************************%
+ \chapter{Exercise \exercicenumber: Check the type of object in the board}
+
+\extitle{Create type checks for the Game class}
+\exnumber{\exercicenumber}
+\exfiles{game.py}
+\exforbidden{n/a}
+\exnotes{n/a}
+
+\makeheaderfiles
+        \begin{enumerate}\itemsep7pt
+    \item Create a method \texttt{is\_nonplant}, prototyped as:
+\begin{42pycode}
+def is_nonplant(self, row, col)
+\end{42pycode}
+    that returns whether the element at the passed in \texttt{row} and \texttt{col} of the game's \texttt{board} is of type \texttt{Non\_Plant}.
+    \hint{
+        Look up the built-in python method type(). Also, the \texttt{peek()} method or its equivalent in your \texttt{Queue} class will be helpful.
+    }
+    \item Create a method \texttt{is\_plant}, prototyped as:
+\begin{42pycode}
+def is_plant(self, row, col)
+\end{42pycode}
+    that returns whether the element at the passed in \texttt{row} and \texttt{col} of the game's \texttt{board} is of type \texttt{Plant}.
+    \end{enumerate}
+\nextexercice
+%******************************************************************************%
+%                                                                              %
+%                             Game3.py                                         %
+%                                                                              %
+%******************************************************************************%
+ \chapter{Exercise \exercicenumber: Edit the placement of objects in the board}
+
+\extitle{Edit the placement of objects on the board}
+\exnumber{\exercicenumber}
+\exfiles{game.py}
+\exforbidden{n/a}
+\exnotes{n/a}
+
+\makeheaderfiles
+        \begin{enumerate}\itemsep7pt
+    \item Create a method \texttt{remove}, prototyped as:
+\begin{42pycode}
+def remove(self, row, col)
+\end{42pycode}
+    that removes the entity at the corresponding \texttt{row} and \texttt{col} passed into the method from the board (hint, dequeue).
+    \\\\
+    If the entity is a \texttt{Non\_Plant}, then add the \texttt{worth} to the game's \texttt{cash} instance variable (initialized in the init function of the \texttt{Game} class).
+    Make sure to adjust the value of the game's instance variable for the number of nonplants.
+    \item Create a method \texttt{place\_nonplant}, prototyped as:
+\begin{42pycode}
+def place_nonplant(self, row)
+\end{42pycode}
+that adds a nonplant to the game (again adjust the value of the game's instance variable for the number of nonplants). 
+Make sure to:
+   \begin{enumerate}\itemsep7pt
+        \item Create a new \texttt{Non\_Plant} object.
+        \item Then, add that new \texttt{Non\_Plant} object to the row passed in at the last column of that row.
+    \end{enumerate}
+        \info{
+            We are adding to the last column of the row, because the nonplants enter to attack from the last column, travelling to the left of the board.
+        }
+    \newpage
+    \item Create a method \texttt{place\_plant}, prototyped as:
+\begin{42pycode}
+def place_plant(self, row, col)
+\end{42pycode}
+ that adds a new \texttt{Plant} object to the passed in \texttt{row} and \texttt{col}.
+ \\
+ Keep note that:
+ \begin{enumerate}\itemsep7pt
+     \item Plants cannot be stacked on top of each other.
+    \item Plants cannot be placed in the same location as a nonplant.
+    \item Plants cannot be placed in the rightmost column (that is where nonplants enter).
+    \end{enumerate}
+ \warn {Be careful with the logic here and don't forget, plant's cost money when they're placed!}
+    \item Create a method \texttt{place\_wave}, prototyped as:
+\begin{42pycode}
+def place_wave(self)
+\end{42pycode}
+For each wave in the list of waves, check if it is equal to the current turn's number. If so, then:
+ \begin{enumerate}\itemsep7pt
+    \item Release the appropriate number of non plants in the proper \texttt{Wave} class's instance variable \texttt{row}.
+    \warn {Remember the Wave is a linked list, so make sure to access the data properly.}
+    \item Remove that wave from the beginning of the list.
+    \item Decrement the \texttt{wave\_num} counter, which stores the number of waves that are left.
+  \end{enumerate}
+  \end{enumerate}
+\nextexercice
+%******************************************************************************%
+%                                                                              %
+%                             Game3.py                                         %
+%                                                                              %
+%******************************************************************************%
+ \chapter{Exercise \exercicenumber: Execute turns}
+
+\extitle{Execute turns}
+\exnumber{\exercicenumber}
+\exfiles{game.py}
+\exforbidden{n/a}
+\exnotes{n/a}
+
+\makeheaderfiles
+        \begin{enumerate}\itemsep7pt
+\item Create a method \texttt{plant\_turn}, prototyped as:
+\begin{42pycode}
+def plant_turn(self)
+\end{42pycode}
+that, goes through the playing field, and for each plant in the field:
+ \begin{enumerate}\itemsep7pt
+    \item Searches for the first nonplant infront of the plant and attacks it.
+    \info{You can print to the console a message that says the plant has attacked a nonplant, or something along these lines}
+    \item If the nonplant's \texttt{hp} is less than or equal to 0, removes the nonplant from the playing field.
+  \end{enumerate}
+\item Create a method \texttt{nonplant\_turn}, prototyped as:
+\begin{42pycode}
+def nonplant_turn(self)
+\end{42pycode}
+that, goes through the playing field, and for each nonplant in the field:
+ \begin{enumerate}\itemsep7pt
+    \item Checks if the nonplant has reached the leftmost column, this means the game is over, and you can display a game over message and exit the function (hint, \texttt{return}).
+    \item Checks if the column to the left of the nonplant:
+        \begin{enumerate}\itemsep7pt
+            \item Has a plant, then the nonplant attacks the plant.
+            \warn{
+            Because each spot in the board is a queue, you need to loop through the size of the queue for each nonplant attacking the plant that many times.
+            Then check if the \texttt{hp} of the plant is less than or equal to zero, in that case, remove the plant from the board.
+            }
+            \item After the attack this should be checked: If no plant is now in the spot to the left of the nonplant, then combine the queue on the left with the queue on the right, and set the spot where the nonplant was to an empty queue.
+         \end{enumerate}   
+  \end{enumerate}
+\item Create a method \texttt{run\_turn}, prototyped as:
+\begin{42pycode}
+def run_turn(self)
+\end{42pycode}
+        \begin{enumerate}\itemsep7pt
+            \item Increment the turn counter by 1
+            \item Weaken all the plants' powerups (hint, loop throught all the plants in the \texttt{board})
+            \item Run the plants' turn
+            \item Run the nonplants' turn
+            \item Place the proper wave
+            \item Check if the number of nonplants and waves are both zero.\\If so, the game is over, draw the game and let the user know that they have won!
+         \end{enumerate}   
+\end{enumerate}
+% Don't forget this line in order to increment the exercise counter
+\nextexercice
+%******************************************************************************%
+%                                                                              %
+%                             Game3.py                                         %
+%                                                                              %
+%******************************************************************************%
+ \chapter{Exercise \exercicenumber: Finishing up the Game class}
+
+\extitle{Finishing up the Game class}
+\exnumber{\exercicenumber}
+\exfiles{game.py}
+\exforbidden{n/a}
+\exnotes{n/a}
+
+\makeheaderfiles
+        \begin{enumerate}\itemsep7pt
+\item Create a method \texttt{draw\_card}, prototyped as:
+\begin{42pycode}
+def draw_card(self)
+\end{42pycode}
+    that removes the top card from the stack. Then, it applies the card's power up to all the plants on the board.
+    \warn{Cards cost money, so make sure to handle it accordingly} 
+    \newpage
+\item Your last method for this huge class, is a \texttt{get\_input} method that will get the input of the user, and execute accordingly. To make this last bit easier,
+we've got the whole method here, so just copy and paste it into your \texttt{Game} class.
+\begin{42pycode}
+def get_input(self):
+		while True:
+			ui = input("Action?\n\t[ROW COL] to place plant ($" +
+						str(Plant.cost) +
+						")\n\t[C] to draw a powerup card ($" +
+						str(Card.cost) +
+						")\n\t[Q] to quit\n\t[ENTER] to do nothing?\n")
+			if (len(ui) > 0):
+				if (len(ui) == 1):
+					if (ui.lower() == 'c'):
+						self.draw_card()
+						break
+					elif (ui.lower() == 'q'):
+						self.over = True
+						break
+					else:
+						print("Invalid Input \"" + ui + "\"")
+				else:
+					try:
+						row, col = [int(x) for x in ui.split(' ')]
+						self.place_plant(row, col)
+						break
+					except:
+						print("Invalid Input \"" + ui + "\"")
+			else:
+				break
+\end{42pycode}
+\end{enumerate}
+\info{Of course tweak it how you want :)}
+% Don't forget this line in order to increment the exercise counter
+\nextexercice
+%******************************************************************************%
+%                                                                              %
+%                             Game3.py                                         %
+%                                                                              %
+%******************************************************************************%
+ \chapter{Exercise \exercicenumber: Complete the Main method}
+
+\extitle{Complete the Main method}
+\exnumber{\exercicenumber}
+\exfiles{PvNP.py}
+\exforbidden{n/a}
+\exnotes{n/a}
+
+\makeheaderfiles
+For the main method, we have provided you with some simple code for running the main program.
+This is what the user will be executing to start the game.
+\begin{42pycode}
+import sys
+from game import Game
+
+if __name__ == "__main__":
+	if len(sys.argv) == 2:
+		game = Game(sys.argv[1]);
+		game.place_wave()
+		game.draw()
+		game.get_input()
+		#ADD ADDITIONAL CODE HERE
+		print("Game Over");
+\end{42pycode}
+Where the \texttt{\#ADD ADDITIONAL CODE HERE} is where you need to add:
+\begin{enumerate}\itemsep7pt
+    \item While the game is not over, call the \texttt{run\_turn} method of the \texttt{Game} class.
+    \item If after \texttt{run\_turn} the game is not over, call the game's \texttt{draw} method and then the game's \texttt{get\_input} method.
+\end{enumerate}
+
+% Don't forget this line in order to increment the exercise counter
+\nextexercice
+
+%******************************************************************************%
+%                                                                              %
+%                                 Bonus part                                   %
+%                                                                              %
+%******************************************************************************%
+\chapter{Bonus part}
+
+Anything extra that your corrector deems a game-changer will be counted as a bonus.
+Game changers include but are not limited to:
+\begin{enumerate}\itemsep7pt
+\item Colored print statements.
+\item Output of what happened between each turn.
+\item Command line animations.
+\end{enumerate}
+
+%******************************************************************************%
+%                                                                              %
+%                           Turn-in and peer-evaluation                        %
+%                                                                              %
+%******************************************************************************%
+\chapter{Turn-in and peer-evaluation}
+
+    Turn your work in using your \texttt{GiT} repository, as
+    usual. Only work present on your repository will be graded in defense.
+
+%******************************************************************************%
+\end{document}

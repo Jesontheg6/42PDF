@@ -1,0 +1,584 @@
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+%******************************************************************************%
+%                                                                              %
+%                   InformationLibre.tex                                       %
+%                   Made by: 42 staff                                          %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+
+\begin{document}
+
+\title{Information Libre}
+\subtitle{Scatter, learn things, and regroup}
+
+\member {Kai}{kai@42.us.org}
+
+\summary
+{
+	Keep a friend at your side, and study in the path of inspired ones who have given their knowledge out for free. 
+}
+
+\maketitle
+
+\tableofcontents
+
+%******************************************************************************%
+%                                                                              %
+%                               Before you Start                               %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Before you Start!}
+
+\begin{itemize}
+
+	\item Download the \texttt{setup.sh} script included with this project. Then, in your terminal, run it by typing "sh \textasciitilde/Downloads/setup.sh". If it gives you error messages, copy and paste the error message in the \#setup\_help Slack channel and ask your mentors.
+	\item Find a partner to work with on this project. Be advised that Information\_Libre may take up to a month, and you'll make faster progress if you pair with someone you can correspond with or meet with outside of 42 easily.
+	\item If you are on our AP Computer Science Principles track, take this practice AP exam for a baseline score: \url{quiz.42.us.org} (Set aside 1 hour and answer as many as you can. The real exam is 2 hours.)
+	\item Join some useful Slack groups! Click on "Channels" and join \texttt{\#pdf\_questions}, \texttt{\#setup\_help}, \texttt{\#ruby-help}, \texttt{\#python-help}, and one of the AP channels if interested.
+	\item Create your project folder:
+	\begin{enumerate}
+		\item From your project page on intra, copy the git repository link. Now, in the terminal type "git clone " and paste the link. After the link and before pressing enter, write a name for the new folder. Cloning your git repository always creates a new folder.
+		\item cd into the folder you just created and from now on, save your work there. Use the command "mkdir <name>" to create new folders. Put each puzzle from this project in a folder with the same name.
+	\end{enumerate}
+\end{itemize}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Coding Tools                               %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Coding Tools}
+
+Set up your programming environment by picking a program for each of three essential functions. Our favorites are listed below.\\
+
+If you want to install one which is not already on your computer, simply download the program and then drag its icon to your desktop or to a folder of your choice (you won't have access to the Applications folder). 
+
+\begin{enumerate}
+	\item Terminal
+	\begin{itemize}
+		\item Built-in: Terminal
+		\item Upgrade: iTerm2
+	\end{itemize}
+	\item Text Editor
+	\begin{itemize}
+		\item In the terminal: Emacs or Vim
+		\item Built-in: Xcode
+		\item Free: Atom
+		\item Free: Sublime
+		\item Free: Brackets
+	\end{itemize}
+	\item Web browser
+	\begin{itemize}
+		\item Built-in: Safari
+		\item Free: Google Chrome
+		\item Free: Opera
+		\item Free: Vivaldi
+	\end{itemize}
+\end{enumerate}
+
+%******************************************************************************%
+%                                                                              %
+%                                     Roads                                    %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Study One of These}
+
+With your partner, choose one from the list of freely offered, noncommercial Intro to Programming courses that follows.\\
+
+You will use your chosen curriculum to learn about programming. Feel free to either follow it from start to finish or skip around. You need to put together the puzzle pieces from what those tutorials teach you to solve our programming challenges below.
+
+\section{Ruby}
+
+\begin{itemize}
+
+	\item Chris Pine’s Learn to Program: \url{https://pine.fm/LearnToProgram/}
+	\item Bastards’ Book of Ruby, sections from “Style, Conventions, and Debugging” to “File input/output”. \url{http://ruby.bastardsbook.com/toc/} (Don’t worry about the tweet fetching scripts, they no longer work with Twitter’s new API.)
+	\item Learn Ruby the Hard Way: \url{https://learnrubythehardway.org/book/}
+	\item Test-first Ruby: \url{http://testfirst.org/learn_ruby} - best for someone with some programming experience, but really fun. The same author wrote \url{http://codelikethis.com/lessons/learn_to_code} which provides a beginner overview. Make sure you learn "puts" if you choose the test-first course.
+
+\end{itemize}
+
+\section{Python}
+
+\begin{itemize}
+
+	\item IntroPython.org: \url{http://introtopython.org/hello_world.html}
+	\item A Byte of Python: \url{https://python.swaroopch.com/}
+	\item MIT Gentle Introduction to Programming using Python: \url{https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-189-a-gentle-introduction-to-programming-using-python-january-iap-2011/lectures/}
+	\item Google’s open Python class: \url{https://developers.google.com/edu/python/} - best for people with a bit of programming experience already.
+
+\end{itemize}
+
+\hint { In addition to studying these resources and Googling your questions, each challenge chapter contains a "Notes" section which links you directly to the official documentation of Ruby and Python. It's a good idea to get familiar with the layout of official documentation - that means you can find answers directly from the source. }
+
+%******************************************************************************%
+%                                                                              %
+%                                  Choosing                                    %
+%                                                                              %
+%******************************************************************************%
+
+\section{Gemstones? Invertebrates?}
+
+"Which language should I learn?"\\
+
+If you do not know either Ruby or Python, you may not have anything to base your preference on.\\
+
+Programmers love to argue about the superiority of their favorite tools but the truth is that both of these are popular, useful, modern programming languages that have similar abilities. Python is used more widely and Ruby is a bit more "poetic" or aesthetically pleasing.\\
+
+You can research opinions online if you would like to read something about their characteristics.\\
+
+If you have no prejudice, I arbitrarily recommend that you go with Ruby =)\\
+
+It's what Intra is written in and thus it is what we love.\\
+
+%******************************************************************************%
+%                                                                              %
+%                             Version Management                               %
+%                                                                              %
+%******************************************************************************%
+
+\section{Going Retro}
+
+Ruby and Python are updated on a regular basis with new features.\\
+
+So, for example, hashtables are written using different symbols in Ruby 1.9.3 than they are in the modern version, Ruby 2.4.2.\\
+
+Python 3 is a big leap forward from the features included in Python 2. However, it's not supported by all of the tools that interface with Python yet.\\
+
+\texttt{Setup.sh} sets your computer to use Ruby 2.4.2 and Python 2.7 by default. It also installs the tools needed to easily switch between versions of both languages (so please run it regardless of which version you want)!\\
+
+Some of the freely offered coding classes are written for a different version of the programming language than Ruby 2.4 \& Python 2.7. If that's the case, post in the \texttt{\#setup\_help} Slack channel for help using \texttt{rbenv} and \texttt{pyenv} to switch the version used by your computer.
+
+
+%******************************************************************************%
+%                                                                              %
+%                                What to Turn In                               %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Turn In}
+
+Turn in your work with the following structure. We have divided the essential topics into seven parts, so you will turn in seven folders. Name them exactly as the example shows.\\
+
+\begin{42console}
+	?> pwd
+	~/kai/hackhighschool
+	?> ls
+	first_day
+	information_libre
+	?> cd information_libre && ls -a
+	.
+	..
+	.git
+	4200_io
+	4201_if
+	4202_str
+	4203_num
+	4204_arr
+	4205_bool
+	4206_hash
+	?> cd 4200_io && ls
+	4200_io.rb
+	printing_practice.rb
+	argv_in_python.py
+\end{42console}
+
+\textbf{In each folder, turn in the assigned project in a .rb or .py file with a name that matches the folder name. Also turn in at least two other examples of short scripts that use or demonstrate that chapter's coding concept.}\\
+
+You will get bonus points for turning in for than two additional demonstrations of the topic and explaining them to your peer graders.\\
+
+Each day, turn in your work so far by typing three commands in order: 
+	\begin{itemize}
+		\item git add *
+		\item git commit -m "<your comments here>"
+		\item git push
+		\item If you have an error during the git push, you may need to refresh your authentication ticket. Do this by typing "kinit <username>" and then typing your intra password.
+	\end{itemize}
+
+%******************************************************************************%
+%                                                                              %
+%                              Coding Guidelines                               %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Format your Code}
+
+Each 42 challenge you turn in must adhere to the following format:
+
+\begin{42rbcode}
+#!/usr/bin/env ruby
+
+# This is what my program does
+# By <userid>
+
+def function_a
+ #code
+end
+
+def function_b
+ #code
+end
+
+def main(ARGV)
+ #main method
+ function_a
+ function_b
+end
+
+main(ARGV)
+\end{42rbcode}
+
+\begin{itemize}
+	\item Always begin with the "\#!/usr/bin/env ruby" statement. This tells your terminal to run the program using Ruby. In python, the first line is "\#!/usr/bin/env python".
+	\item Always add a comment stating what this program is for, some hints to help others use or understand it, and your name or intra ID.
+	\item Do not write any code outside of functions except for one line, at the end of your program, which calls the main() function.
+	\item The (ARGV) parameter is not always needed. In Python it is sys.argv.
+\end{itemize}
+
+\hint{Reference your chosen intro to coding class to learn about functions/methods (The keyword "def" means "define function...").}
+
+% \chapter{Coding Puzzles!}
+\startexercices
+
+%******************************************************************************%
+%                                                                              %
+%                                   Part I                                     %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 0: Input, Printing, and ARGV/sys.argv}
+
+\extitle{IO: Input/Output, Command Line Arguments, String Interpolation}
+\exnumber{\exercicenumber}
+\turnindir{4200\_io}
+\exfiles{4200\_io.rb or 4200\_io.py, plus 2 or more practice files}
+\exnotes{Ruby \href{https://ruby-doc.org/core-2.4.2/IO.html}{IO}, \href{https://ruby-doc.org/core-2.4.2/ARGF.html}{ARGF} Python \href{https://docs.python.org/2/library/functions.html}{Built-in Functions}, \href{https://docs.python.org/2/library/sys.html}{System}}
+\makeheaderfiles
+
+Create a short Mad-Libs puzzle. It will take a command-line argument which sets the title of the madlib. Then, your program prompts your corrector for an adjective, a business, an animal, and a noise. Then, print a version of "Old MacDonald Had a Farm" using the user input instead of some of the traditional words.
+
+\begin{42console}
+	?> ruby 4200_io.rb "Ode to Joy"
+	Please input an adjective:
+\end{42console}
+
+After printing each prompt, the user (yourself or your friend) should type in a word and press 'enter'. When all the prompts are answered, your program prints out an empty line, then the title (from argv) in all caps, and then each line of the poem with the words replaced as below:
+
+\begin{42console}
+	?> ruby 4200_io.rb "Ode to Joy"
+	Please input an adjective: fruity
+	Please input a business: orchard
+	Please input an animal: bat
+	Please input a noise: click
+
+	ODE TO JOY
+	fruity Macdonald had a orchard, E-I-E-I-O
+	and on that orchard he had a bat, E-I-E-I-O
+	with a click click here
+	and a click click there,
+	here a click, there a click,
+	everywhere a click click,
+	fruity Macdonald had a orchard, E-I-E-I-O! 
+\end{42console}
+\nextexercice
+
+%******************************************************************************%
+%                                                                              %
+%                                   Part II                                    %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 1: Decision Making}
+
+\extitle{IF: If, If-else, Else, and comparison symbols like ==, =>, >, !=}
+\exnumber{\exercicenumber}
+\turnindir{4201\_if}
+\exfiles{4201\_if.rb or 4201\_if.py, plus 2 or more practice files}
+\exnotes{Ruby \href{https://ruby-doc.org/core-2.4.2/doc/syntax/control_expressions_rdoc.html}{Control Expressions} Python \href{https://docs.python.org/2/tutorial/controlflow.html}{Control Flow}}
+\makeheaderfiles
+
+Create a program which contains a secret five-letter word.
+When the program runs, it tells the user what letter the word starts with and invites the user to guess.\\
+
+Use a loop to receive guesses from the user 10 times.\\
+
+The program says different things depending on the input:
+\begin{itemize}
+\item If the user does not type a word but presses Enter, the program informs them, "You wasted a guess =P"
+\item If the user types a word that is longer or shorter than five letters long, the program helpfully prints out "0, 1, 2, 3, 4 that's how we count to five!". 
+\item If the user types a word that is five letters long but does not start with the correct letter, the program helpfully prints out the full alphabet.
+\item If the user types a word that is five letters long and starts with the correct letter but is not the secret word, the program informs them how many guesses they have left.
+\item If the user guesses the word correctly, the program prints out, "Good Job! You are one with the Source."
+\item If the user spends all 10 guesses and does not get the question right, exit the program.
+\end{itemize}
+\begin{42console}
+	?> ruby 4201-if.rb
+	The secret word begins with a D.
+	GUESS: delighted
+	0, 1, 2, 3, 4 that's how we count to five!
+	GUESS: rigor
+	ABCDEFGHIJKLMNOPQRSTUVWXYZ
+	GUESS:
+	You wasted a guess!
+	GUESS: dolma
+	You have 6 guesses left!
+	GUESS: dough
+	Good Job! You are one with the Source.
+\end{42console}
+
+\nextexercice
+
+%******************************************************************************%
+%                                                                              %
+%                                   Part III                                   %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 2: Strings}
+
+\extitle{STR: Strings, Regular Expressions, Strings are an array of Characters}
+\exnumber{\exercicenumber}
+\turnindir{4202\_str}
+\exfiles{4202\_str.rb or 4202\_str.py, plus 2 or more practice files}
+\exnotes{Ruby \href{https://ruby-doc.org/core-2.4.0/String.html}{String}, \href{https://ruby-doc.org/core-2.4.2/Regexp.html}{Regular Expressions} Python \href{https://docs.python.org/2/library/string.html}{String}, \href{https://docs.python.org/2/library/re.html}{Regular Expressions}}
+\makeheaderfiles
+
+Write a progam which performs three tasks in a row on the phrase given as a command line argument.\\
+
+First, it prints out the phrase with eVeRy OtHeR lEtTeR cApItAlIzEd.
+
+Then, print out the same string with every capitalized vowel replaced by an asterisk.
+
+Next, run a check\_parentheses function which determines whether every open paren "(" in the phrase is balanced with a close paren ")". Print out "Balanced? True" or "Balanced? False" accordingly. 
+
+\begin{42console}
+	?> ruby 4202_str.rb "(whats going on()?)"
+	(WhAtS gOiNg On()?)
+	(Wh*tS g*iNg *n()?)
+	Balanced? True
+\end{42console}
+
+\begin{42console}
+	?> ruby 4202_str.rb "()()()()(((a)b)b)b"
+	()()()()(((A)b)B)b
+	()()()()(((*)b)B)b
+	Balanced? True
+\end{42console}
+
+\begin{42console}
+	?> ruby 4202_str.rb "((this doesn't match)"
+	((ThIs DoEsN't MaTcH)
+	((Th*s Do*sN't MaTcH)
+	Balanced? False
+\end{42console}
+
+\hint {Use gsub or re.sub. Study a little about regex. Look up what string interpolation means \& use it all the time.}
+
+\nextexercice
+
+%******************************************************************************%
+%                                                                              %
+%                                  Part IV                                     %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 3: Numbers and Casting}
+
+\extitle{NUM: Integers, Floats, Doubles, other data types and how to change types}
+\exnumber{\exercicenumber}
+\turnindir{4203\_num}
+\exfiles{4203\_num.rb or 4203\_num.py, plus 2 or more practice files}
+\exnotes{Ruby \href{https://ruby-doc.org/core-2.4.2/Numeric.html}{Numeric} Python \href{https://docs.python.org/2/library/stdtypes.html}{Numeric Types}}
+\makeheaderfiles
+
+Write a program that takes two numbers as command line arguments.\\
+
+They will come into your program as Strings. Find a way to turn them into numbers with which you can perform math.\\
+
+Divide the first number by the second one and print out both the integer quotient and the remainder.\\
+
+Then, your program should declare and initialize four variables of different numeric types.
+Print them out and use the built-in functions type() or .class to print the variable type of each. 
+
+\begin{42console}
+	?> ruby 4203_num.rb 142 6
+	142 divided by 6 equals 23 remainder 4
+	Variable a contains : 10  which is of type: Integer
+	Variable b contains: 56.99  which is of type: Float
+	Variable c contains: 2+3i  which is of type: Complex
+	...
+\end{42console}
+
+\nextexercice
+
+%******************************************************************************%
+%                                                                              %
+%                                    Part V                                    %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 4: Arrays/Lists}
+
+\extitle{ARR: Arrays in Ruby; Lists (and Tuples, Sets, etc) in Python}
+\exnumber{\exercicenumber}
+\turnindir{4204\_arr}
+\exfiles{4204\_arr.rb or 4204\_arr.py, plus 2 or more practice files}
+\exnotes{Ruby \href{https://ruby-doc.org/core-2.4.1/Array.html}{Array}, Python \href{https://docs.python.org/2/library/stdtypes.html\#sequence-types-str-unicode-list-tuple-bytearray-buffer-xrange}{List}, \href{https://docs.python.org/2/tutorial/datastructures.html}{More on Lists}}
+\makeheaderfiles
+
+Take in a set of numbers as command line arguments. Store them as an array and print out the min, max, mean, median, mode and range of the set.
+
+\begin{42console}
+	?> ruby 4204_arr.rb 142 6 13 36 54 4 9 78 78 102
+	Min: 4
+	Max: 142
+	Mean: 52.2
+	Median: 45
+	Mode: 78
+	Range: 138
+\end{42console}
+\nextexercice
+
+%******************************************************************************%
+%                                                                              %
+%                                   Part VI                                    %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 5: True, False, and nil/None}
+
+\extitle{BOOL: True and False keywords, nil/None, "and" and "or" expressions}
+\exnumber{\exercicenumber}
+\turnindir{4205\_bool}
+\exfiles{4205\_bool.rb or 4205\_bool.py, plus 2 or more practice files}
+\exnotes{Ruby \href{https://ruby-doc.org/core-2.4.2/nilClass.html}{nilClass}, \href{https://ruby-doc.org/core-2.4.2/TrueClass.html}{TrueClass}, \href{https://ruby-doc.org/core-2.2.0/FalseClass.html}{FalseClass} Python \href{https://docs.python.org/2/library/constants.html}{Constants}, \href{https://docs.python.org/2/library/stdtypes.html}{Types}}
+\makeheaderfiles
+
+Using the three provided arrays:\\
+
+Ruby\\
+\noindent [false,true,true,nil,true,nil,nil,false,false,nil,true,false]\\
+\noindent [or,or,or,==,!=,==,and,==,!=,and,!=,and]\\
+\noindent [false,false,nil,nil,true,true,false,true,nil,false,true,nil]\\
+
+Python\\
+\noindent [False,True,True,None,True,None,None,False,False,None,True,False]\\
+\noindent [or,or,or,==,!=,==,and,==,!=,and,!=,and]\\
+\noindent [False,False,None,None,True,True,False,True,None,False,True,None]\\
+
+Write a program which tests boolean logic by combining one element from each array into an equation and printing the full equation with its result. You can either use the arrays as given or have your program randomize them.
+
+\begin{42console}
+	?> ruby 4205_bool.rb
+	false or false => false
+	true or false => true
+	true or false => true
+	nil == nil => true
+	true != true => false
+	...
+\end{42console}
+
+\hint{There are several ways to do this. Sophisticated ways include .send or getattr(). Simpler ways involve using a series of if statements to perform the operation requested. Practicing these equations in the terminal by typing "irb" or "python" may be fun.}
+\nextexercice
+
+%******************************************************************************%
+%                                                                              %
+%                                  Part VII                                    %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 6: Hashes/Dicts}
+
+\extitle{HASH: Hashes in Ruby, Dictionaries in Python}
+\exnumber{\exercicenumber}
+\turnindir{4206\_hash}
+\exfiles{4206\_hash.rb or 4206\_hash.py, plus 2 or more practice files}
+\exnotes{Ruby \href{https://ruby-doc.org/core-2.4.2/Hash.html}{Hash} Python \href{https://docs.python.org/2/tutorial/datastructures.html\#dictionaries}{Dictionary}}
+\makeheaderfiles
+
+Using the attached file names.txt, store the information in a hash or dictionary where first names are associated with last names.\\
+
+Use your hashtable to identify which first names are shared by more than one student, mentor or admin in h2s. Print out each first name that repeats in the set followed by an array of the last names associated with that first name.
+
+\begin{42console}
+	?> ruby 4206_hash.rb
+	# There are many ways to take the input in... you could use gets() and copy/paste the whole thing in the terminal here
+	Elliot (2): [Tregoning, vanHeuman]
+\end{42console}
+
+* Note: This is not a real example. Eliot vanHeuman spells his name with one 'l' and Elliot Tregoning spells it with two. ;-)
+
+% %******************************************************************************%
+% %                                                                              %
+% %                                 Checklist                                    %
+% %                                                                              %
+% %******************************************************************************%
+
+% \chapter{Checklist}
+
+% After learning the method of peer corrections, meeting your terminal and installing your text editor, it's time to take a hunting party into the wild plains of free knowledge.\\
+
+% Find a partner to anchor you on your journey. An intellectual peer. Your mission together is to learn the ins and outs of a programming language: either Ruby or Python. You need to learn just enough to have a sense of how it all fits together, and enough to pass the "Hacker, Baby" challenge which is next on the sproject tree.\\
+
+% Make sure that you have practice with these topics by the time you choose to move on:\\
+
+% \begin{itemize}
+
+% 	\item Variables: how to declare them and set their contents
+% 	\item Common variable types such as strings, ints, doubles, and floats
+% 	\item Printing output and using string interpolation to include variables
+% 	\item How to add comments to your code
+% 	\item Boolean variables and (in Ruby) the concept of \texttt{nil} or \texttt{None}
+% 	\item If, If else, Else
+% 	\item Conditional expressions such as ==, =>, and !=
+% 	\item Taking input through ARGV and also from the user after printing a prompt
+% 	\item Arrays (in Ruby) or Lists (in Python)
+% 	\item Hashes (in Ruby) or Dicts (in Python)
+% 	\item How to write reusable \texttt{methods} or \texttt{functions} or that take in a variable, perform andoperation on it, and return the result.
+
+% \end{itemize}
+
+% \hint{The next project on the path after this one is Hacker, Baby. It's a project based test to see if you have mastered the programming basics.
+
+% If you can't pass Hacker, Baby right away, start by working with your partner through one of the tutorials listed on the next page.}
+
+
+% %******************************************************************************%
+% %                                                                              %
+% %                                 Advanced                                     %
+% %                                                                              %
+% %******************************************************************************%
+
+% \chapter{Advanced}
+
+% For advanced students who know all those concepts and are ready to attempt solving Hacker, Baby.\\
+
+% Go ahead, turn in the Hacker, Baby project and open that gate to projects ahead.\\
+
+% You can come back and earn your bragging rights properly by finishing one of these detailed classes:
+
+% \begin{itemize}
+
+% 	\item Ruby Koans: \url{http://rubykoans.com/}
+% 	\item Python Koans: \url{http://python-intro.readthedocs.io/en/latest/koans.html}
+% 	\item Automate the Boring Stuff with Python: \url{http://automatetheboringstuff.com/}
+
+% \end{itemize}
+
+% Or - find a Creative Commons licensed class for some other language and learn about all the basic concepts in that language, too. If you are advanced enough to skip the intro to Python or Ruby classes you can get XP on this project by turning in your work learning an additional language.
+
+
+%******************************************************************************%
+\end{document}
+

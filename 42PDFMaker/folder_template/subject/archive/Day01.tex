@@ -1,0 +1,410 @@
+
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+%******************************************************************************%
+%                                                                              %
+%                   Day01.tex                                                    %
+%                   Made by: 42 staff                                          %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+
+\begin{document}
+
+\title{Introduction to Programming - 42}
+\subtitle{Day 01}
+
+\member {Kai}{kai@42.us.org}
+\member {Gaetan}{gaetan@42.us.org}
+
+\summary
+{
+This document is the subject of the day 01 of the introduction to programming piscine.
+}
+
+\maketitle
+\tableofcontents
+
+%Initialisation des headers d'exercices
+\daypiscine{01}
+
+%******************************************************************************%
+%                                                                              %
+%                                Guidelines                                    %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Guidelines}
+
+\begin{itemize}
+
+  \item Corrections will take place in the last hour of the day. Each person will correct another person according to the peer-corrections model.
+ 
+  \item Questions? Ask the neighbor on your right. Next, ask the neighbor on your left.
+  
+  \item Read the examples carefully. The exercises might require things that are not specified in the subject...
+
+  \item Your reference manual is called Google / "Read the Manual!" / the Internet / ...
+
+\end{itemize}
+
+\newpage
+
+
+
+%******************************************************************************%
+%                                                                              %
+%                                Preamble                                      %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Preamble}
+
+Here is what \texttt{Wikipédia} has to say about the otter:
+
+\begin{verbatim}
+Otters are animals that live near and around water. They are a part of the animal 
+family Mustelid. A group of otters is called a "romp", because they play together 
+and are energetic. They live in nests called holts. There are many different kinds 
+of otters. Some live near rivers, some in the sea (Sea Otters). Otters live on
+every continent except for Australia and Antarctica.
+
+Otters are carnivores; they must eat a lot of meat to live, so they spend 3 to 5 
+hours every day fishing and hunting. They can die of hunger more quickly than most
+animals. They eat fish, crayfish, crabs, and frogs. They will eat any small
+animals and birds they can catch. Much of their food is found in water. They dive
+in rivers, lakes and streams until they can find a suitable animal to eat, which
+they then chase. Once they catch it, they bring it to the top of the water, where
+they eat it. If the animal has a hard shell, otters can use a rock as a tool to
+break open the shell.
+
+Otters are playful and energetic. They can be seen sliding down hills and slopes,
+as well as chasing other otters for fun. Some kinds of otters live in groups,
+while others are almost always alone. Because they spent so much time in cold
+water, they have to groom their fur often to stop themselves from freezing.
+
+Otters talk to other animals and otters with whistles, growls, chuckles and
+screams, as well as chirps, squeals, and some kinds of otters might even purr.
+They also leave their scent on plants to mark their territory.
+
+Sea otters (Enhydra lutris) are classified as marine mammals. They live along the
+Pacific coast of North America. Their historic range included shallow waters of
+the Bering Strait. It also included Kamchatka, and as far south as Japan. They
+have a rich fur for which humans hunted them almost to extinction. They frequently
+carry a rock in a pouch under their forearm. They use this to smash open shells.
+This makes them one of the few animals that use tools. Although once near extinction,
+they have begun to spread again, from remnant populations in California and Alaska.
+
+\end{verbatim}
+
+It's a cute otter.
+
+\startexercices
+
+%******************************************************************************%
+%                                                                              %
+%                                  42                                          %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: 42}
+
+\extitle{How to display 42}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{42.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{42.rb} that, when executed, displays "42" followed by a newline.
+
+\begin{42console}
+	?> ./42.rb | cat -e
+	42$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Does it sound simple? That's normal.}
+\hint{Ruby is a language meant to read like plain English - easier for us!}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Name                                       %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: name}
+
+\extitle{Display a name}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{name.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{name.rb} in which you define a first\_name variable and a last\_name variable, initialized with your first and last names respectively, and then display them followed by a newline.
+
+\begin{42console}
+	?> ./name.rb | cat -e
+	Arthur Dent$
+	?>
+\end{42console}
+
+\end{itemize}
+
+
+%******************************************************************************%
+%                                                                              %
+%                                   Name++                                     %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: name++}
+
+\extitle{Display a name, better}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{name.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Modify the script name.rb: still do the same thing, but this time your first and last name should be concatenated and assigned to a third variable.
+
+\begin{42console}
+	?> ./name.rb | cat -e
+	Ford Prefect$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Google ruby strings.}
+
+%******************************************************************************%
+%                                                                              %
+%                              What's your name                                %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: what's your name}
+
+\extitle{What's your name?}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{whatsyourname.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script whatsyourname.rb first asks the user to enter their first name, then their last name, and finally displays both.
+
+\begin{42console}
+	?> ./whatsyourname.rb
+	Hey, what's your first name ? : Arthur
+	And your last name ? : Dent
+	Well, pleased to meet you Arthur Dent.
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Google gets, chomp.}
+
+
+%******************************************************************************%
+%                                                                              %
+%                                Disp first_param	                                           %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: disp\_first\_param}
+
+\extitle{Display a parameter}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{disp\_first\_param.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{disp\_first\_param.rb} which, when executed, displays the first string passed as a parameter, followed by a newline. If there are no parameters, display \texttt{none} followed by a newline. 
+
+\begin{42console}
+	?> ./disp_first_param.rb | cat -e
+	none$
+	?> ./disp_first_param.rb "Beeblebrox" "Improbability" "Slartibartfast" | cat -e
+	Beeblebrox$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Google ARGV, array, condition if.}
+
+%******************************************************************************%
+%                                                                              %
+%                                  Age                                         %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: age}
+
+\extitle{Receive and modify a number}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{age.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{age.rb} that asks the user to enter their age, and then displays how old the user will be in 10 years, 20 years, and 30 years.
+
+\begin{42console}
+	?> ./age.rb
+	Please tell me your age : 15
+	You are currently 15 years old.
+	In 10 years, you'll be 25 years old.
+	In 20 years, you'll be 35 years old.
+	In 30 years, you'll be 45 years old.
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Google string to\_i.}
+
+
+%******************************************************************************%
+%                                                                              %
+%                                UPCASE_IT	                                           %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: UPCASE\_IT}
+
+\extitle{Show in all caps}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{upcase\_it.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{upcase\_it.rb} which takes a character string as a parameter. When executed the script displays the string in all caps followed by a newline. If the number of parameters is different from 1, display \texttt{none} followed by a newline.
+
+\begin{42console}
+	?> ./upcase_it.rb | cat -e
+	none$
+	?> ./upcase_it.rb "don't panic" | cat -e
+	DON'T PANIC$
+	?> ./upcase_it.rb 'tHiS iS sO eAsY! - rUbY iS bAe' | cat -e
+	THIS IS SO EASY! - RUBY IS BAE$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Google upcase.}
+
+%******************************************************************************%
+%                                                                              %
+%                                downcase_it	                                           %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: downcase\_it}
+
+\extitle{Show in lowercase}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{downcase\_it.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{downcase\_it.rb} which takes a character string as a parameter. When executed, the script displays the string in lowercase followed by a newline. If the number of parameters is different from 1, display \texttt{none} followed by a newline.
+
+\begin{42console}
+	?> ./downcase_it.rb | cat -e
+	none$
+	?> ./downcase_it.rb "TRILLIAN" | cat -e
+	trillian$
+	?> ./downcase_it.rb 'tHiS iS sO eAsY! - rUbY iS bAe' | cat -e
+	this is so easy! - ruby is bae$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Try without asking for hints.}
+
+
+%******************************************************************************%
+%                                                                              %
+%                                scan_it	                                           %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise \exercicenumber: scan\_it}
+
+\extitle{Scan the text}
+\exnumber{\exercicenumber}
+\exscore{2}
+\exfiles{scan\_it.rb}
+\exauthorize{All}
+
+\makeheaderfiles
+
+\begin{itemize}
+
+\item Create a script \texttt{scan\_it.rb} that takes two parameters. The first is a keyword to look for in a string. The second is the string to search. When executed, the program displays the number of occurrences of the keyword in the string. If the number of parameters is different from 2 or the first string does not appear in the second string, then display \texttt{none} followed by a newline. 
+
+\begin{42console}
+	?> ./scan_it.rb | cat -e
+	none$
+	?> ./scan_it.rb "the" | cat -e
+	none$
+	?> ./scan_it.rb "the" "these exercises in day01 are not the hardest ones we'll see \=P" | cat -e
+	2$
+	?>
+\end{42console}
+
+\end{itemize}
+
+\hint{Try "string.scan(string)".}
+
+
+%******************************************************************************%
+%                                                                              %
+%                               End of document                                %
+%                                                                              %
+%******************************************************************************%
+
+\end{document}

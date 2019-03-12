@@ -1,0 +1,114 @@
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+%******************************************************************************%
+%                                                                              %
+%                   G1_gamejam.tex                                             %
+%                   Made by: Kai                                               %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+
+\begin{document}
+
+\title{Game Design 2: Game Jam}
+\subtitle{Physics class is for collisions and explosions!}
+
+\member {Kai}{kai@42.us.org}
+
+\summary
+{
+	Now that you have your feet wet with the new library, allow your imagination to run wild.
+}
+
+\maketitle
+
+\tableofcontents
+
+%******************************************************************************%
+%                                                                              %
+%                                  Orientation                                 %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Remain Objectively Oriented}
+
+This assignment is wide open. The goal is, simply, to create a game which helps you practice the technique of Object Oriented Programming. Several genres of game would work for this, including physics-based games with collisions, grid-based games with pieces that move around, or card games or battle games where various items have different abilities.\\
+
+% There are also additional libraries you can add on to processing.py to add complexity and new abilites. Within the Processing app, click the "Add Mode..." menu (where it shows you are in Python mode). From there, switch to the Libraries tab to view and download libraries. Search the name of the library and some keywords to find documentation on them. For example, 
+
+You could do this project in the Python version of Processing. Start by reviewing the \href{http://py.processing.org/tutorials/objects/}{objects tutorial} for their overview of OOP.\\
+
+If you use the p5.play library, study the reference material to get an understanding of the OOP patterns are already built in. In the \href{http://molleindustria.github.io/p5.play/docs/classes/p5.play.html}{p5.play documentation}, the links at the left are the names of some classes which p5.play added on to the foundation of \href{https://p5js.org/reference/}{p5.js}.
+\begin{itemize}
+	\item Animation - a collection of .png images to be displayed sequentially.
+	\item Camera - the object representing the viewer's perspective, which can move relative to the canvas.
+	\item Group - a grouping of sprites which helps you keep track of, for example, all the "enemies" at once.
+	\item Sprite - a character on the board that moves around.
+	\item SpriteSheet - a collection of different images for the same character.
+\end{itemize}
+
+In this project we want to see you write a program which uses a system of classes and objects to organize your game world.
+
+
+%******************************************************************************%
+%                                                                              %
+%                                       Ideas                                  %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Some ideas}
+
+\begin{itemize}
+
+	\item Snake
+	\item Single player agar.io (although there is a mutliplayer tutorial on youtube if you want to try it ;) )
+	\item Tetris
+	\item Bejeweled
+	\item Mancala
+	\item Typeracer
+	\item Minesweeper
+	\item Bumper cars
+	\item Angry Birds
+	\item Plants vs Zombies, graphcis edition
+	\item Chess
+	\item Hearts, blackjack, etc - other card games
+	\item Clue, chutes and ladders, etc - classic board games
+	\item The Incredible Machine
+	\item Pinball, pacman, etc - classic arcade games
+
+\end{itemize}
+
+Feel free to simplify the game mechanics to make sure that your project is accomplishable within a week. Simple and polished is better for your pride than ambitious with lots of loose ends. You can always add features later, next session.\\
+
+There will be a showcase and contest on Friday! Try to build a different game than everyone else and make it shine with your own creativity.\\
+
+%******************************************************************************%
+%                                                                              %
+%                                  Evaluation                                  %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Evaluation}
+
+Aim to fulfill the basics of a well polished game for the grading scale:
+
+\begin{itemize}
+	\item The game should welcome you and give you instructions on how to play.
+	\item Does the game area display and update correctly?
+	\item Does the program respond to user input until the game is won or lose?
+	\item Is there a win condition and a lose condition, and the game tells you when one of those has happened?
+	\item After a win, lose, or tie, the program should ask you if you want to play again. It should play again if you say yes, and exit cleanly if you say no.
+	\item Does the program handle bad input (like a number instead of a letter, a move that has already been taken, or a move that is off the board) gracefully? Bad input shouldn't cause the program to crash or act glitchy.
+	\item Ask the programmer to talk about the part of the program that was hardest for them to build. They should be able to tell you something interesting about it, i.e., how many different types of objects they use in the game.
+	\item Ask the team how they divided up the work, and ask each team member to describe how the code works on one part of the program that they contributed to.
+	\item Give bonus points for how nice looking the output is. Consider symmetry, animation, and color!
+	\item Does the program keep score, or a timer for how it takes the player to win, and display it? 
+\end{itemize}
+\end{document}
+

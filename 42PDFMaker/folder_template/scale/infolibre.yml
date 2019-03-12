@@ -1,0 +1,924 @@
+# **************************************************************************** #
+#                                                                              #
+#               INFORMATION_LIBRE.en.yml for INFORMATION_LIBRE                 #
+#               Created on : Oct 12 2017                                       #
+#               Made by : Kai Drumm [kai@42.us.org                             #
+#                                                                              #
+# **************************************************************************** #
+
+# **************************************************************************** #
+#                                                                              #
+#    A scale is made of a bloc header followed by one or more section-blocs.   #
+#  Each section-bloc is made of one or more question-blocs. This bloc system   #
+#  allows you to gather related questions into the same section.               #
+#                                                                              #
+#  - Adaptation & creativity                                                   #
+#  - Algorithms & AI                                                           #
+#  - Company experience                                                        #
+#  - DB & Data                                                                 #
+#  - Functional programming                                                    #
+#  - Graphics                                                                  #
+#  - Group & interpersonal                                                     #
+#  - Imperative programming                                                    #
+#  - Network & system administration                                           #
+#  - Object-oriented programming                                               #
+#  - Organization                                                              #
+#  - Parallel computing                                                        #
+#  - Rigor                                                                     #
+#  - Security                                                                  #
+#  - Technology integration                                                    #
+#  - Unix                                                                      #
+#  - Web                                                                       #
+#                                                                              #
+# **************************************************************************** #
+---
+# **************************************************************************** #
+#                                                                              #
+#                                  Header                                      #
+#                                                                              #
+# **************************************************************************** #
+
+name: Information Libre
+lg: en
+is_primary: true
+comment: ''
+
+# Etiquette!
+introduction_md: |
+
+  To ensure this evaluation goes smoothly, please respect the following set
+  of rules :
+
+  - Please remain courteous, polite, respectful and constructive at all 
+    times during this exchange. The trust bond between the school's 
+    communauty and yourself depends on it.
+
+  - Should you notice any malfunctions within the submitted project, 
+    make sure you take the time to discuss those with the student (or 
+    group of students) being graded.
+
+  - Keep in mind that some subjects can be interpreted differently.
+    If you come accross a situation where the student you're grading 
+    has interpreted the subject differently than you, try and judge
+    fairly whether their interpretation is acceptable or not, and grade
+    them accordingly. Our peer-evaluation system can only work if you
+    both take it seriously.
+
+# Disclaimer for corporate partnerships with NDAs
+disclaimer_md: ''
+
+# Technical guidelines
+guidelines_md: |
+
+  - You may only evaluate whatever is in the GiT submission directory of 
+    the student you are grading.
+
+  - Make sure to check wether the GiT submission directory
+    belongs to the student (or group) you're grading, and that
+    it's the right project.
+
+  - Make sure no mischievous aliases have been used to trick you 
+    into correcting something that is not actually in the official
+    submitted directory.
+
+  - Any script created to make this evaluation session easier - whether
+    it was produced by you or the student being graded - must be  
+    checked rigorously in order to avoid bad surprises.
+
+  - If the student who is grading this project hasn't done the
+    project him/herself yet, he/she must read the whole topic 
+    before starting the evaluation session.
+
+  - Use the flags available to you on this scale in order to report
+    a submission directory that is empty, non-functional, that contains
+    a norm errors or a case of cheating, etc...
+    In this case, the evaluation session ends and the final grade is 0
+    (or -42, in case of cheating). However, unless the student has
+    cheated, we advise you to go through the project together in order 
+    for the two (or more) of you to identify the problems that may have 
+    led for this project to fail, and avoid repeating those mistakes for
+    future projects.
+
+
+# **************************************************************************** #
+#                               Project Details:                               #
+# **************************************************************************** #
+# Imperative programming
+# Organization
+# Group & Integpersonal
+
+# Two corrections required
+correction_number: 2
+
+# 15 minute duration
+duration: 1
+
+# **************************************************************************** #
+#                                                                              #
+#                                   Sections                                   #
+#                                                                              #
+# **************************************************************************** #
+sections:
+
+- name: Overall structure
+  position: 1
+  description: 'Folder structure'
+  questions:
+
+  - name: Folders
+    position: 1
+    guidelines: |
+      Did the student correctly turn in 7 folders with the following names?
+        4200_io
+        4201_if
+        4202_str
+        4203_num
+        4204_arr
+        4205_bool
+        4206_hash
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 4
+      name: Imperative programming
+    - percentage: 4
+      name: Organization
+    - percentage: 4
+      name: Group & interpersonal
+
+# **************************************************************************** #
+#                 Section 1: Input, Printing, & ARGV                           #
+# **************************************************************************** #
+- name: Input, Printing, & ARGV
+  position: 2
+  description: 'Exercises in 4200_io'
+  questions:
+
+  - name: Input
+    position: 1
+    guidelines: |
+
+      Does the program request all four words in an understandable way?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 3
+      name: Imperative programming
+    - percentage: 3
+      name: Organization
+    - percentage: 3
+      name: Group & interpersonal
+
+  - name: ARGV
+    position: 2
+    guidelines: |
+
+      Does the program take the title of the poem from the command line (ARGV) and print it before the lyrics?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 4
+      name: Imperative programming
+    - percentage: 4
+      name: Organization
+    - percentage: 4
+      name: Group & interpersonal
+
+  - name: Output
+    position: 3
+    guidelines: |
+
+      Does the program print the finished madlib correctly using this template? Do not take points off for capitalization or punctuation, but newlines are required.
+      
+      title
+      [adjective] MacDonald had a [business], E-I-E-I-O
+      and on that [business] he had a [animal], E-I-E-I-O
+      with a [noise] [noise] here
+      and a [noise] [noise] there,
+      here a [noise], there a [noise],
+      everywhere a [noise] [noise],
+      [adjective] MacDonald had a [business], E-I-E-I-O!
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 4
+      name: Imperative programming
+    - percentage: 4
+      name: Organization
+    - percentage: 4
+      name: Group & interpersonal
+
+  - name: Extra Quality
+    position: 4
+
+    guidelines: |
+
+      Add one bonus point for each of these extras that the program accomplishes:
+      - matches the example exactly.
+      - changes 'a' to 'an' depending if the word starts with a vowel.
+      - put the title in all caps.
+      - capitalizes the start of each line including the adjective.
+      - puts other input words in lowercase if they were capitalized.
+      - complains if the input is empty, longer than one word, or otherwise nonsensical.
+
+    rating: multi
+    kind: bonus
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal
+
+  - name: Format
+    position: 5
+    guidelines: |
+
+      Is their code in 4200_io.rb/py formatted according to the guidelines?
+
+    rating: multi
+    kind: standard
+    questions_skills:
+    - percentage: 3
+      name: Imperative programming
+    - percentage: 3
+      name: Organization
+    - percentage: 3
+      name: Group & interpersonal
+
+  - name: Extra Examples
+    position: 6
+
+    guidelines: |
+
+      Are their additional examples of this topic interesting & enlightening to you?
+
+    rating: multi
+    kind: bonus
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal
+
+# **************************************************************************** #
+#                 Section 2: Decision Making                                   #
+# **************************************************************************** #
+
+- name: Decision Making
+  position: 3
+  description: 'Exercises in 4201_if'
+
+  questions:
+
+  - name: Loop
+    position: 1
+    guidelines: |
+
+      Does the program accept input exactly 10 times and then exit?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 3
+      name: Imperative programming
+    - percentage: 3
+      name: Organization
+    - percentage: 3
+      name: Group & interpersonal
+
+  - name: Hint
+    position: 2
+    guidelines: |
+
+      Does the program tell the user what letter the word begins with?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 3
+      name: Imperative programming
+    - percentage: 3
+      name: Organization
+    - percentage: 3
+      name: Group & interpersonal
+
+  - name: Response
+    position: 3
+    guidelines: |
+
+      Test the following inputs:
+      - something longer than 5 letters
+      - something shorter than 5 letters
+      - 5 letters starting with the right letter
+      - 5 letters starting with the wrong letter
+      - empty input
+
+      Does the program respond according to the instructions in each case?
+
+    rating: multi
+    kind: standard
+    questions_skills:
+    - percentage: 3
+      name: Imperative programming
+    - percentage: 3
+      name: Organization
+    - percentage: 3
+      name: Group & interpersonal
+
+  - name: Secret
+    position: 4
+    guidelines: |
+
+      Look in the program code. Is there a secret word there? Or, if the programmer is being sneaky, can they explain how the secret word is set?
+
+      When you guess the secret word correctly, does the program tell you that you're right?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 3
+      name: Imperative programming
+    - percentage: 3
+      name: Organization
+    - percentage: 3
+      name: Group & interpersonal
+
+  - name: Format
+    position: 5
+    guidelines: |
+
+      Is their code in 4201_if.rb/py formatted according to the guidelines?
+
+    rating: multi
+    kind: standard
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal
+
+  - name: Extra Examples
+    position: 6
+
+    guidelines: |
+
+      Are their additional examples of this topic interesting & enlightening to you?
+
+    rating: multi
+    kind: bonus
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal
+
+
+# **************************************************************************** #
+#                 Section 3: Strings                                           #
+# **************************************************************************** #
+
+- name: Strings
+  position: 4
+  description: 'Exercises in 4202_str'
+
+  questions:
+
+  - name: Alt Caps
+    position: 1
+    guidelines: |
+
+      Does the program perform the function:
+      (1) It capitalized every other letter of the input (regardless of whether punctuation and whitespace are skipped or not)
+      
+      Try this with both the PDF examples and also your own made-up examples.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal
+
+  - name: Substitution
+    position: 2
+    guidelines: |
+
+      Does the program perform the function:
+      (2) It then replaced uppercase vowels with asterisks.
+
+      Try this with both the PDF examples and also your own made-up examples.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal
+
+  - name: Parens
+    position: 3
+    guidelines: |
+
+      Does the program perform the function:
+      (3) It correctly indicates if the parentheses are balanced or not.
+
+      Try this with both the PDF examples and also your own made-up examples.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal
+
+  - name: Comprehension
+    position: 4
+    guidelines: |
+
+      Can the student who you are correcting understand how each of the three operations works? Can they explain it to you?
+
+    rating: multi
+    kind: standard
+    questions_skills:
+    - percentage: 3
+      name: Imperative programming
+    - percentage: 3
+      name: Organization
+    - percentage: 3
+      name: Group & interpersonal
+
+  - name: Strings are made of Characters
+    position: 5
+    guidelines: |
+
+      Did the student find a method for iterating through each character in a string? Can they explain how to select one letter from a word?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 3
+      name: Imperative programming
+    - percentage: 3
+      name: Organization
+    - percentage: 3
+      name: Group & interpersonal
+
+  - name: Complexity
+    position: 6
+    guidelines: |
+
+      Does the program match the examples exactly by skipping over whitespace and punctuation when it decides which letters to capitalize?
+
+    rating: bool
+    kind: bonus
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal
+
+  - name: Format
+    position: 7
+    guidelines: |
+
+      Is their code in 4202_str.rb/py formatted according to the guidelines?
+
+    rating: multi
+    kind: standard
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal
+
+  - name: Extra Examples
+    position: 8
+
+    guidelines: |
+
+      Are their additional examples of this topic interesting & enlightening to you?
+
+    rating: multi
+    kind: bonus
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal
+
+# **************************************************************************** #
+#                 Section 4: Numbers                                           #
+# **************************************************************************** #
+
+- name: Numbers
+  position: 5
+  description: 'Exercises in 4203_num'
+
+  questions:
+
+  - name: Casting
+    position: 1
+    guidelines: |
+
+      Look at the program code. Can the student explain how to change a string to a number? Can they explain what type of number did they change the input to?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 3
+      name: Imperative programming
+    - percentage: 3
+      name: Organization
+    - percentage: 3
+      name: Group & interpersonal
+
+  - name: Long Division
+    position: 2
+    guidelines: |
+
+      Does the program perform division which correctly finds the quotient and the remainder?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 3
+      name: Imperative programming
+    - percentage: 3
+      name: Organization
+    - percentage: 3
+      name: Group & interpersonal
+
+  - name: Types
+    position: 3
+    guidelines: |
+
+      Does the program use a function call to identify the datatype of each variable?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 3
+      name: Imperative programming
+    - percentage: 3
+      name: Organization
+    - percentage: 3
+      name: Group & interpersonal
+
+  - name: Comprehension
+    position: 4
+    guidelines: |
+
+      Can the student tell you about the differences between the four numeric datatypes in their program?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 3
+      name: Imperative programming
+    - percentage: 3
+      name: Organization
+    - percentage: 3
+      name: Group & interpersonal
+
+  - name: Format
+    position: 5
+    guidelines: |
+
+      Is their code in 4203_num.rb/py formatted according to the guidelines?
+
+    rating: multi
+    kind: standard
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal
+
+  - name: Extra Examples
+    position: 6
+
+    guidelines: |
+
+      Are their additional examples of this topic interesting & enlightening to you?
+
+    rating: multi
+    kind: bonus
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal
+
+# **************************************************************************** #
+#                 Section 5: Arrays & Lists                                    #
+# **************************************************************************** #
+
+- name: Arrays & Lists
+  position: 6
+  description: 'Exercises in 4204_arr'
+
+  questions:
+
+  - name: Information Processing
+    position: 1
+    guidelines: |
+
+      Can the student show in their code how they take command line arguments, convert them to numbers, and store them in an array?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 3
+      name: Imperative programming
+    - percentage: 3
+      name: Organization
+    - percentage: 3
+      name: Group & interpersonal
+
+  - name: Array Looping
+    position: 2
+    guidelines: |
+
+      Can the student show in their code how they loop through the array?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 3
+      name: Imperative programming
+    - percentage: 3
+      name: Organization
+    - percentage: 3
+      name: Group & interpersonal
+
+  - name: Correct math
+    position: 3
+    guidelines: |
+
+      Do they correctly calculate all the measures?
+
+      Make up your own set of numbers as input to their program. Consult an online calculator to make sure the answers for mean, median, and mode are all correct.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 3
+      name: Imperative programming
+    - percentage: 3
+      name: Organization
+    - percentage: 3
+      name: Group & interpersonal
+
+  - name: Unusual numbers
+    position: 4
+    guidelines: |
+
+      Test the following types of input in the array:
+      - all zeroes
+      - a mix of positive numbers, negative numbers and zeroes
+      - A set with some numbers larger than a billion
+      - Empty input
+
+      Mark this question wrong if any of those inputs break the program or cause a wrong answer.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 3
+      name: Imperative programming
+    - percentage: 3
+      name: Organization
+    - percentage: 3
+      name: Group & interpersonal
+
+  - name: Format
+    position: 5
+    guidelines: |
+
+      Is their code in 4204_arr.rb/py formatted according to the guidelines?
+
+    rating: multi
+    kind: standard
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal
+
+  - name: Extra Examples
+    position: 6
+
+    guidelines: |
+
+      Are their additional examples of this topic interesting & enlightening to you?
+
+    rating: multi
+    kind: bonus
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal
+
+# **************************************************************************** #
+#                 Section 6: True False Nil                                    #
+# **************************************************************************** #
+
+- name: True False Nil
+  position: 7
+  description: 'Exercises in 4205_bool'
+
+  questions:
+
+  - name: Accuracy
+    position: 1
+    guidelines: |
+
+      In a new Terminal window, type "irb" to use Interactive Ruby, or Python to use Interactive Python. Test the accuracy of their output by running equations indvidually in these programs.
+
+      Check their output line by line. Are they giving accurate equations?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 5
+      name: Imperative programming
+    - percentage: 5
+      name: Organization
+    - percentage: 5
+      name: Group & interpersonal
+
+  - name: Understanding
+    position: 2
+    guidelines: |
+
+      Make up one true/false/nil logic equation that isn't already on the screen and pop quiz them with it.
+      Can they predict the right answer on the spot? Test the answer in irb or Python.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 5
+      name: Imperative programming
+    - percentage: 5
+      name: Organization
+    - percentage: 5
+      name: Group & interpersonal
+
+  - name: Dynamic Programming
+    position: 3
+    guidelines: |
+
+      Did the student use .send or getattr(), and if so, can they explain to you how those functions work?
+
+    rating: bool
+    kind: bonus
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal
+
+  - name: Format
+    position: 4
+    guidelines: |
+
+      Is their code throughout the project formatted according to the guidelines?
+
+    rating: multi
+    kind: standard
+    questions_skills:
+    - percentage: 4
+      name: Imperative programming
+    - percentage: 4
+      name: Organization
+    - percentage: 4
+      name: Group & interpersonal
+
+  - name: Extra Examples
+    position: 5
+
+    guidelines: |
+
+      Are their additional examples of this topic interesting & enlightening to you?
+
+    rating: multi
+    kind: bonus
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal
+
+# **************************************************************************** #
+#                 Section 7: Hashes & Dicts                                    #
+# **************************************************************************** #
+
+- name: Hashes & Dicts
+  position: 8
+  description: 'Exercises in 4206_hash'
+
+  questions:
+
+  - name: Accuracy
+    position: 1
+    guidelines: |
+
+      Look through names.txt and visually find a duplicating first name. Then, run the script. Are all the duplicates you noticed identified accurately by the script?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 4
+      name: Imperative programming
+    - percentage: 4
+      name: Organization
+    - percentage: 4
+      name: Group & interpersonal
+
+  - name: Understanding
+    position: 2
+    guidelines: |
+
+      Talk to the student about hashtables. Can they articulate a useful understanding of how hashtables or dictionaries work? Have them explain the program to you and give a rating out of 5 for how good their explanation is.
+
+    rating: multi
+    kind: standard
+    questions_skills:
+    - percentage: 4
+      name: Imperative programming
+    - percentage: 4
+      name: Organization
+    - percentage: 4
+      name: Group & interpersonal
+
+  - name: Format
+    position: 3
+    guidelines: |
+
+      Is their code in 4206_hash.rb/py formatted according to the guidelines?
+
+    rating: multi
+    kind: standard
+    questions_skills:
+    - percentage: 4
+      name: Imperative programming
+    - percentage: 4
+      name: Organization
+    - percentage: 4
+      name: Group & interpersonal
+
+  - name: Extra Examples
+    position: 4
+
+    guidelines: |
+
+      Are their additional examples of this topic interesting & enlightening to you?
+
+    rating: multi
+    kind: bonus
+    questions_skills:
+    - percentage: 2
+      name: Imperative programming
+    - percentage: 2
+      name: Organization
+    - percentage: 2
+      name: Group & interpersonal

@@ -1,0 +1,309 @@
+
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+%******************************************************************************%
+%                                                                              %
+%                   Parseltongue_03.tex                                        %
+%                   Made by: 42 staff                                          %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+
+\begin{document}
+
+\title{Parseltongue Piscine - Day03}
+\subtitle{keep practicing and build more complex projects}
+
+\member {Kai}{kai@42.us.org}
+
+\maketitle
+
+\tableofcontents
+
+%Initialisation des headers d'exercices
+
+\newpage
+
+\bigskip
+
+\centerline{\includegraphics[width=150mm]{images/dont_panic.jpeg}}
+
+\centerline{\texttt{Eat, Sleep, Code, Repeat.}}
+
+%******************************************************************************%
+%                                                                              %
+%                                 Don't Panic                                  %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Don't Panic!}
+
+Confused about how to begin? Not sure what the PDF means?\\
+
+Don't worry, we are not perfect :)\\
+
+And the PDFs are challenges - not walkthroughs. Team up with your group, your partner,
+your mentor and your other peers to decipher what to do.\\
+
+You are the master of your own destiny! Go forward and code the world !
+
+%******************************************************************************%
+%                                                                              %
+%                              Coding Guidelines                               %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Format your Code}
+
+Each 42 challenge you turn in must adhere to the following format:
+
+\begin{42pycode}
+#!/usr/bin/env python3
+
+# Write your name at the top, and any helpful comments you have for people
+# running your program.
+# By <userid>
+
+import sys
+
+def function_a:
+    # code
+
+def function_b:
+    # code
+
+def main(argv):
+    # main method
+    function_a
+    function_b
+
+main(sys.argv)
+\end{42pycode}
+
+or:\\
+
+\begin{42rbcode}
+#!/usr/bin/env ruby
+
+# Write your name at the top, and any helpful comments you have for people
+# running your program.
+# By <userid>
+
+def function_a
+ # code
+end
+
+def function_b
+ # code
+end
+
+def main(ARGV)
+ # main method
+ function_a
+ function_b
+end
+
+main(ARGV)
+\end{42rbcode}
+
+\begin{itemize}
+	\item Always begin with the "\#!/usr/bin/env ruby" statement. This tells your terminal to run the program using Ruby. In python, the first line is "\#!/usr/bin/env python3".
+	\item Always add a comment stating what this program is for, some hints to help others use or understand it, and your name or intra ID.
+	\item Do not write any code outside of functions except for one line, at the end of your program, which calls the main() function.
+\end{itemize}
+
+\startexercices
+
+%******************************************************************************%
+%                                                                              %
+%                                    Rainbow                                   %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 0: Rainbow}
+
+\extitle{Rainbow}
+\extopics{Functions and parameters, ANSI escape codes}
+\exfiles{00\_rainbow.rb or 00\_rainbow.py}
+\exnotes{Credit to \href{https://stackoverflow.com/a/21786287}{StackOverflow} for the demonstration code, \href{https://www.pythoncentral.io/fun-with-python-function-parameters/}{Function Parameters}, \href{https://www.python-course.eu/python3_global_vs_local_variables.php}{Global and Local Variables}}
+\makeheaderfiles
+
+Did you know that it is possible to print colorful text in the terminal?\\
+
+Here is a sample Python program, which if you save and run it, will show you many options for color combinations that you can get without installing any special libraries.
+
+\begin{42pycode}
+def print_format_table():
+    """
+    prints table of formatted text format options
+    """
+    for style in range(8):
+        for fg in range(30,38):
+            s1 = ''
+            for bg in range(40,48):
+                format = ';'.join([str(style), str(fg), str(bg)])
+                s1 += '\x1b[%sm %s \x1b[0m' % (format, format)
+            print(s1)
+        print('\n')
+
+print_format_table()
+\end{42pycode}
+
+Run this program, study this code and think about what is "says", how it does what it does.\\
+
+Write a program called \texttt{00\_rainbow.py} which includes a function called write\_colorful\_text. The function will take in one parameter for the text to be written, one parameter for the "style" (in the range of 0 to 8), one parameter for the "background" (in the range of 40 to 48), and one parameter for the "foreground" (in the range from 30 to 38). The first line looks like this:
+
+\begin{42pycode}
+def print_colorful_text(string, style, foreground, background):
+\end{42pycode}
+
+Call the write\_colorful\_text function several times, with different parameters. Your function should print out the word "R A I N B O W" with each letter a different color, in rainbow order. You can decide what color combination is best for rainbow order.\\
+
+\subsection{Bonus}
+
+Use global variables to label each number with the color or style it represents. You should then be able to call your function like this:
+\begin{42pycode}
+print_colorful_text("I am Groot", BOLD, FG_GREEN, BG_DARKBLUE)
+\end{42pycode}
+
+...or similarly with any other color labels that are useful to you.
+
+\hint{This is not the most common color encoding system, by the way. Later on - in Game Design class - we will use RBG format where each color in R, G, and B has a value between 0 and 255.}
+
+\nextexercice
+\newpage
+
+%******************************************************************************%
+%                                                                              %
+%                                   PaReNtHeSiS                                %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 1: PaReNtHeSiS}
+\extitle{PaReNtHeSiS}
+\exfiles{01\_parentheses.rb or 01\_parentheses.py}
+\exnotes{Ruby \href{https://ruby-doc.org/core-2.4.0/String.html}{String}, \href{https://ruby-doc.org/core-2.4.2/Regexp.html}{Regular Expressions} Python \href{https://docs.python.org/2/library/string.html}{String}, \href{https://docs.python.org/2/library/re.html}{Regular Expressions}, \href{https://www.youtube.com/watch?v=WsTsMkmgLOA}{Lower/Upper Case}}
+\makeheaderfiles
+
+Write a progam which performs three tasks in a row on the phrase given as a command line argument.\\
+
+First, it prints out the phrase with eVeRy OtHeR lEtTeR cApItAlIzEd.\\
+
+Then, print out the same string with every capitalized vowel replaced by an asterisk.\\
+
+Next, run a check\_parentheses function which determines whether every open paren "(" in the phrase is balanced with a close paren ")". Print out "Balanced? True" or "Balanced? False" accordingly.
+
+\hint{Don't worry about the order of the parentheses, just the number of them. (It's an advanced problem if you check for correct order of parentheses too. Go ahead and try if you want, for a bonus!)}
+
+\begin{42console}
+	?> python 01_parentheses.py "(whats going on()?)"
+	(WhAtS gOiNg On()?)
+	(Wh*tS g*iNg *n()?)
+	Balanced? True
+\end{42console}
+
+\begin{42console}
+	?> python 01_parentheses.py "()()()()(((a)b)b)b"
+	()()()()(((A)b)B)b
+	()()()()(((*)b)B)b
+	Balanced? True
+\end{42console}
+
+\begin{42console}
+	?> python 01_parentheses.py "((this doesn't match)"
+	((ThIs DoEsN't MaTcH)
+	((Th*s Do*sN't MaTcH)
+	Balanced? False
+\end{42console}
+
+\hint {Use gsub or re.sub. Study a little about regex. Look up what string interpolation means \& use it all the time.}
+
+\nextexercice
+\newpage
+
+%******************************************************************************%
+%                                                                              %
+%                                    Math Class                                %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 2: Math Class}
+
+\extitle{Math Class}
+\exfiles{02\_mathclass.rb or 02\_mathclass.py}
+\exnotes{Ruby \href{https://ruby-doc.org/core-2.4.1/Array.html}{Array}, Python \href{https://docs.python.org/2/library/stdtypes.html\#sequence-types-str-unicode-list-tuple-bytearray-buffer-xrange}{List}, \href{https://docs.python.org/2/tutorial/datastructures.html}{More on Lists}, \href{https://www.youtube.com/watch?v=HXAjLlrCMIg&list=RDHXAjLlrCMIg&start_radio=1}{Importing Libraries}, \href{http://treyhunner.com/2016/04/how-to-loop-with-indexes-in-python/}{Loops}}
+\makeheaderfiles
+
+Take in a set of numbers as command line arguments. Store them as an array and print out the min, max, mean, median, mode and range of the set.\\
+
+You may not use "import statistics". You may use "import math".
+
+\begin{42console}
+	?> python 02_mathclass.py 142 6 13 36 54 4 9 78 78 102
+	Min: 4
+	Max: 142
+	Mean: 52.2
+	Median: 45
+	Mode: 78
+	Range: 138
+\end{42console}
+
+\hint{Each mathematical task should take place in its own function. Write a function to find the min, one to find the max, one to find the mean, and so on.}
+
+\subsection{Bonus}
+
+As a bonus, but not the main part, you may turn in a version of this program which demonstrates how much easier this is using the Statistics library. :)
+
+\nextexercice
+\newpage
+
+%******************************************************************************%
+%                                                                              %
+%                              Guessing Game                                   %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Exercise 3: Guessing Game}
+
+\extitle{Guessing Game}
+\exfiles{03\_guess.rb or 03\_guess.py}
+\exnotes{Ruby \href{https://ruby-doc.org/core-2.4.2/doc/syntax/control_expressions_rdoc.html}{Control Expressions} Python \href{https://docs.python.org/2/tutorial/controlflow.html}{Control Flow}, \href{https://www.tutorialspoint.com/python/python_while_loop.htm}{While Loop}, \href{https://www.digitalocean.com/community/tutorials/how-to-use-break-continue-and-pass-statements-when-working-with-loops-in-python-3}{Loop Breaks}}
+\makeheaderfiles
+
+Create a program which contains an array of five-letter words.\\
+When the program begins, if should pick a random word from the array (make sure to "import random" to help with this!). Then it tells the user what letter the word starts with and invites the user to guess.\\
+
+Use an infinite while loop to receive guesses from the user. Make it so that it exits if the user correctly guesses the word, or guesses wrong 10 times.\\
+
+The program says different things depending on the input:
+\begin{itemize}
+	\item If the user does not type a word but presses Enter, the program informs them, "You wasted a guess =P"
+	\item If the user types a word that is longer or shorter than five letters long, the program helpfully prints out "0, 1, 2, 3, 4 that's how we count to five!".
+	\item If the user types a word that is five letters long but does not start with the correct letter, the program helpfully prints out the full alphabet, and does not count it as a wrong guess.
+	\item If the user types a word that is five letters long and starts with the correct letter but is not the secret word, the program informs them how many guesses they have left.
+	\item If the user guesses the word correctly, the program prints out, "Good Job! You are one with the Source."
+	\item If the user spends all 10 guesses and does not get the question right, exit the program.
+\end{itemize}
+
+\begin{42console}
+	?> 03_guess.py
+	The secret word begins with a D.
+	GUESS: delighted
+	0, 1, 2, 3, 4 that's how we count to five!
+	GUESS: rigor
+	ABCDEFGHIJKLMNOPQRSTUVWXYZ
+	GUESS:
+	You wasted a guess!
+	GUESS: dolma
+	You have 6 guesses left!
+	GUESS: dough
+	Good Job! You are one with the Source.
+\end{42console}
+
+\end{document}

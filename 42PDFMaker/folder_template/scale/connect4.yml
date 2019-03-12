@@ -1,0 +1,108 @@
+---
+name: Connect4
+lg: en
+comment: ''
+introduction_md: ''
+disclaimer_md: ''
+guidelines_md: Be courteous and firm with your classmates. Allow them to defend the
+  reasoning for their code, and focus on giving useful feedback or teaching things
+  they don't understand.
+is_primary: true
+correction_number: 2
+duration: 1
+sections:
+- name: Gameplay
+  description: ''
+  position: 1
+  questions:
+  - name: Game Board
+    guidelines: Can they print out a game board that shows the current position of
+      pieces?
+    rating: bool
+    kind: standard
+    position: 1
+    questions_skills:
+    - percentage: 10
+      name: Organization
+    - percentage: 10
+      name: Imperative programming
+  - name: Making a Move
+    guidelines: Does the program ask you to chose a move, and then show your move
+      on the board?
+    rating: bool
+    kind: standard
+    position: 2
+    questions_skills:
+    - percentage: 15
+      name: Imperative programming
+    - percentage: 15
+      name: Organization
+  - name: Looping efficiency
+    guidelines: Does the program run by looping for each round, as opposed to repeating
+      the same commands over and over in the code?
+    rating: bool
+    kind: standard
+    position: 3
+    questions_skills:
+    - percentage: 15
+      name: Imperative programming
+    - percentage: 15
+      name: Organization
+  - name: Method Use
+    guidelines: Did the student incorporate a method in their code which can take
+      in a parameter and vary what it does accordingly?
+    rating: bool
+    kind: standard
+    position: 4
+    questions_skills:
+    - percentage: 15
+      name: Imperative programming
+    - percentage: 15
+      name: Organization
+  - name: Validity Checking
+    guidelines: Is it impossible to make an invalid move in their game?
+    rating: bool
+    kind: standard
+    position: 5
+    questions_skills:
+    - percentage: 15
+      name: Organization
+    - percentage: 15
+      name: Imperative programming
+  - name: Finding a Winner
+    guidelines: Give them credit if the program knows and congratulates you when you
+      win!!
+    rating: bool
+    kind: standard
+    position: 6
+    questions_skills:
+    - percentage: 15
+      name: Imperative programming
+    - percentage: 15
+      name: Organization
+  - name: Bulletproof
+    guidelines: Give them a zero here if the program ever gives you an unexpected
+      error.
+    rating: bool
+    kind: standard
+    position: 7
+    questions_skills:
+    - percentage: 15
+      name: Imperative programming
+    - percentage: 15
+      name: Organization
+- name: Bonus
+  description: ''
+  position: 2
+  questions:
+  - name: Extra Special
+    guidelines: On a sliding scale, give one point for each bonus feature they implemented.
+      Be sure to ask them how they did it!
+    rating: multi
+    kind: bonus
+    position: 1
+    questions_skills:
+    - percentage: 15
+      name: Imperative programming
+    - percentage: 25
+      name: Organization

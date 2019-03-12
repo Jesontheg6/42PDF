@@ -1,0 +1,242 @@
+%******************************************************************************%
+%                                                                              %
+%                  sample.en.tex for LaTeX                                     %
+%                  Made by : Michael Lu (mlu@student.42.fr)                    %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+
+%******************************************************************************%
+%                                                                              %
+%                                    Header                                    %
+%                                                                              %
+%******************************************************************************%
+\begin{document}
+
+
+
+                           \title{OOP - Part 1}
+                          \subtitle{Essentials of Object Oriented Programming}
+                       \member{Michael Lu}{mlu@student.42.fr}
+\summary {
+  This project will help you learn the essentials of objective oriented programming.
+}
+
+\maketitle
+
+\tableofcontents
+
+%******************************************************************************%
+%                                                                              %
+%                                  Foreword                                    %
+%                                                                              %
+%******************************************************************************%
+\chapter{Foreword}
+
+	Did you know I love cooking and cooking is a great way to learn stuff?\\
+
+	Cooking teaches you a lot of skills that is beneficial to you. Regardless
+	if you prefer your mom's home cooking or maybe your dad's barbecue, but
+	have you ever tried following a recipe and learning it yourself?\\
+
+	If you ever start learning how to cook you will soon realize you need a
+	couple of things first. You need measuring tools, some kind of hot plate,
+	a way to cut or prep ingredients. Each of these objects are their own
+	entity but they work together to provide you a delicious meal.\\
+
+	Object oriented programming is very similar to this concept. Hah! Bet you
+	thought I wouldn't bring up programming eh? Just like cooking, you will
+	be creating objects in objected oriented programming (I wonder why it's called
+	that), and learning how to utilize them to help you create some cool stuff.\\
+
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{images/thonking.jpg}
+	\end{center}
+
+%******************************************************************************%
+%                                                                              %
+%                                  Goals                                       %
+%                                                                              %
+%******************************************************************************%
+\chapter{Goals}
+
+	The goal of this project is to introduce you to the basics object oriented programming.
+	By the end of this project you should know how to:\\
+	
+	\begin{itemize}
+		\item Create classes
+		\item Initiate an instance of a class
+		\item Assign class methods and attributes
+		\item Use variables specific to each instance
+		\item Design classes that inherit from each other.
+	\end{itemize}
+	 
+	You will be exploring a fundamental topic of object oriented programming
+	so take advantage of all the resources including articles, videos, your neighbor, StackOverflow and so forth. There are many tutorials on classes and inheritance.
+
+
+%******************************************************************************%
+%                                                                              %
+%                             General instructions                             %
+%                                                                              %
+%******************************************************************************%
+\chapter{General instructions}
+
+	\begin{itemize}
+		\item This project will only be corrected by actual human beings.
+		You are therefore free to organize and name your files as you wish,
+		although you must respect some requirements listed below.
+		\item You must follow the exercise details and instruction clearly
+		\item You must turn in all the requested files
+		\item Ask your peers, mentor, slack or anywhere else if you need
+		any help, and make sure to have fun!
+	\end{itemize}
+
+\startexercices
+
+%******************************************************************************%
+%                                                                              %
+%                                    ex00                                      %
+%                                                                              %
+%******************************************************************************%
+\chapter{Exercise 00}
+
+\extitle{ex00: Your first class}
+\exfiles{main.(rb/py), first\_class.(rb/py)}
+
+\makeheaderfiles
+
+Make your first class (a class named FirstClass in a file named first\_class) with a constructor that says "Hello World". Instanciate the class inside of a main function located in main.(rb/py).
+
+\begin{42console}
+	?> ruby first_class.py
+	Hello World
+	?>
+\end{42console}
+
+\hint{Google classes or check ft\_arena or ft\_boardgame tutorial videos}
+
+\hint{if \_\_name\_\_ == "\_\_main\_\_":}
+\hint{Ruby: require\_relative first\_class. Python: from . import first\_class}
+\nextexercice
+%******************************************************************************%
+%                                                                              %
+%                                    ex01                                      %
+%                                                                              %
+%******************************************************************************%
+\chapter{Exercise 01}
+
+\extitle{ex01 : Your second class and first inheritance}
+\exfiles{main.(rb/py), first\_class.(rb/py), second\_class.(rb/py)}
+
+\makeheaderfiles
+
+Make your second class (a class named SecondClass in a file named second\_class) that will inherit from the first class. Its constructor should directly call the first class constructor that says "Hello World". You must instantiate the second class only in your main.
+
+\begin{42console}
+	?> ruby main.rb
+	Hello World
+	?>
+\end{42console}
+
+\hint{Google class inheritance or check ft\_arena or ft\_boardgame tutorial videos}
+\nextexercice
+%******************************************************************************%
+%                                                                              %
+%                                    ex02                                      %
+%                                                                              %
+%******************************************************************************%
+\chapter{Exercise 02}
+
+\extitle{ex02 : Your first parameter and passing parameter}
+\exfiles{main.(rb/py), first\_class.(rb/py), second\_class.(rb/py)}
+
+\makeheaderfiles
+
+You now need your second class to take a parameter "name" (which will be your login name) and pass it into the first class which will display "Hello ". You can hard-code your login name into the program without calling input() or gets() to fetch it. You must instantiate the second class only in your main.
+
+\begin{42console}
+	?> ruby main.rb
+	Hello mlu
+	?>
+\end{42console}
+
+\hint{Google how to send parameter into classes or check ft\_arena or ft\_boardgame tutorial videos}
+\nextexercice
+%******************************************************************************%
+%                                                                              %
+%                                    ex03                                      %
+%                                                                              %
+%******************************************************************************%
+\chapter{Exercise 03}
+
+\extitle{ex03 : Your first method}
+\exfiles{main.(rb/py), first\_class.(rb/py), second\_class.(rb/py)}
+
+\makeheaderfiles
+
+You now need to create a method inside your first class called say\_hello which will take the name from the constructor and print out "Hello ". When the method is called pring out a sentance stating that it has been called. You must instantiate the second class only in your main.
+
+\begin{42console}
+	?> ruby main.rb
+	Method say_hello in FirstClass is called
+	Hello mlu
+	?>
+\end{42console}
+
+\hint{Google class methods or check ft\_arena or ft\_boardgame tutorial videos}
+\nextexercice
+%******************************************************************************%
+%                                                                              %
+%                                    ex04                                      %
+%                                                                              %
+%******************************************************************************%
+\chapter{Exercise 04}
+
+\extitle{ex04 : Your second method}
+\exfiles{main.(rb/py), first\_class.(rb/py), second\_class.(rb/py)}
+
+\makeheaderfiles
+
+You now need to create a method inside your second class called roll\_dice which will randomly generate a number from 1 to 6. Roll\_dice will then call the Hello method in its parent class and pass it the random number. You should see an output of "Hello <username>, your number is ". Remember, every method your write should print something to announce it has been called. You must instantiate the second class only in your main.
+
+\begin{42console}
+	?> ruby main.rb
+	Method roll_dice in SecondClass called
+	Method hello in FirstClass is called
+	Hello mlu, your number is 2
+	?>
+\end{42console}
+
+\hint{Google class methods/methods interaction or check ft\_arena or ft\_boardgame tutorial videos}
+\nextexercice
+%******************************************************************************%
+%                                                                              %
+%                                    ex05                                      %
+%                                                                              %
+%******************************************************************************%
+\chapter{Exercise 05}
+
+\extitle{ex05 : Your first class variables, and more methods!}
+\exfiles{main.(rb/py), first\_class.(rb/py), second\_class.(rb/py)}
+
+\makeheaderfiles
+
+Your second class will now take in a second parameter, a string called "hobby", when it is instantiated. Store the hobby in an instance variable. You will write a method called get\_hobby in your second class that returns this variable. In your main you need to print out "Your hobby is " where must be returned from the get\_hobby method. You must instantiate the second class only in your main.
+
+\begin{42console}
+	?> ruby main.rb
+	Method roll_dice in SecondClass called
+	Method hello in FirstClass is called
+	Hello mlu, your number is 5
+	Your hobby is being lazy
+	?>
+\end{42console}
+
+\hint{Read about the difference between class variables and instance variables. What is an instance of a class?}
+
+
+%******************************************************************************%
+\end{document}

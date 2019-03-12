@@ -1,0 +1,110 @@
+% vim: set ts=4 sw=4 tw=80 noexpandtab:
+%******************************************************************************%
+%                                                                              %
+%                   GameofLife.tex                                             %
+%                   Made by: Kai                                               %
+%                                                                              %
+%******************************************************************************%
+
+\documentclass{42-en}
+
+%******************************************************************************%
+%                                                                              %
+%                                   Prologue                                   %
+%                                                                              %
+%******************************************************************************%
+
+\begin{document}
+
+\title{Game of Life}
+\subtitle{Discover Penicillin}
+
+\member {Kai}{kai@42.us.org}
+
+\summary
+{
+	Conway's Game of Life
+}
+
+\maketitle
+
+\tableofcontents
+
+%******************************************************************************%
+%                                                                              %
+%                                   Forward                                    %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Forward}
+
+Conway's Game of Life is a classic computer science exercise; it is mysterious, beautiful, and relatively easy with more complicated ways that you could explore the system in depth.\\
+
+\href{http://web.stanford.edu/~cdebs/GameOfLife/}{Read up about the theory}\\
+
+Check out these beautiful examples for inspiration.\\
+
+\href{https://www.youtube.com/watch?v=-FaqC4h5Ftg}{Life Battling Life}\\
+
+\href{https://www.youtube.com/watch?v=xP5-iIeKXE8}{Life in Life}\\
+
+\href{https://www.youtube.com/watch?v=iiEQg-SHY1g}{3D Game of Life with Time Dimension}\\
+
+**Seizure warning!**: \href{https://www.youtube.com/watch?v=XVVyjIbypwM}{Beautiful Epic Rainbow Game of Life}
+
+%******************************************************************************%
+%                                                                              %
+%                               Getting Started                                %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Getting Started}
+
+You can use any graphics library you prefer for this. We recommending Processing as a default because it is very beginner-friendly and can handle individual pixel placement as well as keyboard and mouse input.\\
+
+You will find other examples of Game of Life implementations online! It can be helpful to read through these for guidance when you get stuck, but we definitely recommend starting from scratch to develop your problem-solving ability from the ground up.\\
+
+Some of the first challenges will be:
+\begin{itemize}
+	\item How do I draw pixels to the screen?
+	\item How do I interact with mouse clicks and keyboard presses?
+	\item How do I draw a grid of squares, where each square is larger than one pixel and can be set to a color that I prefer?
+	\item How do I step forward one unit of time and apply the rules of the Game of Life to each square on the grid?
+	\item How do I create a "play" function that will initiate a loop where the rules get applied, and the board re-drawn, over and over?
+\end{itemize}
+
+%******************************************************************************%
+%                                                                              %
+%                               Required Components                            %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Evaluated Part}
+
+You will be graded on completion of the following functionality: 
+
+\begin{itemize}
+	\item Squares are visible to the user, ie they must be larger than 1 pixel each.
+	\item The user can set the starting state of the board by clicking squares. Squares can be toggled on and off by clicking.
+	\item The user has some way to start and puase the simulation.
+	\item The user has some way to randomize the board (set it to a random noise of on and off squares). 
+\end{itemize}
+
+%******************************************************************************%
+%                                                                              %
+%                                  Bonus Components                            %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Wanna do extra?}
+
+You can show off and get bonus points from the following implementations:
+\begin{itemize}
+	\item Controls to step forward one time unit at a time
+	\item Set board beginning state by uploading from file
+	\item Save the state of the board to a file
+	\item Implement an alternate ruleset of your choice; make sure to use a different color scheme to indicate which one is in effect!
+	\item More bonus points for even more alternate rulesets.
+\end{itemize}
+
+\end{document}

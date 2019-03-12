@@ -1,0 +1,254 @@
+# **************************************************************************** #
+#                                                                              #
+#               io.en.yml for h2s-intro-sequence-talk                          #
+#               Created on : Nov 17 2017                                       #
+#               Made by : Kai Drumm [kai@42.us.org]                            #
+#                                                                              #
+# **************************************************************************** #
+
+# **************************************************************************** #
+#                                                                              #
+#    A scale is made of a bloc header followed by one or more section-blocs.   #
+#  Each section-bloc is made of one or more question-blocs. This bloc system   #
+#  allows you to gather related questions into the same section.               #
+#                                                                              #
+#  - Adaptation & creativity                                                   #
+#  - Algorithms & AI                                                           #
+#  - DB & Data                                                                 #
+#  - Graphics                                                                  #
+#  - Group & interpersonal                                                     #
+#  - Imperative programming                                                    #
+#  - Object-oriented programming                                               #
+#  - Organization                                                              #
+#  - Python                                                                    #
+#  - Rigor                                                                     #
+#  - Ruby                                                                      #
+#  - Security                                                                  #
+#  - Technology integration                                                    #
+#  - Web                                                                       #
+#                                                                              #
+# **************************************************************************** #
+---
+# **************************************************************************** #
+#                                                                              #
+#                                  Header                                      #
+#                                                                              #
+# **************************************************************************** #
+
+name: Input/Output
+lg: en
+is_primary: true
+comment: ''
+
+# Etiquette!
+introduction_md: |
+
+  Please respect the following rules :
+
+  - Always remain courteous, polite, respectful and constructive during a peer
+    corrections exchange. The quality of trust among our school's communuty
+    and your reputation depends on it.
+
+  - Should you notice any errors within the submitted project, 
+    make sure you take the time to discuss those with the student (or 
+    group of students) being graded!
+
+  - Keep in mind that some subjects can be interpreted differently.
+    If you come accross a situation where the student you're grading 
+    has interpreted the subject differently than you, try and judge
+    fairly whether their interpretation is acceptable or not, and grade
+    them accordingly. Our peer-evaluation system can only work if you
+    both take it seriously.
+
+# Disclaimer for corporate partnerships with NDAs
+disclaimer_md: ''
+
+# Technical guidelines
+guidelines_md: |
+
+  - You may only evaluate whatever is in the GiT submission directory of 
+    the student you are grading.
+
+  - Make sure to check wether the GiT submission directory
+    belongs to the student (or group) you're grading, and that
+    it's the right project.
+
+  - If you haven't done the project yourself yet, read the whole topic 
+    before starting the evaluation session.
+
+# - Use the flags available to you on this scale in order to report
+#   a submission directory that is empty, non-functional, or a case of cheating,
+#   etc... In this case, the evaluation session ends and the final grade is 0
+#   (or -42, in case of cheating). However, unless the student has
+#   cheated, we advise you to go through the project together in order 
+#   for the two (or more) of you to identify the problems that may have 
+#   led for this project to fail, and avoid repeating those mistakes for
+#   future projects.
+
+# **************************************************************************** #
+#                               Project Details:                               #
+# **************************************************************************** #
+# Imperative programming
+# Organization
+# Group & Integpersonal
+
+# Two corrections required
+correction_number: 2
+
+# 15 minute duration
+duration: 1
+
+# **************************************************************************** #
+#                                                                              #
+#                                   Sections                                   #
+#                                                                              #
+# **************************************************************************** #
+sections:
+
+- name: Overall structure
+  position: 1
+  description: 'Function structure'
+  questions:
+
+  - name: Folders
+    position: 1
+    guidelines: |
+      Did the student format their program and functions according to the
+      instructions in the PDF?
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 100
+      name: Organization
+
+
+# **************************************************************************** #
+#                 Section 1: Input, Printing, & ARGV                           #
+# **************************************************************************** #
+- name: What's your name
+  position: 2
+  description: 'Exercise 00'
+  questions:
+
+  - name: Greeting
+    position: 1
+    guidelines: Does the program greet with a question?
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 10
+      name: Imperative programming
+    - percentage: 10
+      name: Group & interpersonal
+
+  - name: Input
+    position: 2
+    guidelines: Does the program take your name in and then welcome you by name?
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 10
+      name: Imperative programming
+    - percentage: 10
+      name: Group & interpersonal
+      
+  - name: Newlines
+    position: 3
+    guidelines: |
+
+      Does the program display these things nicely with each part on a new line,
+      rather than jumbling it all together?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 10
+      name: Imperative programming
+    - percentage: 10
+      name: Group & interpersonal
+
+# **************************************************************************** #
+#                 Section 1: Input, Printing, & ARGV                           #
+# **************************************************************************** #
+- name: Mad Libs with ARGV
+  position: 3
+  description: 'Exercise 01'
+  questions:
+
+  - name: Input
+    position: 1
+    guidelines: |
+
+      Does the program request all four words in an understandable way?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 20
+      name: Imperative programming
+    - percentage: 20
+      name: Group & interpersonal
+
+  - name: ARGV
+    position: 2
+    guidelines: |
+
+      Does the program take the title of the poem from the command line (ARGV)
+      and print it before the lyrics?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 30
+      name: Imperative programming
+    - percentage: 30
+      name: Group & interpersonal
+
+  - name: Output
+    position: 3
+    guidelines: |
+
+      Does the program print the finished madlib correctly using this template? 
+      Do not take points off for capitalization or punctuation, but newlines
+      are required.
+      
+      title
+      [adjective] MacDonald had a [business], E-I-E-I-O
+      and on that [business] he had a [animal], E-I-E-I-O
+      with a [noise] [noise] here
+      and a [noise] [noise] there,
+      here a [noise], there a [noise],
+      everywhere a [noise] [noise],
+      [adjective] MacDonald had a [business], E-I-E-I-O!
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 20
+      name: Imperative programming
+    - percentage: 20
+      name: Group & interpersonal
+
+  - name: Extra Quality
+    position: 4
+
+    guidelines: |
+
+      Add one bonus point for each of these extras that the program accomplishes:
+      - matches the example exactly.
+      - changes 'a' to 'an' depending if the word starts with a vowel.
+      - put the title in all caps.
+      - capitalizes the start of each line including the adjective.
+      - puts other input words in lowercase if they were capitalized.
+      - complains if the input is empty, longer than one word, or otherwise
+      nonsensical.
+
+    rating: multi
+    kind: bonus
+    questions_skills:
+    - percentage: 25
+      name: Imperative programming
+    - percentage: 25
+      name: Organization
+    - percentage: 25
+      name: Group & interpersonal
