@@ -330,6 +330,8 @@
 \newcommand{\exauthorize}[1]{\def \@exauthorize {#1}}
 \newcommand{\exforbidden}[1]{\def \@exforbidden {#1}}
 \newcommand{\exmake}[1][No]{\def \@exmake {#1}}
+%ADDED IKOURKJI
+\newcommand{\extopics}[1]{\def \@extopics {#1}}
 
 
 % Default values
@@ -346,6 +348,8 @@
 \exauthorize{None}
 \exforbidden{None}
 \exmake{}
+%ADDED IKOURKJI
+\extopics{}
 
 %Header pour exercices sans rien a "rendre"
 \newcommand{\makeheaderbasic}
@@ -391,11 +395,15 @@
 
   \multicolumn{4}{|>{\centering}m{15cm}|}
               {\small \@extitle} \\ \hline
-
-  \multicolumn{4}{|>{\raggedright}m{15cm}|}
-              {\small Turn-in directory : \ttfamily \@turnindir }
-                % $ex\@exnumber/$ }
+%ADDED IKOURKJI
+\multicolumn{4}{|>{\raggedright}m{15cm}|}
+              {\small Topics to study : \ttfamily \@extopics }
               \\ \hline
+
+%  \multicolumn{4}{|>{\raggedright}m{15cm}|}
+%              {\small Turn-in directory : \ttfamily \@turnindir }
+%                % $ex\@exnumber/$ }
+%              \\ \hline
   \multicolumn{4}{|>{\raggedright}m{15cm}|}
               {\small Files to turn in : \ttfamily \@exfiles }
               \\ \hline
